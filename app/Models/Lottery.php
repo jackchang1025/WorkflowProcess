@@ -56,29 +56,6 @@ class Lottery extends Model
 {
     use HasDateTimeFormatter;
 
-    //开奖规则
-    const LOTTERY_RULES = 'lottery_rules';
-    //开奖次数规则
-    const LOTTERY_COUNT_RULES = 'lottery_count_rules';
-
-    //基础投注金额规则
-    const BET_BASE_AMOUNT_RULES = 'bet_base_amount_rules';
-    //总投注金额规则
-    const BET_TOTAL_AMOUNT_RULES = 'bet_total_amount_rules';
-    //投注金额规则
-    const BET_AMOUNT_RULES = 'bet_amount_rules';
-
-    //投注号码规则
-    const BET_CODE_RULES = 'bet_code_rules';
-    //投注次数数规则
-    const BET_COUNT_RULES = 'bet_count_rules';
-    //输赢规则
-    const WIN_LOSE_RULES = 'win_lose_rules';
-    //连续输次数规则
-    const CONTINUOUS_LOSE_COUNT_RULES = 'continuous_lose_count_rules';
-    //连续赢次数规则
-    const CONTINUOUS_WIN_COUNT_RULES = 'continuous_win_count_rules';
-
     protected $table = 'lottery';
 
     public function lotteryGroup(): BelongsTo

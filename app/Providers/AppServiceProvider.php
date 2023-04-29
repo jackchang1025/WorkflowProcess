@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -41,5 +42,11 @@ class AppServiceProvider extends ServiceProvider
                 'data'    => $data,
             ], $code);
         });
+
+        Validator::extend('str_replace', 'App\Rules\LotteryOptionRule@str_replace');
+        Validator::extend('explode', 'App\Rules\LotteryOptionRule@explode');
+        Validator::extend('array_sum', 'App\Rules\LotteryOptionRule@array_sum');
+        Validator::extend('pregMatch', 'App\Rules\LotteryOptionRule@pregMatch');
+        Validator::extend('substr', 'App\Rules\LotteryOptionRule@substr');
     }
 }

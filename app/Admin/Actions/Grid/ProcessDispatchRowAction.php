@@ -2,7 +2,7 @@
 
 namespace App\Admin\Actions\Grid;
 
-use App\Jobs\ProcessJob;
+use App\Jobs\RequestJob;
 use App\Models\Process;
 use Dcat\Admin\Actions\Response;
 use Dcat\Admin\Grid\RowAction;
@@ -39,10 +39,15 @@ class ProcessDispatchRowAction extends RowAction
                 ->refresh();
         }
 
-        ProcessJob::dispatchSync($process->id);
+        RequestJob::dispatchSync($process->id);
 
         return $this->response()
             ->success('Processed successfully');
+    }
+
+    public function html()
+    {
+        return parent::html();
     }
 
     /**
