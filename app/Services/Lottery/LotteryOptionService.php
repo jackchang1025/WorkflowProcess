@@ -8,19 +8,9 @@ use App\Models\LotteryOption;
 use App\Services\BaseService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
 
 class LotteryOptionService extends BaseService
 {
-    protected string $code;
-
-    /**
-     * LotteryOptionBiz constructor.
-     */
-    public function __construct(LotteryOption $lotteryOption)
-    {
-        $this->model = $lotteryOption;
-    }
 
     /**
      * @param string $code
@@ -42,7 +32,7 @@ class LotteryOptionService extends BaseService
      */
     public function validateOptionWithParents(LotteryOption $option, string $code): bool
     {
-        return !($option->parentNode && !$this->validateOptionWithParents($option->parentNode, $code)) && $this->validateLotteryOptionValue($option, $code);
+        return $option->rule && $this->validateLotteryOptionValue($code,$option->rule);
     }
 
     /**

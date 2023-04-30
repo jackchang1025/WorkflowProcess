@@ -12,22 +12,18 @@ class Expression implements ExpressionInterface
      */
     public function evaluate(string $expression, $dataStore = null): bool
     {
-        if ($this->isExpression($expression)) {
+        // 使用正则表达式查找变量并替换为 $dataStore
+        $replacedExpression = preg_replace('/\$[a-zA-Z_][a-zA-Z0-9_]*/', '$dataStore', $expression);
 
-            // 使用正则表达式查找变量并替换为 $dataStore
-            $replacedExpression = preg_replace('/\$[a-zA-Z_][a-zA-Z0-9_]*/', '$dataStore', $expression);
+        try {
 
             // 使用 eval() 执行替换后的表达式
+            return eval("return $replacedExpression;");
 
-            try {
-
-                return eval("return $replacedExpression;");
-
-            } catch (\Exception | \Throwable) {
-
-            }
+        } catch (\Exception | \Throwable) {
+            return false;
         }
-        return false;
+
     }
 
     /**

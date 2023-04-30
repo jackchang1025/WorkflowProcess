@@ -3,6 +3,7 @@
 namespace App\Services\Tasks;
 
 use App\Services\Events\ServiceTaskActivatedEvent;
+use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\ActivityTrait;
 use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
 use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
@@ -35,7 +36,7 @@ class BetTask extends ServiceTask
      */
     public function run(TokenInterface $token): GetLotteryDataTask|static
     {
-        dump('betTask run');
+        Log::channel()->info('betTask run');
 
         if ($this->executeService($token)) {
 

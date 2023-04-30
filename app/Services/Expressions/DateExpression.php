@@ -16,7 +16,7 @@ class DateExpression implements ExpressionInterface
     {
         $regexpValidDate = '/^[0-9]{4}-[0-9]{2}-[0-9]{2}[T ][0-9]{2}:[0-9]{2}(:[0-9]{2})?(?:[\+-][0-9]{2}:[0-9]{2}|Z)?/';
 
-        return (bool)preg_match($regexpValidDate, $expression);
+        return preg_match($regexpValidDate, $expression);
     }
 
     public function isExpression(string $expression): bool

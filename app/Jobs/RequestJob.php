@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Process;
+use App\Models\Request;
 use App\Services\ProcessService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -31,8 +32,6 @@ class RequestJob implements ShouldQueue
      */
     public function handle(ProcessService $processService)
     {
-        $process = Process::findOrFail($this->id);
-
-        return $processService->handle($process->bpmn_xml);
+        return $processService->handle(Request::findOrFail($this->id));
     }
 }

@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
+use App\Services\Lottery\IssueInterFace;
+use App\Services\Lottery\LotteryManger;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
 
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use ProcessMaker\Nayra\Bpmn\DataStoreTrait;
-use ProcessMaker\Nayra\Contracts\Bpmn\DataStoreInterface;
-use ProcessMaker\Nayra\Contracts\Bpmn\ProcessInterface;
-use ProcessMaker\Nayra\Contracts\Repositories\StorageInterface;
-use ProcessMaker\Nayra\Contracts\RepositoryInterface;
-use ProcessMaker\Nayra\Contracts\Storage\BpmnElementInterface;
+
 
 /**
  * App\Models\Request
@@ -22,7 +20,7 @@ use ProcessMaker\Nayra\Contracts\Storage\BpmnElementInterface;
  * @property int $lottery_id lottery_id
  * @property int $code_type 类型
  * @property int $status 状态
- * @property string|null $lottery_rules 开奖规则
+ * @property array $lottery_rules 开奖规则
  * @property int|null $lottery_count_rules 开奖总次数规则
  * @property int|null $bet_base_amount_rules 基础投注金额规则
  * @property int|null $bet_total_amount_rules 总投注金额规则
@@ -57,6 +55,12 @@ use ProcessMaker\Nayra\Contracts\Storage\BpmnElementInterface;
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereWinLoseRules($value)
  * @property int|null $token_id token id
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereTokenId($value)
+ * @property-read \App\Models\Lottery|null $lottery
+ * @property-read \App\Models\Token|null $token
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RequestLog> $requestLog
+ * @property-read int|null $request_log_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\LotteryOption> $requestLotteryOption
+ * @property-read int|null $request_lottery_option_count
  * @mixin \Eloquent
  */
 class Request extends Model
@@ -79,6 +83,14 @@ class Request extends Model
         'win_lose_rules',
         'continuous_lose_count_rules',
         'continuous_win_count_rules'
+    ];
+
+    protected $attributes = [
+        'lottery_rules' => [],
+    ];
+
+    protected $casts = [
+        'lottery_rules' => 'array',
     ];
 
     protected $table = 'request';
@@ -117,6 +129,16 @@ class Request extends Model
         self::CODE_TYPE_HISTORY    => '历史数据',
     ];
 
+
+    const LOSE = 0;
+    const WIN  = 1;
+    const AND  = 3;
+    static array $winOrLost = [
+        self::WIN  => '赢',
+        self::LOSE => '输',
+        self::AND  => '和',
+    ];
+
     /**
      * 彩票选项
      * @return BelongsToMany
@@ -131,8 +153,71 @@ class Request extends Model
         return $this->belongsTo(Lottery::class);
     }
 
+    public function token(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Token::class);
+    }
+
     public function requestLog(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(RequestLog::class);
     }
+
+    public function lotteryManage(): IssueInterFace
+    {
+        return (new LotteryManger(app(container::class), [
+            'url_address' => $this->lottery->url,
+            'token'       => $this->token->token,
+            'lottery_id'  => $this->lottery->lottery_id,
+            'version'     => $this->lottery->version,
+            'code_type'   => $this->code_type,
+        ]))->driver($this->lottery->lotteryGroup->driver_type);
+    }
+
+    /**
+     * 添加开奖规则
+     * @param string $key
+     * @param $value
+     * @return array
+     */
+    public function appendLotteryRules(string $key, $value): array
+    {
+        $lotteryRules = $this->lottery_rules ?? [];
+
+         empty($lotteryRules[$key]) ? $lotteryRules[$key] = $value : $lotteryRules[$key] .= $value;
+
+         return $this->lottery_rules = $lotteryRules;
+    }
+    /**
+     * 输赢规则
+     * @param string $value
+     * @return string
+     */
+    public function appendWinLoseRules(string $value): string
+    {
+        return $this->win_lose_rules .= $value;
+    }
+
+    /**
+     * 总金额自减
+     *
+     * @param float|int $betAmount
+     * @return float|int
+     */
+    public function totalAmountRulesDecrement(float|int $betAmount): float|int
+    {
+        return $this->bet_total_amount_rules -= $betAmount;
+    }
+
+    /**
+     * 总金额自增
+     *
+     * @param float|int $betAmount
+     * @return float|int
+     */
+    public function totalAmountRulesIncrement(float|int $betAmount): float|int
+    {
+        return $this->bet_total_amount_rules += $betAmount;
+    }
+
 }

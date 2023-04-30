@@ -9,18 +9,21 @@ use ProcessMaker\Nayra\Bpmn\Models\DatePeriod;
 class CycleExpression implements ExpressionInterface
 {
 
-    public function evaluate(string $expression, $dataStore = null): bool
+    /**
+     * @param string $expression
+     * @param $dataStore
+     * @return false|DatePeriod
+     */
+    public function evaluate(string $expression, $dataStore = null): bool|DatePeriod
     {
         try {
             //Improve Repeating intervals (R/start/interval/end) configuration
 
-            $response = preg_match('/^R\/([^\/]+)\/([^\/]+)\/([^\/]+)$/', $expression, $repeating)
+            return preg_match('/^R\/([^\/]+)\/([^\/]+)\/([^\/]+)$/', $expression, $repeating)
                 ? new DatePeriod(new DateTime($repeating[1]), new DateInterval($repeating[2]), new DateTime($repeating[3]))
                 : new DatePeriod($expression);
 
-            return (bool) $response;
-
-        } catch (\Exception $e) {
+        } catch (\Exception) {
 
             return false;
         }

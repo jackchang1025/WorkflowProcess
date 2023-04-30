@@ -8,12 +8,12 @@ class RegularExpression implements ExpressionInterface
     /**
      * @param string $expression
      * @param $dataStore
-     * @return bool
+     * @return bool|int
      */
-    public function evaluate(string $expression, $dataStore = null): bool
+    public function evaluate(string $expression, $dataStore = null): bool|int
     {
         try {
-            return (bool)preg_match($expression, (string)$dataStore, $matches);
+            return preg_match($expression, (string)$dataStore, $matches);
         } catch (\Exception) {
             return false;
         }

@@ -2,7 +2,13 @@
 
 namespace App\Services\Tasks;
 
+use App\Models\Lottery;
+use App\Models\LotteryOption;
+use App\Models\Request;
+use App\Models\RequestLog;
 use App\Services\Events\ServiceTaskActivatedEvent;
+use App\Services\Lottery\LotteryOptionService;
+use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\ActivityTrait;
 use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
 use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
@@ -13,12 +19,21 @@ class GetLotteryDataTask extends ServiceTask
 {
     use ActivityTrait;
 
+    protected LotteryOptionService $lotteryOptionService;
+
     const TAG_NAME = 'getLotteryDataTask';
+
+    public function __construct(...$args)
+    {
+        parent::__construct($args);
+
+        $this->lotteryOptionService = app(LotteryOptionService::class);
+    }
 
     protected function getBpmnEventClasses(): array
     {
         return [
-            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
+//            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
         ];
     }
 
@@ -29,7 +44,7 @@ class GetLotteryDataTask extends ServiceTask
      */
     public function run(TokenInterface $token): GetLotteryDataTask|static
     {
-        dump('getLotteryDataTask run');
+        Log::channel()->info('getLotteryDataTask run');
 
         if ($this->executeService($token)) {
 
@@ -53,27 +68,65 @@ class GetLotteryDataTask extends ServiceTask
         $dataStore = $token->getInstance()->getDataStore();
 
         /**
-         * @var \Illuminate\Database\Eloquent\Model $model
+         * @var Request $request
          */
-        $model = $dataStore->getData('model');
+        $request = $dataStore->getData('request');
 
-        $option = ['单', '双'];
 
-        $model->lottery_rule .= $option[rand(0, 1)];
+        $lotteryManage = $request->lotteryManage();
 
-        $model->lottery_conut_rule += 1;
+        //上一期开奖号码                             //上一期号
+//        $code = $lotteryManage->getLastCode($request->currentIssue = $lotteryManage->getLastIssue());
 
-        $winLost = rand(0, 1);
+        $code = rand(1, 6).','.rand(1, 6).','.rand(1, 6);
+        $request->currentIssue = time();
 
-        $model->win_lose_rule .= $winLost;
+        //开奖总次数
+        $request->lottery_count_rules ++;
 
-        if ($winLost) {
-            $model->total_amount_rule += $model->bet_amount_rule ?? 0;
-        } else {
-            $model->total_amount_rule -= $model->bet_amount_rule ?? 0;
+
+        //匹配开奖选项 设置开奖规则 父节点title设置为 key
+        $validateLotteryOption = $request->requestLotteryOption->filter(function (LotteryOption $item) use ($code) {
+
+            return $this->lotteryOptionService->validateOptionWithParents($item, $code);
+        })->each(function (LotteryOption $item) use ($request) {
+
+            $request->appendLotteryRules($item->parentNode->title ?? $item->title, $item->value);
+        });
+
+        $betOrderLogBettingLogUpdateOrCreate = RequestLog::updateOrCreate(
+            ['request_id' => $request->id, 'issue' => $request->currentIssue],
+            ['lottery_code' => $code]
+        );
+
+        if (!$betOrderLogBettingLogUpdateOrCreate->wasRecentlyCreated && $betOrderLogBettingLogUpdateOrCreate->bet_code) {
+
+            //是否中奖
+            if ($optionInfo = $validateLotteryOption->where('value', $betOrderLogBettingLogUpdateOrCreate->bet_code)->first()) {
+                //输赢规则
+                $request->appendWinLoseRules(Request::WIN);
+                $betOrderLogBettingLogUpdateOrCreate->win_lose = Request::WIN;
+
+                //设置总投注金额 = 投注金额 * 选项赔率
+                $request->totalAmountRulesIncrement($betOrderLogBettingLogUpdateOrCreate->bet_amount * $optionInfo->odds);
+                $betOrderLogBettingLogUpdateOrCreate->bet_total_amount = $request->bet_total_amount_rules;
+
+                $request->continuous_lose_count_rules = 0;
+                $request->continuous_win_count_rules ++;
+
+            } else {
+
+                //输赢规则
+                $request->appendWinLoseRules(Request::LOSE);
+                $betOrderLogBettingLogUpdateOrCreate->win_lose = Request::LOSE;
+
+                $request->continuous_win_count_rules = 0;
+                $request->continuous_lose_count_rules ++;
+            }
+            //保持投注单日志表
+            $betOrderLogBettingLogUpdateOrCreate->lottery_code = $code;
+            $betOrderLogBettingLogUpdateOrCreate->save();
         }
-
-        $dataStore->putData('model', $model);
 
         return true;
     }

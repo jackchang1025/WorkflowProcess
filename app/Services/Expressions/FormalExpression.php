@@ -1,13 +1,8 @@
 <?php
 
-namespace App\Services\Models;
+namespace App\Services\Expressions;
 
-use App\Services\Expressions\CycleExpression;
-use App\Services\Expressions\DateExpression;
-use App\Services\Expressions\DurationExpression;
-use App\Services\Expressions\Expression;
-use App\Services\Expressions\ExpressionInterface;
-use App\Services\Expressions\RegularExpression;
+use App\Models\Request;
 use Exception;
 use ProcessMaker\Nayra\Bpmn\FormalExpressionTrait;
 use ProcessMaker\Nayra\Bpmn\Models\DatePeriod;
@@ -27,10 +22,13 @@ class FormalExpression implements FormalExpressionInterface
 
     public function __construct()
     {
+
         $this->registerConditionExpressions();
     }
 
-
+    /**
+     * @return void
+     */
     protected function registerConditionExpressions(): void
     {
         if (empty($this->conditionExpressions)) {
@@ -44,6 +42,7 @@ class FormalExpression implements FormalExpressionInterface
         }
     }
 
+
     /**
      * 获取表达式的语言
      * @return mixed|string
@@ -52,7 +51,6 @@ class FormalExpression implements FormalExpressionInterface
     {
         return $this->getProperty(FormalExpressionInterface::BPMN_PROPERTY_LANGUAGE);
     }
-
 
     /**
      * 获取表达式的主体
@@ -105,9 +103,9 @@ class FormalExpression implements FormalExpressionInterface
     /**
      * 评估表达式
      * @param $dataStore
-     * @return bool|int
+     * @return mixed
      */
-    public function evaluates($dataStore): bool|int
+    public function evaluates($dataStore): mixed
     {
         if (!empty($extensionProperties = $this->getExtensionProperties())) {
 
@@ -120,8 +118,8 @@ class FormalExpression implements FormalExpressionInterface
                         return $conditionExpression->isExpression($expression['value']);
                     });
 
-                    if ($this->expressionEvaluate($matchingExpressions, $expression['value'], (string) $data)) {
-                        return true;
+                    if ($result = $this->expressionEvaluate($matchingExpressions, $expression['value'], (string) $data)) {
+                        return $result;
                     }
                 }
             }
@@ -133,19 +131,14 @@ class FormalExpression implements FormalExpressionInterface
      * @param array $matchingExpressions
      * @param string $expression
      * @param string $data
-     * @return bool
+     * @return mixed
      */
-    public function expressionEvaluate(array $matchingExpressions,string $expression ,string $data): bool
+    public function expressionEvaluate(array $matchingExpressions,string $expression ,string $data): mixed
     {
         return array_reduce($matchingExpressions, function ($carry, ExpressionInterface $matchingExpression) use ($expression, $data) {
-
-            echo "expression: $expression, data: $data, result: {$matchingExpression->evaluate($expression, $data)}, class: ".get_class($matchingExpression)."<br>";
-
-            return $carry || $matchingExpression->evaluate($expression, $data);
+            return $carry ?: $matchingExpression->evaluate($expression, $data);
         }, false);
     }
-
-
 
     /**
      * 返回特定的评估类型。
@@ -175,6 +168,6 @@ class FormalExpression implements FormalExpressionInterface
      */
     public function __invoke($args): int|bool|DatePeriod|\DateTime|\DateInterval
     {
-        return $this->evaluates($args['model']);
+        return $this->evaluates($args['request']);
     }
 }

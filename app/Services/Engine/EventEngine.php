@@ -2,6 +2,7 @@
 
 namespace App\Services\Engine;
 
+use App\Events\ServiceTaskActivatedEvent;
 use ProcessMaker\Nayra\Contracts\EventBusInterface;
 
 class EventEngine implements EventBusInterface
@@ -10,7 +11,8 @@ class EventEngine implements EventBusInterface
      * 存储已注册的事件监听器。键是事件名称，值是一个包含监听器的数组
      * @var array
      */
-    protected array $listeners = [];
+    protected array $listeners = [
+    ];
 
     /**
      * 用于存储已推送但尚未处理的事件和其相关数据。键是事件名称，值是一个包含事件数据的数组
@@ -39,7 +41,7 @@ class EventEngine implements EventBusInterface
      */
     public function hasListeners($eventName): bool
     {
-        return isset($this->listeners[$eventName]) && count($this->listeners[$eventName]) > 0;
+        return !empty($this->listeners[$eventName]);
     }
 
     /**
@@ -78,6 +80,7 @@ class EventEngine implements EventBusInterface
 
         $responses = [];
         foreach ($this->listeners[$event] as $listener) {
+
             $response = call_user_func($listener, $event, $payload);
             if ($halt && !is_null($response)) {
                 return $response;

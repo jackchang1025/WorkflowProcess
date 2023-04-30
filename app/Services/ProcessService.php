@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Request;
 use App\Services\Engine\BpmnEngine;
 use App\Services\Engine\EventEngine;
 use App\Services\Engine\RepositoryEngine;
@@ -106,13 +107,15 @@ class ProcessService
 
     protected readonly BpmnEngine $bpmnEngine;
 
+    /**
+     * @param RepositoryEngine $repositoryEngine
+     * @param EventEngine $eventEngine
+     * @param BpmnDocument $bpmnDocument
+     */
     public function __construct(
         protected readonly RepositoryEngine $repositoryEngine,
         protected readonly EventEngine      $eventEngine,
         protected readonly BpmnDocument     $bpmnDocument,
-        protected string                    $xml = '',
-        protected string                    $id = '',
-        protected array                     $data = [],
     )
     {
         // 实例化引擎
@@ -126,11 +129,15 @@ class ProcessService
 
     }
 
-    public function handle(string $bpmnXml)
+    /**
+     * @param Request $request
+     * @return void
+     */
+    public function handle(Request $request)
     {
 
         // 加载 BPMN 文档
-        $this->bpmnDocument->loadXML($bpmnXml);
+        $this->bpmnDocument->loadXML($request->bpmn_xml);
 
         // 替换 BPMN 文档中的元素
         $this->replaceBpmElement();
@@ -141,31 +148,35 @@ class ProcessService
          */
         $process = $this->bpmnDocument->getProcess('Process_1');
 
-        $executionInstanceInterface = $process->call();
+        $dataStore = $this->repositoryEngine->createDataStore()->putData('request', $request);
+
+        $executionInstanceInterface = $process->call($dataStore);
 
 
-        $process->getDispatcher()->listen('ServiceTaskActivated',function (string $event, ServiceTaskActivatedEvent $serviceTaskActivatedEvent){
+        $process->getDispatcher()->listen('ServiceTaskActivated',function (string $event, $payload){
 
-            $serviceTaskActivatedEvent->activatedEvent(); //BeforeTransit
+            event(new \App\Events\ServiceTaskActivatedEvent($payload[0], $payload[1]));
         });
 
-        $process->getDispatcher()->listen('GatewayActivated',function (string $event, $payload){
 
-            dump($event,$payload[0] ? $payload[0]->getProperty('id') : '');
-        });
-
-        $process->getDispatcher()->listen('BeforeTransit',function (string $event, $payload){
-            dump(
-                $event,
-                $payload
-            );
-
-        });//\ProcessMaker\Nayra\Bpmn\ConditionedExclusiveTransition  ConditionedTransition
-
-        $process->getDispatcher()->listen('ConditionedTransition',function (string $event, $payload){
-
-            dump($event,$payload[1] ? $payload[1]->getProperty('id') : '');
-        });
+//
+//        $process->getDispatcher()->listen('GatewayActivated',function (string $event, $payload){
+//
+//            dump($event,$payload[0] ? $payload[0]->getProperty('id') : '');
+//        });
+//
+//        $process->getDispatcher()->listen('BeforeTransit',function (string $event, $payload){
+//            dump(
+//                $event,
+//                $payload
+//            );
+//
+//        });//\ProcessMaker\Nayra\Bpmn\ConditionedExclusiveTransition  ConditionedTransition
+//
+//        $process->getDispatcher()->listen('ConditionedTransition',function (string $event, $payload){
+//
+//            dump($event,$payload[1] ? $payload[1]->getProperty('id') : '');
+//        });
 
         $this->bpmnEngine->runToNextState();
 

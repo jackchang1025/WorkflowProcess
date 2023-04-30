@@ -360,6 +360,7 @@ a:link {
 .properties-panel-parent {
     border-left: 1px solid #ccc;
     overflow: auto;
+    width: 700px;
 }
 
 .properties-panel-parent:empty {

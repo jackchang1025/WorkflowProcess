@@ -9,13 +9,13 @@ class DurationExpression implements ExpressionInterface
 {
     /**
      * @param string $expression
-     * @param $dataStore
-     * @return bool
+     * @param null $dataStore
+     * @return DateInterval|bool
      */
-    public function evaluate(string $expression, $dataStore = null): bool
+    public function evaluate(string $expression, $dataStore = null): DateInterval|bool
     {
         try {
-            return (bool) new DateInterval($expression);
+            return  new DateInterval($expression);
         } catch (Exception) {
             return false;
         }

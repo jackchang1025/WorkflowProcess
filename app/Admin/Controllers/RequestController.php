@@ -96,9 +96,13 @@ class RequestController extends AdminController
             })->required();
 
             $form->select('bpmn_xml')->options(function () {
+
                 return Process::all()->pluck('title', 'id');
+
             })->saving(function ($value) {
-                return $value;
+
+                return Process::findOrFail($value)->value('bpmn_xml');
+
             })->required();
 
             $form->select('code_type')->options(\App\Models\Request::$codeType)->required();
@@ -126,9 +130,9 @@ class RequestController extends AdminController
             $form->display('created_at');
             $form->display('updated_at');
 
-            $form->saved(function (Form $form,$result) {
+            $form->saved(function (Form $form) {
 
-                RequestJob::dispatchSync($result->id);
+                RequestJob::dispatchSync($form->getKey());
             });
         });
     }

@@ -6,18 +6,19 @@ use Dcat\Admin\Traits\HasDateTimeFormatter;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * App\Models\RequestLog
  *
  * @property int $id
  * @property int $request_id request_id
  * @property string $issue 期号
- * @property string $bet_code 投注号码
- * @property float $bet_code_odds 投注号码赔率
- * @property string $lottery_code 开奖号码
- * @property int $bet_amount 投注金额
- * @property int $bet_total_amount 投注总金额
- * @property int $win_lose 输赢
+ * @property string|null $bet_code 投注号码
+ * @property string|null $bet_code_odds 投注号码赔率
+ * @property string|null $lottery_code 开奖号码
+ * @property string|null $bet_amount 投注金额
+ * @property string|null $bet_total_amount 投注总金额
+ * @property string|null $win_lose 输赢
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|RequestLog newModelQuery()
@@ -42,4 +43,14 @@ class RequestLog extends Model
 
     protected $table = 'request_log';
 
+    protected $fillable = [
+        'request_id',
+        'issue',
+        'bet_code',
+        'bet_code_odds',
+        'lottery_code',
+        'bet_amount',
+        'bet_total_amount',
+        'win_lose',
+    ];
 }
