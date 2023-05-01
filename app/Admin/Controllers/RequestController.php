@@ -113,7 +113,6 @@ class RequestController extends AdminController
                 return (int)$value;
             })->rules('required_if:code_type,1,2');
 
-
             $form->tree('requestLotteryOption', '选项')
                 ->nodes(LotteryOption::all()->toArray()) // 设置所有节点
                 ->setTitleColumn('title')
@@ -121,8 +120,6 @@ class RequestController extends AdminController
                     if (!$v) return [];
                     return array_column($v, 'id');
                 })->required();
-
-            $form->switch('status')->default(1);
 
             $form->number('bet_base_amount_rules')->rules(['required', 'numeric', 'min:2', 'lt:bet_total_amount_rules',])->required();
             $form->number('bet_total_amount_rules')->rules('required|min:10|numeric')->required();

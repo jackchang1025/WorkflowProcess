@@ -57,14 +57,16 @@ class CreateBetAmountTask extends ServiceTask
     private function executeService(TokenInterface $token): bool
     {
         /**
-         * @var Request $instance
+         * @var Request $request
          */
 
         $request = $token->getInstance()->getDataStore()->getData('request');
 
-        $this->formalExpression->setBpmnElement($this->getBpmnElement());
+        $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
 
-        $request->current_bet_amount_rule = $this->formalExpression->evaluates($request);
+        $request->current_bet_amount_rule = $this->formalExpression->evaluates($request,$extensionProperties);
+
+        Log::info('current_bet_amount_rule ===>' . $request->current_bet_amount_rule);
 
         return true;
     }

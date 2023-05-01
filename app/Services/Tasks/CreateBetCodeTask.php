@@ -31,6 +31,7 @@ class CreateBetCodeTask extends ServiceTask
 //            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
         ];
     }
+
     /**
      * 执行服务任务。首先尝试执行服务任务实现（通过 executeService() 方法），如果执行成功，调用 complete() 方法完成任务；否则，将令牌设置为失败状态
      * @param TokenInterface $token
@@ -59,19 +60,22 @@ class CreateBetCodeTask extends ServiceTask
     private function executeService(TokenInterface $token): bool
     {
         /**
-         * @var Request $instance
+         * @var Request $request
          */
-
         $request = $token->getInstance()->getDataStore()->getData('request');
 
-        $this->formalExpression->setBpmnElement($this->getBpmnElement());
 
-        $response = $this->formalExpression->evaluates($request);
-        if ($response === false) {
+        $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
+
+        $response = $this->formalExpression->evaluates($request, $extensionProperties);
+
+        if (empty($response)) {
             return false;
         }
-        $request->current_bet_code_rule = $response[0];
 
+        $request->current_bet_code_rule = $response[1];
+
+        Log::info('current_bet_code_rule ===>' . $request->current_bet_code_rule);
         return true;
     }
 

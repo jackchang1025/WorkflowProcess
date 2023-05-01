@@ -8,12 +8,12 @@ class Expression implements ExpressionInterface
     /**
      * @param string $expression
      * @param $dataStore
-     * @return bool
+     * @return mixed
      */
-    public function evaluate(string $expression, $dataStore = null): bool
+    public function evaluate(string $expression, $dataStore = null): mixed
     {
         // 使用正则表达式查找变量并替换为 $dataStore
-        $replacedExpression = preg_replace('/\$[a-zA-Z_][a-zA-Z0-9_]*/', '$dataStore', $expression);
+        $replacedExpression = preg_replace('/\$[a-zA-Z_][a-zA-Z0-9_]*/', $dataStore, $expression);
 
         try {
 

@@ -64,19 +64,6 @@ class BpmnDocumentService extends BpmnDocument
         $attributes = $this->attributes($startEvent);
 
         $attributes['name']         = $rootElement->getAttribute('name');
-        $attributes['isExecutable'] = $rootElement->getAttribute('isExecutable') == 'true';
-
-        validator($attributes, [
-            'name'             => 'required',
-            'isExecutable'     => 'required|boolean',
-            'lottery_id'       => 'required',
-            'lottery_option'   => 'required',
-            'base_bet_amount'  => 'required|integer',
-            'total_bet_amount' => 'required|integer',
-        ])->validate();
-
-        $lottery = Lottery::findOrFail($attributes['lottery_id']);
-        throw_if(!$lottery->status, ValidationException::withMessages(['lottery_id' => '彩种未开启']));
 
         return $attributes;
     }

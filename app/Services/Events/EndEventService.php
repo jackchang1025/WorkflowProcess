@@ -4,17 +4,17 @@ namespace App\Services\Events;
 
 
 use Illuminate\Support\Facades\Log;
+use ProcessMaker\Nayra\Bpmn\Models\EndEvent;
 use ProcessMaker\Nayra\Bpmn\StartEventTrait;
 use ProcessMaker\Nayra\Contracts\Bpmn\MessageListenerInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\StartEventInterface;
 use ProcessMaker\Nayra\Contracts\Engine\ExecutionInstanceInterface;
 
 
-class StartEventService implements StartEventInterface, MessageListenerInterface
+class EndEventService extends EndEvent
 {
-    use StartEventTrait;
 
-    const TAG_NAME = 'startEvent';
+    const TAG_NAME = 'endEvent';
 
     public function start(ExecutionInstanceInterface $instance): EndEventService|static
     {

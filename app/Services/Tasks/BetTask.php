@@ -2,14 +2,12 @@
 
 namespace App\Services\Tasks;
 
-use App\Services\Events\ServiceTaskActivatedEvent;
+use App\Models\Request;
 use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\ActivityTrait;
 use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
 use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
-use ProcessMaker\Nayra\Contracts\Bpmn\ServiceTaskInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\TokenInterface;
-use ProcessMaker\Nayra\Contracts\Engine\ExecutionInstanceInterface;
 
 class BetTask extends ServiceTask
 {
@@ -24,7 +22,7 @@ class BetTask extends ServiceTask
     protected function getBpmnEventClasses(): array
     {
         return [
-            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
+//            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
         ];
     }
 
@@ -56,18 +54,48 @@ class BetTask extends ServiceTask
      */
     private function executeService(TokenInterface $token): bool
     {
-        // 在这里实现您的远程请求接口逻辑，例如发送 HTTP 请求
+        /**
+         * @var Request $request
+         */
+        $request = $token->getInstance()->getDataStore()->getData('request');
 
-        $dataStore = $token->getInstance()->getDataStore();
+        $lotteryManage = $request->lotteryManage();
 
-        $model = $dataStore->getData('model');
+        //实时数据
+        if ($request->code_type == Request::CODE_TYPE_PRODUCTION) {
+            //开始投注 金额单位分
+            $lotteryManage->lotteryBet($request->current_issue, $request->current_bet_code_rule, $request->current_bet_amount_rule * 100);
+        }
 
-        $model->bet_lottery_rule += 1;
+        //投注总次数
+        $request->bet_count_rules++;
 
-        $model->bet_tatal_code_rule .= $model->bet_code_rule;
+        //投注规则
+        $request->bet_code_rules .= $request->current_bet_code_rule;
+
+        //投注金额规则
+        $request->bet_amount_rules .= ',' . $request->current_bet_amount_rule;
+
+//        //当前投注单选项id
+//        $lotteryOption = $this->betOrder->betOrderLotteryOption->where('value', $currentBetCode)->first();
+
+        //减去总金额
+        $request->bet_total_amount_rules -= $request->current_bet_amount_rule;
+
+        //获取玩法规则
+        $odds = $request->requestLotteryOption()->where('value', $request->current_bet_code_rule)->value('odds');
+
+        //生成投注单投注日志
+        $requestLog = $request->requestLog()->create([
+            'issue'            => $request->current_issue,
+            'bet_code'         => $request->current_bet_code_rule,
+            'bet_amount'       => $request->current_bet_amount_rule,
+            'bet_total_amount' => $request->bet_total_amount_rules,
+            'bet_code_odds'    => $odds,
+        ]);
+
+        Log::info('生成投注单投注日志', ['betOrderLogBettingLog' => $requestLog]);
 
         return true;
     }
-
-
 }

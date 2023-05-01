@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int $lottery_option_id lottery_option_id
  * @property int $lottery_id lottery_id
  * @property int $code_type 类型
- * @property int $status 状态
+ * @property string $status 状态
  * @property array $lottery_rules 开奖规则
  * @property int|null $lottery_count_rules 开奖总次数规则
  * @property int|null $bet_base_amount_rules 基础投注金额规则
@@ -30,6 +30,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property string|null $win_lose_rules 输赢规则
  * @property int|null $continuous_lose_count_rules 连续输次数规则
  * @property int|null $continuous_win_count_rules 连续赢次数规则
+ * @property string|null $current_bet_code_rule 当前投注号码规则
+ * @property int|null $current_bet_amount_rule 当前投注金额规则
+ * @property string|null $current_issue 当前期号
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Request newModelQuery()
@@ -86,11 +89,19 @@ class Request extends Model
     ];
 
     protected $attributes = [
-        'lottery_rules' => [],
+//        'lottery_rules' => [],
+        'win_lose_rules' => '1',
     ];
 
     protected $casts = [
-        'lottery_rules' => 'array',
+        'lottery_rules' => 'json',
+    ];
+
+    // 定义需要排除的字段
+    protected array $excludeFieldsOnSave = [
+        'current_bet_code_rule',
+        'current_bet_amount_rule',
+        'current_issue',
     ];
 
     protected $table = 'request';
@@ -139,6 +150,10 @@ class Request extends Model
         self::AND  => '和',
     ];
 
+    const STATUS_PENDING = 'pending';
+    const STATUS_COMPLETED = 'completed';
+    const STATUS_FAILED = 'failed';
+
     /**
      * 彩票选项
      * @return BelongsToMany
@@ -178,10 +193,12 @@ class Request extends Model
      * 添加开奖规则
      * @param string $key
      * @param $value
-     * @return array
+     * @return
      */
-    public function appendLotteryRules(string $key, $value): array
+    public function appendLotteryRules(string $key, $value)
     {
+        return $this->lottery_rules .= $value;
+
         $lotteryRules = $this->lottery_rules ?? [];
 
          empty($lotteryRules[$key]) ? $lotteryRules[$key] = $value : $lotteryRules[$key] .= $value;
@@ -218,6 +235,17 @@ class Request extends Model
     public function totalAmountRulesIncrement(float|int $betAmount): float|int
     {
         return $this->bet_total_amount_rules += $betAmount;
+    }
+
+    public function save(array $options = [])
+    {
+        // 在保存之前移除排除字段
+        foreach ($this->excludeFieldsOnSave as $field) {
+            unset($this->$field);
+        }
+
+        // 调用父类的 save() 方法
+        return parent::save($options);
     }
 
 }

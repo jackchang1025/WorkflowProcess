@@ -103,7 +103,6 @@ class ProcessController extends AdminController
 
         $process = ProcessModel::create([
             'title'    => $attributes['name'],
-            'status'   => $attributes['isExecutable'],
             'bpmn_xml' => $bpmnXml
         ]);
 
@@ -174,7 +173,6 @@ class ProcessController extends AdminController
 
         $process->bpmn_xml = $bpmnXml;
         $process->title    = $attributes['name'];
-        $process->status   = $attributes['isExecutable'];
         $process->save();
 
         return Response::success();

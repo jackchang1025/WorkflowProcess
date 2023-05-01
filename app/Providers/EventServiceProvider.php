@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\ProcessInstanceCompletedEvent;
 use App\Events\ServiceTaskActivatedEvent;
+use App\Listeners\ProcessInstanceCompletedListener;
 use App\Listeners\ServiceTaskActivatedListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -22,6 +24,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         ServiceTaskActivatedEvent::class => [
             ServiceTaskActivatedListener::class,
+        ],
+        ProcessInstanceCompletedEvent::class => [
+            ProcessInstanceCompletedListener::class,
         ],
     ];
 

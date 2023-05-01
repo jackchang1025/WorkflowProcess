@@ -2,11 +2,11 @@
 
 namespace App\Services\Expressions;
 
-use App\Models\Request;
 use Exception;
+use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\FormalExpressionTrait;
-use ProcessMaker\Nayra\Bpmn\Models\DatePeriod;
 use ProcessMaker\Nayra\Contracts\Bpmn\FormalExpressionInterface;
+use ProcessMaker\Nayra\Contracts\Storage\BpmnElementInterface;
 
 /**
  * FormalExpression 类表示 BPMN 中的形式表达式。形式表达式用于表示条件表达式、脚本、规则等。
@@ -64,11 +64,14 @@ class FormalExpression implements FormalExpressionInterface
 
     /**
      * 获取表达式的属性
+     * @param BpmnElementInterface $bpmnElement
      * @return array
      */
-    public function getExtensionProperties(): array
+    public function getExtensionProperties(BpmnElementInterface $bpmnElement): array
     {
-        $extensionElements = $this->getBpmnElement()->parentNode->getElementsByTagNameNS('*', 'extensionElements');
+        $this->extensionProperties = [];
+
+        $extensionElements = $bpmnElement->getElementsByTagNameNS('*', 'extensionElements');
 
         // 获取 extensionElements 的所有 properties
         foreach ($extensionElements as $extensionElement) {
@@ -103,24 +106,22 @@ class FormalExpression implements FormalExpressionInterface
     /**
      * 评估表达式
      * @param $dataStore
+     * @param array $extensionProperties
      * @return mixed
      */
-    public function evaluates($dataStore): mixed
+    public function evaluates($dataStore,array $extensionProperties): mixed
     {
-        if (!empty($extensionProperties = $this->getExtensionProperties())) {
+        foreach ($extensionProperties as $ruleName => $expression) {
 
-            foreach ($extensionProperties as $ruleName => $expression) {
+            if (($data = $dataStore->getAttribute($ruleName)) !== null) {
 
-                if (($data = $dataStore->getAttribute($ruleName)) !== null) {
+                $matchingExpressions = array_filter($this->conditionExpressions, function (ExpressionInterface $conditionExpression) use ($expression) {
 
-                    $matchingExpressions = array_filter($this->conditionExpressions, function (ExpressionInterface $conditionExpression) use ($expression) {
+                    return $conditionExpression->isExpression($expression['value']);
+                });
 
-                        return $conditionExpression->isExpression($expression['value']);
-                    });
-
-                    if ($result = $this->expressionEvaluate($matchingExpressions, $expression['value'], (string) $data)) {
-                        return $result;
-                    }
+                if ($result = $this->expressionEvaluate($matchingExpressions, $expression['value'], (string) $data)) {
+                    return $result;
                 }
             }
         }
@@ -136,6 +137,7 @@ class FormalExpression implements FormalExpressionInterface
     public function expressionEvaluate(array $matchingExpressions,string $expression ,string $data): mixed
     {
         return array_reduce($matchingExpressions, function ($carry, ExpressionInterface $matchingExpression) use ($expression, $data) {
+            Log::info("{$expression} ===> {$data}");
             return $carry ?: $matchingExpression->evaluate($expression, $data);
         }, false);
     }
@@ -163,11 +165,11 @@ class FormalExpression implements FormalExpressionInterface
 
     /**
      * @param $args
-     * @return int|bool|DatePeriod|\DateTime|\DateInterval
+     * @return mixed
      * @throws Exception
      */
-    public function __invoke($args): int|bool|DatePeriod|\DateTime|\DateInterval
+    public function __invoke($args): mixed
     {
-        return $this->evaluates($args['request']);
+        return $this->evaluates($args['request'],$this->getExtensionProperties($this->getBpmnElement()->parentNode));
     }
 }

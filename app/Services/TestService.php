@@ -6,7 +6,7 @@ use App\Services\Engine\BpmnEngine;
 use App\Services\Engine\EventEngine;
 use App\Services\Engine\RepositoryEngine;
 use App\Services\Events\ServiceTaskActivatedEvent;
-use App\Services\Events\StartEventService;
+use App\Services\Events\EndEventService;
 use App\Services\Tasks\BetTask;
 use App\Services\Tasks\CreateBetAmountTask;
 use App\Services\Tasks\CreateBetCodeTask;
@@ -100,9 +100,9 @@ class TestService
         ],
         [
             'namespace' => self::NAMESPACE,
-            'tagName'   => StartEventService::TAG_NAME,
+            'tagName'   => EndEventService::TAG_NAME,
             'mapping'   => [
-                StartEventService::class,
+                EndEventService::class,
                 [
                     FlowNodeInterface::BPMN_PROPERTY_INCOMING       => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_INCOMING]],
                     FlowNodeInterface::BPMN_PROPERTY_OUTGOING       => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_OUTGOING]],

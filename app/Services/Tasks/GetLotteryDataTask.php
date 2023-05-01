@@ -76,13 +76,16 @@ class GetLotteryDataTask extends ServiceTask
         $lotteryManage = $request->lotteryManage();
 
         //上一期开奖号码                             //上一期号
-//        $code = $lotteryManage->getLastCode($request->currentIssue = $lotteryManage->getLastIssue());
+//        $code = $lotteryManage->getLastCode($request->current_issue = $lotteryManage->getLastIssue());
 
         $code = rand(1, 6).','.rand(1, 6).','.rand(1, 6);
-        $request->currentIssue = time();
+        $request->current_issue = time();
 
         //开奖总次数
         $request->lottery_count_rules ++;
+
+        //设置默认值
+        $request->win_lose_rules = $request->win_lose_rules ?: '1';
 
 
         //匹配开奖选项 设置开奖规则 父节点title设置为 key
@@ -95,7 +98,7 @@ class GetLotteryDataTask extends ServiceTask
         });
 
         $betOrderLogBettingLogUpdateOrCreate = RequestLog::updateOrCreate(
-            ['request_id' => $request->id, 'issue' => $request->currentIssue],
+            ['request_id' => $request->id, 'issue' => $request->current_issue],
             ['lottery_code' => $code]
         );
 
