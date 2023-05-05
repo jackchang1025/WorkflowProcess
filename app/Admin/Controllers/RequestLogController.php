@@ -18,10 +18,14 @@ class RequestLogController extends AdminController
     protected function grid()
     {
         return Grid::make(new RequestLog(), function (Grid $grid) {
+
+            $grid->model()->orderBy('id', 'desc');
+
             $grid->column('id')->sortable();
             $grid->column('request_id');
             $grid->column('issue');
             $grid->column('bet_code');
+            $grid->column('bet_code_transform_value','value');
             $grid->column('bet_code_odds');
             $grid->column('lottery_code');
             $grid->column('bet_amount');
@@ -29,10 +33,10 @@ class RequestLogController extends AdminController
             $grid->column('win_lose');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -78,7 +82,7 @@ class RequestLogController extends AdminController
             $form->text('bet_amount');
             $form->text('bet_total_amount');
             $form->text('win_lose');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });

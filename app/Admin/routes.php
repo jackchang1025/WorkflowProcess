@@ -7,6 +7,8 @@ use App\Admin\Controllers\LotteryOptionController;
 use App\Admin\Controllers\ProcessController;
 use App\Admin\Controllers\RequestController;
 use App\Admin\Controllers\RequestLogController;
+use App\Admin\Controllers\RequestStatisticsController;
+use App\Admin\Controllers\RuleController;
 use App\Admin\Controllers\TokenController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +28,11 @@ Route::group([
     Route::resource('request', RequestController::class);
 
     Route::post('process/run', [ProcessController::class, 'run'])->name('process.run');
+
     Route::get('process/dispatch/{id}', [ProcessController::class, 'dispatch'])->name('process.dispatch');
+
+    Route::get('request_statistics/getData/{id}', [RequestStatisticsController::class, 'getData'])->name('request_statistics.getData');
+    Route::get('request_statistics/show/{id}', [RequestStatisticsController::class, 'show'])->name('request_statistics.show');
 
     Route::resource('process', ProcessController::class);
     Route::resource('request_log', RequestLogController::class);
@@ -34,4 +40,5 @@ Route::group([
     Route::resource('lottery', LotteryController::class);
     Route::resource('token', TokenController::class);
     Route::resource('lottery_option', LotteryOptionController::class);
+    Route::resource('rule', RuleController::class);
 });

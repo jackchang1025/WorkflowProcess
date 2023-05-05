@@ -5,6 +5,7 @@ namespace App\Models;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 /**
@@ -14,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $request_id request_id
  * @property string $issue 期号
  * @property string|null $bet_code 投注号码
+ * @property string|null $bet_code_transform_value 投注号码转换值
  * @property string|null $bet_code_odds 投注号码赔率
  * @property string|null $lottery_code 开奖号码
  * @property string|null $bet_amount 投注金额
@@ -43,6 +45,20 @@ class RequestLog extends Model
 
     protected $table = 'request_log';
 
+    protected $casts = [
+        'bet_total_amount'=>'integer',
+    ];
+
+//    public function getBetTotalAmountAttribute($key): int
+//    {
+//        return (int) $key;
+//    }
+//
+//    public function getBetAmountAttribute($key): int
+//    {
+//        return (int) $key;
+//    }
+
     protected $fillable = [
         'request_id',
         'issue',
@@ -52,5 +68,11 @@ class RequestLog extends Model
         'bet_amount',
         'bet_total_amount',
         'win_lose',
+        'bet_code_transform_value'
     ];
+
+    public function request(): BelongsTo
+    {
+        return $this->belongsTo(Request::class);
+    }
 }

@@ -8,6 +8,7 @@ use App\Services\Engine\BpmnEngine;
 use App\Services\Engine\EventEngine;
 use App\Services\Engine\RepositoryEngine;
 use App\Services\Events\EndEventService;
+use App\Services\Events\StartEventService;
 use App\Services\Tasks\BetTask;
 use App\Services\Tasks\CreateBetAmountTask;
 use App\Services\Tasks\CreateBetCodeTask;
@@ -18,6 +19,7 @@ use ProcessMaker\Nayra\Bpmn\Models\Process;
 use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\EndEventInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\EventDefinitionInterface;
+use ProcessMaker\Nayra\Contracts\Bpmn\EventInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\FlowNodeInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\LoopCharacteristicsInterface;
 use ProcessMaker\Nayra\Storage\BpmnDocument;
@@ -98,9 +100,21 @@ class ProcessService
             'mapping'   => [
                 EndEventService::class,
                 [
-                    FlowNodeInterface::BPMN_PROPERTY_INCOMING => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_INCOMING]],
-                    FlowNodeInterface::BPMN_PROPERTY_OUTGOING => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_OUTGOING]],
+                    FlowNodeInterface::BPMN_PROPERTY_INCOMING          => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_INCOMING]],
+                    FlowNodeInterface::BPMN_PROPERTY_OUTGOING          => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_OUTGOING]],
                     EndEventInterface::BPMN_PROPERTY_EVENT_DEFINITIONS => ['n', EventDefinitionInterface::class],
+                ],
+            ]
+        ],
+        [
+            'namespace' => self::NAMESPACE,
+            'tagName'   => StartEventService::TAG_NAME,
+            'mapping'   => [
+                StartEventService::class,
+                [
+                    FlowNodeInterface::BPMN_PROPERTY_INCOMING       => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_INCOMING]],
+                    FlowNodeInterface::BPMN_PROPERTY_OUTGOING       => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_OUTGOING]],
+                    EventInterface::BPMN_PROPERTY_EVENT_DEFINITIONS => ['n', EventDefinitionInterface::class],
                 ],
             ]
         ],
@@ -153,51 +167,44 @@ class ProcessService
         $executionInstanceInterface = $process->call($dataStore);
 
 
-        $process->getDispatcher()->listen('ServiceTaskActivated',function (string $event, $payload){
+        $process->getDispatcher()->listen('ServiceTaskActivated', function (string $event, $payload) {
 
             event(new \App\Events\ServiceTaskActivatedEvent($payload[0], $payload[1]));
 
-            Log::info("{$event} ===> ".$payload[1]->getProperty('id') ?? "");
+            Log::info("{$event} ===> " . $payload[1]->getProperty('id') ?? "");
         });
 
 
-//ThrowEventTokenArrives  ProcessInstanceCompleted
-        $process->getDispatcher()->listen('GatewayActivated',function (string $event, $payload){
+        $process->getDispatcher()->listen('GatewayActivated', function (string $event, $payload) {
 
-            Log::info("{$event} ===> ".$payload[0]->getProperty('id') ?? "");
-        });
-//
-//        $process->getDispatcher()->listen('BeforeTransit',function (string $event, $payload){
-//            dump(
-//                $event,
-//                $payload
-//            );
-//
-//        });//\ProcessMaker\Nayra\Bpmn\ConditionedExclusiveTransition  ConditionedTransition
-//
-        $process->getDispatcher()->listen('ConditionedTransition',function (string $event, $payload){
-
-            Log::info("{$event} ===> ".$payload[1]->getProperty('id') ?? "");
+            Log::info("{$event} ===> " . $payload[0]->getProperty('id') ?? "");
         });
 
-        $process->getDispatcher()->listen('ProcessInstanceCompleted',function ($event, \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent $payload){
+        $process->getDispatcher()->listen('ConditionedTransition', function (string $event, $payload) {
+
+            Log::info("{$event} ===> " . $payload[1]->getProperty('id') ?? "");
+        });
+
+        $process->getDispatcher()->listen('ProcessInstanceCompleted', function ($event, \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent $payload) {
 
             Log::info("end");
 
             event(new ProcessInstanceCompletedEvent($payload));
         });
 
-        $this->bpmnEngine->runToNextState();
+
+        try {
+
+            $this->bpmnEngine->runToNextState();
+
+        } catch (\Exception $e) {
+
+            Log::error($e->getMessage());
+
+            event(new ProcessInstanceCompletedEvent(new \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent($process,$executionInstanceInterface)));
+        }
 
         return $this->bpmnEngine;
-    }
-
-    public function run(string $xml)
-    {
-        $this->bpmnDocument->loadXML($xml);
-
-        $this->replaceBpmElement();
-
     }
 
     public function registerBpmnElementMappings(): void

@@ -61,6 +61,7 @@ class GetLotteryDataTask extends ServiceTask
      * 服务任务执行器，用于执行服务任务的实现。这里的实现仅用于测试目的。这个方法尝试调用服务任务的实现，如果调用成功返回 true，否则返回 false。
      * @param TokenInterface $token
      * @return bool
+     * @throws \Throwable
      */
     private function executeService(TokenInterface $token): bool
     {
@@ -72,14 +73,20 @@ class GetLotteryDataTask extends ServiceTask
          */
         $request = $dataStore->getData('request');
 
-
         $lotteryManage = $request->lotteryManage();
 
-        //上一期开奖号码                             //上一期号
-//        $code = $lotteryManage->getLastCode($request->current_issue = $lotteryManage->getLastIssue());
+        sleep($lotteryManage->sleep());
 
-        $code = rand(1, 6).','.rand(1, 6).','.rand(1, 6);
-        $request->current_issue = time();
+        $lotteryLastInfo = $lotteryManage->lotteryLastInfo();
+
+        throw_if(!$lotteryLastInfo, new \Exception('获取上次开奖数据失败'));
+
+        //上一期开奖号码                             //上一期号
+        $code = $lotteryLastInfo['openNum'];
+        $request->last_issue = $lotteryLastInfo['issue'];
+
+        Log::info("上一期开奖期号 ===> {$request->last_issue}");
+        Log::info("上一期开奖号码 ===> {$code}");
 
         //开奖总次数
         $request->lottery_count_rules ++;
@@ -97,9 +104,11 @@ class GetLotteryDataTask extends ServiceTask
             $request->appendLotteryRules($item->parentNode->title ?? $item->title, $item->value);
         });
 
+        Log::info("开奖规则 ===> {$request->lottery_rules}");
+
         $betOrderLogBettingLogUpdateOrCreate = RequestLog::updateOrCreate(
-            ['request_id' => $request->id, 'issue' => $request->current_issue],
-            ['lottery_code' => $code]
+            ['request_id' => $request->id, 'issue' => $request->last_issue],
+            ['lottery_code' => $code, 'bet_code_transform_value' => $validateLotteryOption->value('value'),'bet_total_amount' => $request->bet_total_amount_rules]
         );
 
         if (!$betOrderLogBettingLogUpdateOrCreate->wasRecentlyCreated && $betOrderLogBettingLogUpdateOrCreate->bet_code) {
@@ -126,9 +135,14 @@ class GetLotteryDataTask extends ServiceTask
                 $request->continuous_win_count_rules = 0;
                 $request->continuous_lose_count_rules ++;
             }
+
             //保持投注单日志表
             $betOrderLogBettingLogUpdateOrCreate->lottery_code = $code;
             $betOrderLogBettingLogUpdateOrCreate->save();
+
+            Log::info("输赢规则 ===> {$request->win_lose_rules}");
+            Log::info("连续输规则 ===> {$request->continuous_lose_count_rules}");
+            Log::info("连续赢规则 ===> {$request->continuous_win_count_rules}");
         }
 
         return true;

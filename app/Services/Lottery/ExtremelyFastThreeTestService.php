@@ -2,12 +2,12 @@
 
 namespace App\Services\Lottery;
 
-use App\Services\Lottery\IssueInterFace;
+use App\Services\Lottery\LotteryInterFace;
 use Exception;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
 
-class ExtremelyFastThreeTestService extends AbstractLotteryService implements IssueInterFace
+class ExtremelyFastThreeTestService extends AbstractLotteryService implements LotteryInterFace
 {
     protected Collection $lottery;
 
@@ -24,9 +24,9 @@ class ExtremelyFastThreeTestService extends AbstractLotteryService implements Is
 
         $lotteryHistoryOpenInfo = $this->lotteryHistoryOpenInfo(5000);
 
-        throw_unless(
-            $this->lottery = !empty($lotteryHistoryOpenInfo['data']['historyList']) ? collect($lotteryHistoryOpenInfo['data']['historyList']) : null,
-            new Exception('获取彩票数据为空'));
+        throw_if(empty($lotteryHistoryOpenInfo['data']['historyList']),new Exception('获取彩票数据为空'));
+
+        $this->lottery = collect($lotteryHistoryOpenInfo['data']['historyList']);
     }
 
     /**
@@ -34,30 +34,11 @@ class ExtremelyFastThreeTestService extends AbstractLotteryService implements Is
      * @return mixed
      * @throws Exception|\Throwable
      */
-    public function issueLastOpenInfo(): mixed
+    public function lotteryLastInfo(): mixed
     {
-        return $this->lastLottery ?: throw_unless($this->lastLottery = $this->lottery->pop(),new Exception('获取最后期号为空'));
+        return $this->lottery->pop();
     }
 
-    /**
-     * 获取最后期号
-     * @return mixed|string
-     * @throws \Throwable
-     */
-    public function getLastIssue(): mixed
-    {
-        return throw_unless($this->issueLastOpenInfo()['issue'] ?? false,new Exception('获取最后期号为空'));
-    }
-
-    /**
-     * 获取最后开奖号码
-     * @return mixed|string
-     * @throws \Throwable
-     */
-    public function getLastCode(): mixed
-    {
-        return throw_unless($this->issueLastOpenInfo()['openNum'] ?? false,new Exception('获取最后开奖号码为空'));
-    }
 
     /**
      * 获取当前期数信息
@@ -66,18 +47,9 @@ class ExtremelyFastThreeTestService extends AbstractLotteryService implements Is
      */
     public function lotteryCurrentInfo(): mixed
     {
-        return $this->currentLottery ?: throw_unless($this->currentLottery = $this->lottery->last(),new Exception('获取当前期数信息为空'));
+        return $this->lottery->last();
     }
 
-    /**
-     * 获取当前期数
-     * @return int
-     * @throws \Throwable
-     */
-    public function currentIssue(): int
-    {
-        return throw_unless($this->lotteryCurrentInfo()['issue'] ?? null,new Exception('获取当前期数为空'));
-    }
 
     public function beginTime(): int
     {

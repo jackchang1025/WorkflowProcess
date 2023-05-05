@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-use App\Services\Lottery\IssueInterFace;
-use App\Services\Lottery\LotteryManger;
+use App\Providers\LotteryServiceProvider;
+use App\Services\Lottery\LotteryInterFace;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
-
-use Illuminate\Contracts\Container\Container;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -16,6 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  *
  * @property int $id
  * @property string $bpmn_xml bpmn_xml
+ * @property string $title 名称
  * @property int $lottery_option_id lottery_option_id
  * @property int $lottery_id lottery_id
  * @property int $code_type 类型
@@ -24,6 +23,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int|null $lottery_count_rules 开奖总次数规则
  * @property int|null $bet_base_amount_rules 基础投注金额规则
  * @property int|null $bet_total_amount_rules 总投注金额规则
+ * @property int|null $total_amount_rules 总金额规则
  * @property string|null $bet_amount_rules 投注金额规则
  * @property string|null $bet_code_rules 投注号码规则
  * @property int|null $bet_count_rules 投注次数规则
@@ -33,6 +33,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property string|null $current_bet_code_rule 当前投注号码规则
  * @property int|null $current_bet_amount_rule 当前投注金额规则
  * @property string|null $current_issue 当前期号
+ * @property string|null $last_issue 上一期号
+ * @property int|null $token_id token id
+ * @property-read int|null $request_lottery_option_count
+ * @property-read int|null $request_log_count
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Request newModelQuery()
@@ -56,14 +60,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereWinLoseRules($value)
- * @property int|null $token_id token id
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereTokenId($value)
  * @property-read \App\Models\Lottery|null $lottery
  * @property-read \App\Models\Token|null $token
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RequestLog> $requestLog
- * @property-read int|null $request_log_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\LotteryOption> $requestLotteryOption
- * @property-read int|null $request_lottery_option_count
  * @mixin \Eloquent
  */
 class Request extends Model
@@ -72,6 +73,7 @@ class Request extends Model
 
     protected $fillable = [
         'bpmn_xml',
+        'title',
         'lottery_option_id',
         'lottery_id',
         'code_type',
@@ -90,7 +92,7 @@ class Request extends Model
 
     protected $attributes = [
 //        'lottery_rules' => [],
-        'win_lose_rules' => '1',
+'win_lose_rules' => '1',
     ];
 
     protected $casts = [
@@ -102,6 +104,7 @@ class Request extends Model
         'current_bet_code_rule',
         'current_bet_amount_rule',
         'current_issue',
+        'last_issue',
     ];
 
     protected $table = 'request';
@@ -142,8 +145,8 @@ class Request extends Model
 
 
     const LOSE = 0;
-    const WIN  = 1;
-    const AND  = 3;
+    const WIN = 1;
+    const AND = 3;
     static array $winOrLost = [
         self::WIN  => '赢',
         self::LOSE => '输',
@@ -153,6 +156,12 @@ class Request extends Model
     const STATUS_PENDING = 'pending';
     const STATUS_COMPLETED = 'completed';
     const STATUS_FAILED = 'failed';
+
+    static array $status = [
+        self::STATUS_PENDING   => '执行中',
+        self::STATUS_COMPLETED => '已完成',
+        self::STATUS_FAILED    => '执行失败',
+    ];
 
     /**
      * 彩票选项
@@ -178,15 +187,29 @@ class Request extends Model
         return $this->hasMany(RequestLog::class);
     }
 
-    public function lotteryManage(): IssueInterFace
+    public function lotteryManage(): LotteryInterFace
     {
-        return (new LotteryManger(app(container::class), [
+        return app(LotteryServiceProvider::class, [
             'url_address' => $this->lottery->url,
             'token'       => $this->token->token,
             'lottery_id'  => $this->lottery->lottery_id,
             'version'     => $this->lottery->version,
             'code_type'   => $this->code_type,
-        ]))->driver($this->lottery->lotteryGroup->driver_type);
+        ]);
+    }
+
+    /**
+     * 上一次投注金额
+     * @return int|null
+     */
+    public function getLastBetAmountRulesAttribute(): ?int
+    {
+        if (empty($this->bet_amount_rules)) {
+            return $this->bet_base_amount_rules;
+        }
+
+        $betAmountRules = explode(',', $this->bet_amount_rules);
+        return $betAmountRules[count($betAmountRules) - 1];
     }
 
     /**
@@ -201,10 +224,11 @@ class Request extends Model
 
         $lotteryRules = $this->lottery_rules ?? [];
 
-         empty($lotteryRules[$key]) ? $lotteryRules[$key] = $value : $lotteryRules[$key] .= $value;
+        empty($lotteryRules[$key]) ? $lotteryRules[$key] = $value : $lotteryRules[$key] .= $value;
 
-         return $this->lottery_rules = $lotteryRules;
+        return $this->lottery_rules = $lotteryRules;
     }
+
     /**
      * 输赢规则
      * @param string $value

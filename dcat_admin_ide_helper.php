@@ -55,6 +55,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection describe
      * @property Grid\Column|Collection deleted_at
      * @property Grid\Column|Collection driver_type
+     * @property Grid\Column|Collection rule
+     * @property Grid\Column|Collection odds
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection tokenable_type
@@ -63,7 +65,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection last_used_at
      * @property Grid\Column|Collection expires_at
      * @property Grid\Column|Collection bpmn_xml
-     * @property Grid\Column|Collection lottery_option_id
      * @property Grid\Column|Collection token_id
      * @property Grid\Column|Collection code_type
      * @property Grid\Column|Collection lottery_rules
@@ -76,14 +77,17 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection win_lose_rules
      * @property Grid\Column|Collection continuous_lose_count_rules
      * @property Grid\Column|Collection continuous_win_count_rules
+     * @property Grid\Column|Collection total_amount_rules
      * @property Grid\Column|Collection request_id
      * @property Grid\Column|Collection issue
      * @property Grid\Column|Collection bet_code
+     * @property Grid\Column|Collection bet_code_transform_value
      * @property Grid\Column|Collection bet_code_odds
      * @property Grid\Column|Collection lottery_code
      * @property Grid\Column|Collection bet_amount
      * @property Grid\Column|Collection bet_total_amount
      * @property Grid\Column|Collection win_lose
+     * @property Grid\Column|Collection lottery_option_id
      * @property Grid\Column|Collection email_verified_at
      *
      * @method Grid\Column|Collection id(string $label = null)
@@ -130,6 +134,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection describe(string $label = null)
      * @method Grid\Column|Collection deleted_at(string $label = null)
      * @method Grid\Column|Collection driver_type(string $label = null)
+     * @method Grid\Column|Collection rule(string $label = null)
+     * @method Grid\Column|Collection odds(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection tokenable_type(string $label = null)
@@ -138,7 +144,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection last_used_at(string $label = null)
      * @method Grid\Column|Collection expires_at(string $label = null)
      * @method Grid\Column|Collection bpmn_xml(string $label = null)
-     * @method Grid\Column|Collection lottery_option_id(string $label = null)
      * @method Grid\Column|Collection token_id(string $label = null)
      * @method Grid\Column|Collection code_type(string $label = null)
      * @method Grid\Column|Collection lottery_rules(string $label = null)
@@ -151,14 +156,17 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection win_lose_rules(string $label = null)
      * @method Grid\Column|Collection continuous_lose_count_rules(string $label = null)
      * @method Grid\Column|Collection continuous_win_count_rules(string $label = null)
+     * @method Grid\Column|Collection total_amount_rules(string $label = null)
      * @method Grid\Column|Collection request_id(string $label = null)
      * @method Grid\Column|Collection issue(string $label = null)
      * @method Grid\Column|Collection bet_code(string $label = null)
+     * @method Grid\Column|Collection bet_code_transform_value(string $label = null)
      * @method Grid\Column|Collection bet_code_odds(string $label = null)
      * @method Grid\Column|Collection lottery_code(string $label = null)
      * @method Grid\Column|Collection bet_amount(string $label = null)
      * @method Grid\Column|Collection bet_total_amount(string $label = null)
      * @method Grid\Column|Collection win_lose(string $label = null)
+     * @method Grid\Column|Collection lottery_option_id(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
     class Grid {}
@@ -210,6 +218,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection describe
      * @property Show\Field|Collection deleted_at
      * @property Show\Field|Collection driver_type
+     * @property Show\Field|Collection rule
+     * @property Show\Field|Collection odds
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
      * @property Show\Field|Collection tokenable_type
@@ -218,7 +228,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection last_used_at
      * @property Show\Field|Collection expires_at
      * @property Show\Field|Collection bpmn_xml
-     * @property Show\Field|Collection lottery_option_id
      * @property Show\Field|Collection token_id
      * @property Show\Field|Collection code_type
      * @property Show\Field|Collection lottery_rules
@@ -231,14 +240,17 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection win_lose_rules
      * @property Show\Field|Collection continuous_lose_count_rules
      * @property Show\Field|Collection continuous_win_count_rules
+     * @property Show\Field|Collection total_amount_rules
      * @property Show\Field|Collection request_id
      * @property Show\Field|Collection issue
      * @property Show\Field|Collection bet_code
+     * @property Show\Field|Collection bet_code_transform_value
      * @property Show\Field|Collection bet_code_odds
      * @property Show\Field|Collection lottery_code
      * @property Show\Field|Collection bet_amount
      * @property Show\Field|Collection bet_total_amount
      * @property Show\Field|Collection win_lose
+     * @property Show\Field|Collection lottery_option_id
      * @property Show\Field|Collection email_verified_at
      *
      * @method Show\Field|Collection id(string $label = null)
@@ -285,6 +297,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection describe(string $label = null)
      * @method Show\Field|Collection deleted_at(string $label = null)
      * @method Show\Field|Collection driver_type(string $label = null)
+     * @method Show\Field|Collection rule(string $label = null)
+     * @method Show\Field|Collection odds(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection tokenable_type(string $label = null)
@@ -293,7 +307,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection last_used_at(string $label = null)
      * @method Show\Field|Collection expires_at(string $label = null)
      * @method Show\Field|Collection bpmn_xml(string $label = null)
-     * @method Show\Field|Collection lottery_option_id(string $label = null)
      * @method Show\Field|Collection token_id(string $label = null)
      * @method Show\Field|Collection code_type(string $label = null)
      * @method Show\Field|Collection lottery_rules(string $label = null)
@@ -306,14 +319,17 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection win_lose_rules(string $label = null)
      * @method Show\Field|Collection continuous_lose_count_rules(string $label = null)
      * @method Show\Field|Collection continuous_win_count_rules(string $label = null)
+     * @method Show\Field|Collection total_amount_rules(string $label = null)
      * @method Show\Field|Collection request_id(string $label = null)
      * @method Show\Field|Collection issue(string $label = null)
      * @method Show\Field|Collection bet_code(string $label = null)
+     * @method Show\Field|Collection bet_code_transform_value(string $label = null)
      * @method Show\Field|Collection bet_code_odds(string $label = null)
      * @method Show\Field|Collection lottery_code(string $label = null)
      * @method Show\Field|Collection bet_amount(string $label = null)
      * @method Show\Field|Collection bet_total_amount(string $label = null)
      * @method Show\Field|Collection win_lose(string $label = null)
+     * @method Show\Field|Collection lottery_option_id(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */
     class Show {}

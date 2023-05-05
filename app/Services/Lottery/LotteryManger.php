@@ -46,10 +46,10 @@ class LotteryManger extends Manager
 
     /**
      *
-     * @return IssueInterFace|ExtremelyFastThreeTestService|ExtremelyFastThreeService
+     * @return LotteryInterFace|ExtremelyFastThreeTestService|ExtremelyFastThreeService
      * @throws \Throwable
      */
-    public function createExtremelyFastThreeDriver(): IssueInterFace|ExtremelyFastThreeTestService|ExtremelyFastThreeService
+    public function createExtremelyFastThreeDriver(): LotteryInterFace|ExtremelyFastThreeTestService|ExtremelyFastThreeService
     {
         if ($this->config['code_type'] == Request::CODE_TYPE_HISTORY) {
             return new ExtremelyFastThreeTestService(

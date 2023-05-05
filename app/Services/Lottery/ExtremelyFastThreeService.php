@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Throwable;
 
-class ExtremelyFastThreeService extends AbstractLotteryService implements IssueInterFace
+class ExtremelyFastThreeService extends AbstractLotteryService implements LotteryInterFace
 {
     protected array $config;
 
@@ -24,61 +24,34 @@ class ExtremelyFastThreeService extends AbstractLotteryService implements IssueI
     /**
      * 获取上一期开奖信息
      * @param int|null $issue
-     * @return Response
+     * @return array
      * @throws Exception|Throwable
      */
-    public function issueLastOpenInfo(int $issue = null): Response
+    public function lotteryLastInfo(int $issue = null): array
     {
-        return $this->lastLottery = $this->lastLottery ?: retry(5, function () use ($issue) {
-            $this->lastLottery = $this->lotteryApi('IssueLastOpenInfo', $issue);
-            $this->getLastIssue();
-            $this->getLastCode();
-            return $this->lastLottery;
+        return retry(5, function () use ($issue) {
+            $response =  $this->lotteryApi('IssueLastOpenInfo', $issue)['data']['lastIssueEntity'];
+
+            throw_if(empty($response['issue']), new Exception('获取上一期开奖期号为空'));
+            throw_if(empty($response['openNum']), new Exception('获取上一期开奖号码为空'));
+
+            return $response;
         }, $this->sleepMilliseconds);
     }
 
-    /**
-     * 获取上一期开奖期号
-     * @return mixed
-     * @throws Exception|Throwable
-     */
-    public function getLastIssue(): mixed
-    {
-        return throw_unless($this->issueLastOpenInfo()['data']['lastIssueEntity']['issue'] ?? null, new Exception('获取上一期开奖期号为空'));
-    }
-
-    /**
-     * 获取上一期开奖号码
-     * @param int|null $issue
-     * @return mixed
-     * @throws Exception|Throwable
-     */
-    public function getLastCode(int $issue = null): mixed
-    {
-        return throw_unless($this->issueLastOpenInfo()['data']['lastIssueEntity']['openNum'] ?? null, new Exception('获取上一期开奖号码为空'));
-    }
 
     /**
      * 获取当前期数信息
-     * @return Response
+     * @return array
      * @throws Exception|Throwable
      */
-    public function lotteryCurrentInfo(): Response
+    public function lotteryCurrentInfo(): array
     {
-        return $this->currentLottery = $this->currentLottery ?: retry(5, function () {
-            return $this->lotteryApi('LotteryCurrentInfo');
+        return retry(5, function () {
+            return $this->lotteryApi('LotteryCurrentInfo')['data'];
         }, $this->sleepMilliseconds);
     }
 
-    /**
-     * 当前期数
-     * @return int
-     * @throws Exception|Throwable
-     */
-    public function currentIssue(): int
-    {
-        return throw_unless($this->lotteryCurrentInfo()['data']['issue'] ?? null, new Exception('获取当前期数为空'));
-    }
 
     /**
      * 当前期数开始时间
@@ -87,10 +60,10 @@ class ExtremelyFastThreeService extends AbstractLotteryService implements IssueI
      */
     public function beginTime(): int
     {
-        return throw_unless(
-            !empty($this->lotteryCurrentInfo()['data']['beginTime']) ? strtotime($this->currentLottery['data']['beginTime']) : null,
-            new Exception('当前期数开始时间为空')
-        );
+        if (empty($beginTime = $this->lotteryCurrentInfo()['beginTime'])){
+            throw new Exception('当前期数开始时间为空');
+        }
+        return strtotime($beginTime);
     }
 
     /**
@@ -100,10 +73,10 @@ class ExtremelyFastThreeService extends AbstractLotteryService implements IssueI
      */
     public function endTime(): int
     {
-        return throw_unless(
-            !empty($this->lotteryCurrentInfo()['data']['endTime']) ? strtotime($this->currentLottery['data']['endTime']) : null,
-            new Exception('当前期数结束时间为空')
-        );
+        if (empty($endTime = $this->lotteryCurrentInfo()['endTime'])){
+            throw new Exception('当前期数开始时间为空');
+        }
+        return strtotime($endTime);
     }
 
     /**

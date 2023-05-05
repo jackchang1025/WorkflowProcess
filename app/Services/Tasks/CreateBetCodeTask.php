@@ -4,6 +4,7 @@ namespace App\Services\Tasks;
 
 use App\Models\Request;
 use App\Services\Expressions\FormalExpression;
+use Exception;
 use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\ActivityTrait;
 use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
@@ -56,6 +57,7 @@ class CreateBetCodeTask extends ServiceTask
      * 服务任务执行器，用于执行服务任务的实现。这里的实现仅用于测试目的。这个方法尝试调用服务任务的实现，如果调用成功返回 true，否则返回 false。
      * @param TokenInterface $token
      * @return bool
+     * @throws \Throwable
      */
     private function executeService(TokenInterface $token): bool
     {
@@ -64,18 +66,15 @@ class CreateBetCodeTask extends ServiceTask
          */
         $request = $token->getInstance()->getDataStore()->getData('request');
 
-
         $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
 
         $response = $this->formalExpression->evaluates($request, $extensionProperties);
 
-        if (empty($response)) {
-            return false;
-        }
+        throw_if(empty($response), new Exception('获取投注号码失败'));
 
         $request->current_bet_code_rule = $response[1];
 
-        Log::info('current_bet_code_rule ===>' . $request->current_bet_code_rule);
+        Log::info('current_bet_code_rule ===> ' . $request->current_bet_code_rule);
         return true;
     }
 

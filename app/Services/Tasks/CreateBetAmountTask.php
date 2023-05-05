@@ -53,6 +53,7 @@ class CreateBetAmountTask extends ServiceTask
      * 服务任务执行器，用于执行服务任务的实现。这里的实现仅用于测试目的。这个方法尝试调用服务任务的实现，如果调用成功返回 true，否则返回 false。
      * @param TokenInterface $token
      * @return bool
+     * @throws \Throwable
      */
     private function executeService(TokenInterface $token): bool
     {
@@ -65,6 +66,9 @@ class CreateBetAmountTask extends ServiceTask
         $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
 
         $request->current_bet_amount_rule = $this->formalExpression->evaluates($request,$extensionProperties);
+
+        //投注金额大于总金额
+        throw_if($request->current_bet_amount_rule > $request->bet_total_amount_rules, new \Exception("投注金额大于总金额:{$request->current_bet_amount_rule} > {$request->bet_total_amount_rules}"));
 
         Log::info('current_bet_amount_rule ===>' . $request->current_bet_amount_rule);
 

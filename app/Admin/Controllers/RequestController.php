@@ -10,6 +10,7 @@ use App\Models\Process;
 use App\Models\Token;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
+use Dcat\Admin\Grid\Displayers\Actions;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
@@ -24,27 +25,39 @@ class RequestController extends AdminController
     {
         return Grid::make(new Request(['lottery']), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('lottery.title', '彩票')->label();
+            $grid->column('lottery.title', '彩票');
+
+            $grid->column('title', '名称');
 
             $grid->column('code_type')->display(function ($value) {
                 return \App\Models\Request::$codeType[$value] ?? '';
             })->label();
 
             $grid->column('status')->display(function ($value) {
-                return $value == 1 ? '执行中' : '执行完成';
+                return \App\Models\Request::$status[$value] ?? '未知状态';
             })->label();
 
             $grid->column('lottery_count_rules');
             $grid->column('bet_base_amount_rules');
             $grid->column('bet_total_amount_rules');
+            $grid->column('total_amount_rules','总金额');
             $grid->column('bet_count_rules');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
-            $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+            $grid->actions(function (Actions $actions) {
+
+                $editUrl = admin_url("request_statistics/show/{$actions->getKey()}"); // 替换为实际的编辑页面 URL
+                $actions->append("<a href='{$editUrl}' class='grid-row-action'><i class='feather icon-edit'>request statistics</i></a>");
 
             });
+
+            $grid->filter(function (Grid\Filter $filter) {
+                $filter->equal('id');
+            });
+
+            $grid->disableEditButton();
+
         });
     }
 
@@ -89,6 +102,8 @@ class RequestController extends AdminController
         return Form::make(new Request(['requestLotteryOption']), function (Form $form) {
             $form->display('id');
 
+            $form->text('title')->required();
+
             $form->select('lottery_id')->options(function () {
                 return Lottery::all()->pluck('title', 'id');
             })->saving(function ($value) {
@@ -101,8 +116,9 @@ class RequestController extends AdminController
 
             })->saving(function ($value) {
 
-                return Process::findOrFail($value)->value('bpmn_xml');
+                $process = Process::findOrFail($value);
 
+                return $process->bpmn_xml;
             })->required();
 
             $form->select('code_type')->options(\App\Models\Request::$codeType)->required();
@@ -121,15 +137,18 @@ class RequestController extends AdminController
                     return array_column($v, 'id');
                 })->required();
 
-            $form->number('bet_base_amount_rules')->rules(['required', 'numeric', 'min:2', 'lt:bet_total_amount_rules',])->required();
-            $form->number('bet_total_amount_rules')->rules('required|min:10|numeric')->required();
+            $form->number('bet_base_amount_rules')->rules(['required', 'numeric', 'min:2', 'lt:total_amount_rules',])->required();
+            $form->number('total_amount_rules')->rules('required|min:10|numeric')->required();
+            $form->number('bet_total_amount_rules')->rules('required|same:total_amount_rules')->required();
 
             $form->display('created_at');
             $form->display('updated_at');
 
+
             $form->saved(function (Form $form) {
 
-                RequestJob::dispatchSync($form->getKey());
+                RequestJob::dispatch($form->getKey());
+//                RequestJob::dispatchSync($form->getKey());
             });
         });
     }
