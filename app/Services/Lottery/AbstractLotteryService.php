@@ -39,6 +39,8 @@ abstract class AbstractLotteryService
      */
     protected Response|array|null $lastLottery = [];
 
+    public mixed $time;
+
 
     /**
      * @param string $urlAddress
@@ -65,6 +67,8 @@ abstract class AbstractLotteryService
         ];
 
         $this->urlAddress = $urlAddress;
+
+        $this->time = microtime(true);
     }
 
     /**

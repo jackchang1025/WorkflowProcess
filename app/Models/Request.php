@@ -69,6 +69,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Request extends Model
 {
+
+    protected LotteryInterFace $lotteryService;
+
     use HasDateTimeFormatter;
 
     protected $fillable = [
@@ -87,7 +90,11 @@ class Request extends Model
         'bet_count_rules',
         'win_lose_rules',
         'continuous_lose_count_rules',
-        'continuous_win_count_rules'
+        'continuous_win_count_rules',
+        'current_bet_code_rule',
+        'current_bet_amount_rule',
+        'current_issue',
+        'last_issue',
     ];
 
     protected $attributes = [
@@ -101,10 +108,7 @@ class Request extends Model
 
     // 定义需要排除的字段
     protected array $excludeFieldsOnSave = [
-        'current_bet_code_rule',
-        'current_bet_amount_rule',
-        'current_issue',
-        'last_issue',
+
     ];
 
     protected $table = 'request';
@@ -156,12 +160,17 @@ class Request extends Model
     const STATUS_PENDING = 'pending';
     const STATUS_COMPLETED = 'completed';
     const STATUS_FAILED = 'failed';
+    const STATUS_RUNNING = 'running';
+    const STATUS_STOP = 'stop';
 
     static array $status = [
         self::STATUS_PENDING   => '执行中',
         self::STATUS_COMPLETED => '已完成',
         self::STATUS_FAILED    => '执行失败',
+        self::STATUS_RUNNING    => '执行中',
+        self::STATUS_STOP    => '已停止',
     ];
+
 
     /**
      * 彩票选项
@@ -189,7 +198,7 @@ class Request extends Model
 
     public function lotteryManage(): LotteryInterFace
     {
-        return app(LotteryServiceProvider::class, [
+        return $this->lotteryService = app(LotteryServiceProvider::class, [
             'url_address' => $this->lottery->url,
             'token'       => $this->token->token,
             'lottery_id'  => $this->lottery->lottery_id,

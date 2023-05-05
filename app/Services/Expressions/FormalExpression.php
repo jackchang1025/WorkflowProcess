@@ -2,6 +2,7 @@
 
 namespace App\Services\Expressions;
 
+use App\Models\Request;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use ProcessMaker\Nayra\Bpmn\FormalExpressionTrait;
@@ -166,10 +167,15 @@ class FormalExpression implements FormalExpressionInterface
     /**
      * @param $args
      * @return mixed
-     * @throws Exception
+     * @throws Exception|\Throwable
      */
     public function __invoke($args): mixed
     {
-        return $this->evaluates($args['request'],$this->getExtensionProperties($this->getBpmnElement()->parentNode));
+        $request = Request::find($args['request_id']);
+
+        throw_if(!$request , new \Exception('请求不存在'));
+        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
+
+        return $this->evaluates($request,$this->getExtensionProperties($this->getBpmnElement()->parentNode));
     }
 }

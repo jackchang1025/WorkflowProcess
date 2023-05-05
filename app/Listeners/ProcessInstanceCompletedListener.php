@@ -30,7 +30,7 @@ class ProcessInstanceCompletedListener
         /**
          * @var \App\Models\Request $request
          */
-        $request = $event->processInstanceCompletedEvent->instance->getDataStore()->getData('request');
+        $request = Request::find($event->id);
 
         $request->status = Request::STATUS_COMPLETED;
 

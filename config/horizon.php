@@ -188,22 +188,10 @@ return [
             'maxTime' => 0,
             'maxJobs' => 0,
             'memory' => 128,
-            'tries' => 1,
-            'timeout' => 60,
-            'nice' => 0,
-        ],
-        'supervisor-2' => [
-            'connection' => 'redis',
-            'queue' => ['request'],
-            'balance' => 'auto',
-            'maxProcesses' => 10,
-            'maxTime' => 0,
-            'maxJobs' => 0,
-            'memory' => 128,
-            'tries' => 1,
+            'tries' => 0,
             'timeout' => 0,
             'nice' => 0,
-        ],
+        ]
     ],
 
     'environments' => [

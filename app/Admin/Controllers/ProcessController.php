@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Actions\Grid\ProcessDispatchRowAction;
+use App\Admin\Actions\Grid\RequestStatusRowAction;
 use App\Admin\Repositories\Process;
 use App\Models\Process as ProcessModel;
 use App\Services\Engine\BpmnDocumentService;
@@ -63,7 +63,7 @@ class ProcessController extends AdminController
                 $editUrl = admin_url("process/{$actions->getKey()}/edit/"); // 替换为实际的编辑页面 URL
                 $actions->append("<a href='{$editUrl}' target='_blank' class='grid-row-action'><i class='feather icon-edit'>edit</i></a>");
 
-                $actions->append(ProcessDispatchRowAction::make());
+                $actions->append(RequestStatusRowAction::make());
             });
         });
     }

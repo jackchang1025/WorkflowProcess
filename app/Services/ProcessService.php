@@ -147,6 +147,7 @@ class ProcessService
     /**
      * @param Request $request
      * @return mixed
+     * @throws \Exception
      */
     public function handle(Request $request): mixed
     {
@@ -162,10 +163,11 @@ class ProcessService
          */
         $process = $this->bpmnDocument->getProcess('Process_1');
 
-        $dataStore = $this->repositoryEngine->createDataStore()->putData('request', $request);
+        $dataStore = $this->repositoryEngine->createDataStore()
+            ->putData('request_id', $request->id)
+            ->putData('lotteryManage',$request->lotteryManage());
 
         $executionInstanceInterface = $process->call($dataStore);
-
 
         $process->getDispatcher()->listen('ServiceTaskActivated', function (string $event, $payload) {
 
@@ -175,34 +177,16 @@ class ProcessService
         });
 
 
-        $process->getDispatcher()->listen('GatewayActivated', function (string $event, $payload) {
+        //ProcessInstanceCompleted 工作流完成事件
+        //GatewayActivated 网关事件
+        //ConditionedTransition 条件转换事件
+        //ServiceTaskActivated ServiceTask事件
 
-            Log::info("{$event} ===> " . $payload[0]->getProperty('id') ?? "");
-        });
+        $this->bpmnEngine->runToNextState();
 
-        $process->getDispatcher()->listen('ConditionedTransition', function (string $event, $payload) {
+        Log::info("end");
 
-            Log::info("{$event} ===> " . $payload[1]->getProperty('id') ?? "");
-        });
-
-        $process->getDispatcher()->listen('ProcessInstanceCompleted', function ($event, \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent $payload) {
-
-            Log::info("end");
-
-            event(new ProcessInstanceCompletedEvent($payload));
-        });
-
-
-        try {
-
-            $this->bpmnEngine->runToNextState();
-
-        } catch (\Exception $e) {
-
-            Log::error($e->getMessage());
-
-            event(new ProcessInstanceCompletedEvent(new \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent($process,$executionInstanceInterface)));
-        }
+        event(new ProcessInstanceCompletedEvent($request->id));
 
         return $this->bpmnEngine;
     }

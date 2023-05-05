@@ -60,9 +60,16 @@ class BetTask extends ServiceTask
         /**
          * @var Request $request
          */
-        $request = $token->getInstance()->getDataStore()->getData('request');
+        $dataStore = $token->getInstance()->getDataStore();
 
-        $lotteryManage = $request->lotteryManage();
+        $requestId = $dataStore->getData('request_id');
+
+        $request = Request::find($requestId);
+
+        throw_if(!$request , new \Exception('请求不存在'));
+        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
+
+        $lotteryManage = $dataStore->getData('lotteryManage');
 
         $lotteryCurrentInfo = $lotteryManage->lotteryCurrentInfo();
 
@@ -97,6 +104,6 @@ class BetTask extends ServiceTask
 
         Log::info('生成投注单投注日志', ['betOrderLogBettingLog' => $requestLog]);
 
-        return true;
+        return $request->save();
     }
 }

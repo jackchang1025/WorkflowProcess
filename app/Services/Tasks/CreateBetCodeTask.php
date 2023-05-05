@@ -37,6 +37,7 @@ class CreateBetCodeTask extends ServiceTask
      * 执行服务任务。首先尝试执行服务任务实现（通过 executeService() 方法），如果执行成功，调用 complete() 方法完成任务；否则，将令牌设置为失败状态
      * @param TokenInterface $token
      * @return GetLotteryDataTask|$this
+     * @throws \Throwable
      */
     public function run(TokenInterface $token): GetLotteryDataTask|static
     {
@@ -64,7 +65,12 @@ class CreateBetCodeTask extends ServiceTask
         /**
          * @var Request $request
          */
-        $request = $token->getInstance()->getDataStore()->getData('request');
+        $requestId = $token->getInstance()->getDataStore()->getData('request_id');
+
+        $request = Request::find($requestId);
+
+        throw_if(!$request , new \Exception('请求不存在'));
+        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
 
         $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
 
@@ -75,7 +81,8 @@ class CreateBetCodeTask extends ServiceTask
         $request->current_bet_code_rule = $response[1];
 
         Log::info('current_bet_code_rule ===> ' . $request->current_bet_code_rule);
-        return true;
+
+        return $request->save();
     }
 
 

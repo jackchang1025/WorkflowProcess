@@ -61,7 +61,12 @@ class CreateBetAmountTask extends ServiceTask
          * @var Request $request
          */
 
-        $request = $token->getInstance()->getDataStore()->getData('request');
+        $requestId = $token->getInstance()->getDataStore()->getData('request_id');
+
+        $request = Request::find($requestId);
+
+        throw_if(!$request , new \Exception('请求不存在'));
+        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
 
         $extensionProperties = $this->formalExpression->getExtensionProperties($this->getBpmnElement());
 
@@ -72,7 +77,7 @@ class CreateBetAmountTask extends ServiceTask
 
         Log::info('current_bet_amount_rule ===>' . $request->current_bet_amount_rule);
 
-        return true;
+        return $request->save();
     }
 
 

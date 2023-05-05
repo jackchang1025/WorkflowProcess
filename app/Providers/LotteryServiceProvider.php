@@ -11,7 +11,6 @@ use Illuminate\Support\ServiceProvider;
 
 class LotteryServiceProvider extends ServiceProvider
 {
-    protected ?LotteryInterFace $lotteryService = null;
 
     /**
      * Register services.
@@ -20,31 +19,27 @@ class LotteryServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(LotteryServiceProvider::class, function (Application $app, array $params) {
+        $this->app->bind(LotteryServiceProvider::class, function (Application $app, array $params) {
             // 根据参数中的 code_type，实例化不同的服务类
 
-            if (!$this->lotteryService) {
-                if ($params['code_type'] == Request::CODE_TYPE_HISTORY) {
-                    $this->lotteryService = new ExtremelyFastThreeTestService(
-                        $params['url_address'],
-                        $params['token'],
-                        $params['lottery_id'],
-                        $params['version']
-                    );
-                }else{
+            if ($params['code_type'] == Request::CODE_TYPE_HISTORY) {
 
-                    $this->lotteryService = new ExtremelyFastThreeService(
-                        $params['url_address'],
-                        $params['token'],
-                        $params['lottery_id'],
-                        $params['version']
-                    );
-                }
+                return new ExtremelyFastThreeTestService(
+                    $params['url_address'],
+                    $params['token'],
+                    $params['lottery_id'],
+                    $params['version']
+                );
 
+            }else{
 
+                return new ExtremelyFastThreeService(
+                    $params['url_address'],
+                    $params['token'],
+                    $params['lottery_id'],
+                    $params['version']
+                );
             }
-
-            return $this->lotteryService;
         });
     }
 

@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\Rule;
+use App\Services\ByteArrayService;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
@@ -17,6 +18,7 @@ class RuleController extends AdminController
      */
     protected function grid()
     {
+
         return Grid::make(new Rule(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title');

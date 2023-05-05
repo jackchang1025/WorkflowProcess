@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\Grid\RequestStatusRowAction;
 use App\Admin\Repositories\Request;
 use App\Jobs\RequestJob;
 use App\Models\Lottery;
@@ -13,6 +14,7 @@ use Dcat\Admin\Grid;
 use Dcat\Admin\Grid\Displayers\Actions;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
+use App\Models\Request as RequestModel;
 
 class RequestController extends AdminController
 {
@@ -40,7 +42,7 @@ class RequestController extends AdminController
             $grid->column('lottery_count_rules');
             $grid->column('bet_base_amount_rules');
             $grid->column('bet_total_amount_rules');
-            $grid->column('total_amount_rules','总金额');
+            $grid->column('total_amount_rules', '总金额');
             $grid->column('bet_count_rules');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
@@ -50,13 +52,16 @@ class RequestController extends AdminController
                 $editUrl = admin_url("request_statistics/show/{$actions->getKey()}"); // 替换为实际的编辑页面 URL
                 $actions->append("<a href='{$editUrl}' class='grid-row-action'><i class='feather icon-edit'>request statistics</i></a>");
 
+                if (in_array($actions->row->getAttribute('status'), [RequestModel::STATUS_PENDING, RequestModel::STATUS_RUNNING])) {
+                    $actions->append(RequestStatusRowAction::make());
+                }
             });
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
             });
 
-            $grid->disableEditButton();
+//            $grid->disableEditButton();
 
         });
     }
@@ -141,6 +146,10 @@ class RequestController extends AdminController
             $form->number('total_amount_rules')->rules('required|min:10|numeric')->required();
             $form->number('bet_total_amount_rules')->rules('required|same:total_amount_rules')->required();
 
+            $form->hidden('status', '状态')->saving(function () {
+
+                return RequestModel::STATUS_PENDING;
+            });
             $form->display('created_at');
             $form->display('updated_at');
 
@@ -148,6 +157,7 @@ class RequestController extends AdminController
             $form->saved(function (Form $form) {
 
                 RequestJob::dispatch($form->getKey());
+//
 //                RequestJob::dispatchSync($form->getKey());
             });
         });

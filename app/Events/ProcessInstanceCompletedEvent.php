@@ -2,14 +2,10 @@
 
 namespace App\Events;
 
-use App\Models\Process;
-use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use ProcessMaker\Nayra\Contracts\Engine\ExecutionInstanceInterface;
 
 class ProcessInstanceCompletedEvent
 {
@@ -20,7 +16,7 @@ class ProcessInstanceCompletedEvent
      *
      * @return void
      */
-    public function __construct(public readonly \ProcessMaker\Nayra\Bpmn\Events\ProcessInstanceCompletedEvent $processInstanceCompletedEvent)
+    public function __construct(public readonly int $id)
     {
         //
     }
