@@ -61,6 +61,7 @@ return [
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
+//            'timezone' => 'Asia/Shanghai', // 添加这一行，设置数据库的时区
         ],
 
         'pgsql' => [

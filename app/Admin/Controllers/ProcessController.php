@@ -2,12 +2,10 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Actions\Grid\RequestStatusRowAction;
 use App\Admin\Repositories\Process;
 use App\Models\Process as ProcessModel;
 use App\Services\Engine\BpmnDocumentService;
 use App\Services\ProcessService;
-use Dcat\Admin\Admin;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Grid\Displayers\Actions;
 use Dcat\Admin\Layout\Content;
@@ -15,7 +13,6 @@ use Dcat\Admin\Http\Controllers\AdminController;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 
@@ -38,8 +35,6 @@ class ProcessController extends AdminController
         return Grid::make(new Process(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title');
-            $grid->column('status')->switch();
-            $grid->column('describe');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -63,7 +58,6 @@ class ProcessController extends AdminController
                 $editUrl = admin_url("process/{$actions->getKey()}/edit/"); // 替换为实际的编辑页面 URL
                 $actions->append("<a href='{$editUrl}' target='_blank' class='grid-row-action'><i class='feather icon-edit'>edit</i></a>");
 
-                $actions->append(RequestStatusRowAction::make());
             });
         });
     }
