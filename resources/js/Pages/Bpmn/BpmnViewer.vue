@@ -61,12 +61,37 @@ import 'bpmn-js/dist/assets/diagram-js.css';
 import 'bpmn-js/dist/assets/bpmn-js.css';
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 
+import CamundaBpmnModdle from 'camunda-bpmn-moddle/resources/camunda.json'
 import ZeebeBpmnModdle from 'zeebe-bpmn-moddle/resources/zeebe.json';
+
+
+import MagicPropertiesProvider from './Provider/magicPropertiesProvider';
+import ruleModdleDescriptor from './Descriptor/rule.json';
+
+
+import magicPropertiesProviderModule from './Provider/MagicPropertiesProviders';
+import magicModdleDescriptor from './Descriptor/magic.json';
+
 
 const canvas = ref(null);
 const propertiesPanel = ref(null);
 let modeler = null;
 const date = ref(new Date().toDateString());
+
+const ruleNameData = [
+    'Rule 1',
+    'Rule 2',
+    'Rule 3',
+    'Rule 4',
+];
+
+const ruleExpressionData = [
+    'Expression 1',
+    'Expression 2',
+    'Expression 3',
+    'Expression 4',
+];
+
 
 const props = defineProps({
     csrf_token: {
@@ -93,22 +118,36 @@ onMounted(() => {
 
 function init() {
     modeler = new BpmnModeler({
-        container: canvas.value,
+        container: '#js-canvas',
         propertiesPanel: {
-            parent: propertiesPanel.value
+            parent: '#js-properties-panel'
         },
         additionalModules: [
             BpmnPropertiesPanelModule,
             BpmnPropertiesProviderModule,
-            ZeebePropertiesProviderModule,
+
+            // ZeebePropertiesProviderModule,
+            CamundaPlatformPropertiesProviderModule,
 
             // CustomContextPadProvider,
             // CustomContextPadModule,
             // CamundaPlatformPropertiesProviderModule,
+
+            // {
+            //     magicPropertiesProvider: ['type', MagicPropertiesProvider, { ruleNameData, ruleExpressionData }]
+            // },
+            // {
+            //     magicPropertiesProvider: ['type', 'value', MagicPropertiesProvider, { ruleNameData, ruleExpressionData }]
+            // },
+            magicPropertiesProviderModule,
+
         ],
         moddleExtensions: {
-            zeebe: ZeebeBpmnModdle,
-            // camunda: CamundaBpmnModdle
+            // zeebe: ZeebeBpmnModdle,
+            camunda: CamundaBpmnModdle,
+
+            // rule: ruleModdleDescriptor,
+            magic: magicModdleDescriptor
         }
     });
 

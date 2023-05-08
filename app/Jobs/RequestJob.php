@@ -28,21 +28,21 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
      *
      * @var int
      */
-    public int $tries = 0;
+    public  $tries = null;
 
     /**
      * 任务失败前允许的最大异常数
      *
      * @var int
      */
-    public int $maxExceptions = 0;
+    public  $maxExceptions = null;
 
     /**
      * 作业的唯一锁将被释放的秒数。
      *
      * @var int
      */
-    public int $uniqueFor = 864000000;
+    public int $uniqueFor = 0;
 
     /**
      * Create a new job instance.
@@ -53,6 +53,7 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
     {
 
     }
+
 
     public function uniqueId(): int
     {
@@ -73,7 +74,17 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
 
         $request = Request::findOrFail($this->id);
 
-        $processService->handle($request);
+        try {
+
+            $processService->handle($request);
+
+        } catch (\Exception $e) {
+
+            Log::error($e->getMessage());
+            Request::where('id', $this->id)->update(['status' => Request::STATUS_FAILED]);
+
+            echo "{$e->getMessage()}" . PHP_EOL;
+        }
 
         echo "{$this->id} RequestJob end" . PHP_EOL;
     }

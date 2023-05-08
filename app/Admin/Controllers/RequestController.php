@@ -156,9 +156,8 @@ class RequestController extends AdminController
 
             $form->saved(function (Form $form) {
 
-                RequestJob::dispatch($form->getKey());
-//
-//                RequestJob::dispatchSync($form->getKey());
+//                RequestJob::dispatch($form->getKey());
+                RequestJob::dispatchSync($form->getKey());
             });
         });
     }

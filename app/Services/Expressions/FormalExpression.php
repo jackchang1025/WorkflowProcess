@@ -21,26 +21,21 @@ class FormalExpression implements FormalExpressionInterface
 
     protected array $conditionExpressions = [];
 
-    public function __construct()
-    {
-
-        $this->registerConditionExpressions();
-    }
-
     /**
+     * @param $data
+     * @param string $expression
      * @return void
      */
-    protected function registerConditionExpressions(): void
+    protected function registerConditionExpressions($data, string $expression): void
     {
-        if (empty($this->conditionExpressions)) {
-            $this->conditionExpressions = [
-                new DateExpression(),
-                new CycleExpression(),
-                new DurationExpression(),
-                new RegularExpression(),
-                new Expression(),
-            ];
-        }
+        $this->conditionExpressions = [
+            new DateExpression($expression),
+            new CycleExpression($expression),
+            new DurationExpression($expression),
+            new RegularExpression($data, $expression),
+            new Expression($data, $expression),
+            new PhpScript($data, $expression),
+        ];
     }
 
 
@@ -106,41 +101,21 @@ class FormalExpression implements FormalExpressionInterface
 
     /**
      * 评估表达式
-     * @param $dataStore
-     * @param array $extensionProperties
      * @return mixed
      */
-    public function evaluates($dataStore,array $extensionProperties): mixed
+    public function expressionEvaluate(): mixed
     {
-        foreach ($extensionProperties as $ruleName => $expression) {
+        $matchingExpressions = array_values(array_filter($this->conditionExpressions, function (ExpressionInterface $conditionExpression) {
+            return $conditionExpression->isExpression();
+        }));
 
-            if (($data = $dataStore->getAttribute($ruleName)) !== null) {
-
-                $matchingExpressions = array_filter($this->conditionExpressions, function (ExpressionInterface $conditionExpression) use ($expression) {
-
-                    return $conditionExpression->isExpression($expression['value']);
-                });
-
-                if ($result = $this->expressionEvaluate($matchingExpressions, $expression['value'], (string) $data)) {
-                    return $result;
-                }
+        return array_reduce($matchingExpressions, function ($carry, ExpressionInterface $matchingExpression) {
+            if (!empty($matchingExpression->data)) {
+                Log::info("{$matchingExpression->expression} ===> {$matchingExpression->data}");
             }
-        }
-        return false;
-    }
-
-    /**
-     * @param array $matchingExpressions
-     * @param string $expression
-     * @param string $data
-     * @return mixed
-     */
-    public function expressionEvaluate(array $matchingExpressions,string $expression ,string $data): mixed
-    {
-        return array_reduce($matchingExpressions, function ($carry, ExpressionInterface $matchingExpression) use ($expression, $data) {
-            Log::info("{$expression} ===> {$data}");
-            return $carry ?: $matchingExpression->evaluate($expression, $data);
+            return $carry ?: $matchingExpression->evaluate();
         }, false);
+
     }
 
     /**
@@ -148,20 +123,25 @@ class FormalExpression implements FormalExpressionInterface
      * @return bool
      * @throws Exception
      */
-    public function getEvaluatesToType(): bool
+    /**
+     * Get the type that this Expression returns when evaluated.
+     *
+     * @return string
+     */
+    public function getEvaluatesToType()
     {
-        $string   = $this->getBody();
+        return $this->getProperty(FormalExpressionInterface::BPMN_PROPERTY_EVALUATES_TO_TYPE_REF);
+    }
 
-        if (empty($string)) {
-            throw new Exception('body is empty');
-        }
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public function evaluate($data = null): mixed
+    {
+        $this->registerConditionExpressions($data, $this->getBody());
 
-        $string = str_starts_with($string, '=') ? substr($string, 1) : $string;
-
-        if ($string == 'true'){
-            return true;
-        }
-        return false;
+        return $this->expressionEvaluate();
     }
 
     /**
@@ -171,11 +151,15 @@ class FormalExpression implements FormalExpressionInterface
      */
     public function __invoke($args): mixed
     {
-        $request = Request::find($args['request_id']);
+        try {
 
-        throw_if(!$request , new \Exception('请求不存在'));
-        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
+            $request = Request::findOrStatusFail($args['request_id']);
+            return $this->evaluate($request);
 
-        return $this->evaluates($request,$this->getExtensionProperties($this->getBpmnElement()->parentNode));
+        } catch (\Exception $e) {
+
+            // Log the error or handle it as needed
+            return false;
+        }
     }
 }

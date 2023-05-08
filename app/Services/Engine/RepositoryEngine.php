@@ -3,8 +3,11 @@
 namespace App\Services\Engine;
 
 
+use App\Services\Events\EndEventService;
+use App\Services\Events\StartEventService;
 use App\Services\Expressions\FormalExpression;
 use App\Services\Models\CallActivity;
+use App\Services\Tasks\ServiceTask;
 use Exception;
 use ProcessMaker\Nayra\Contracts\RepositoryInterface;
 use ProcessMaker\Nayra\RepositoryTrait;
@@ -81,5 +84,35 @@ class RepositoryEngine implements RepositoryInterface
         }
 
         return $this->parentCreate($interfaceName, ...$constructorArguments);
+    }
+
+    /**
+     * Create instance of ServiceTask.
+     *
+     * @return \ProcessMaker\Nayra\Contracts\Bpmn\ServiceTaskInterface
+     */
+    public function createServiceTask()
+    {
+        return new ServiceTask();
+    }
+
+    /**
+     * Create instance of StartEvent.
+     *
+     * @return \ProcessMaker\Nayra\Contracts\Bpmn\StartEventInterface
+     */
+    public function createStartEvent()
+    {
+        return new StartEventService();
+    }
+
+    /**
+     * Create instance of EndEvent.
+     *
+     * @return \ProcessMaker\Nayra\Contracts\Bpmn\EndEventInterface
+     */
+    public function createEndEvent()
+    {
+        return new EndEventService();
     }
 }

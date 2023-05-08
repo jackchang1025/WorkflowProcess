@@ -27,6 +27,9 @@ class ServiceTaskActivatedListener
      */
     public function handle(ServiceTaskActivatedEvent $event): ServiceTask
     {
+
+        $event->activity->setImplementation($event->activity->getProperty('delegateExpression'));
+
         return $event->activity->run($event->token);
     }
 }

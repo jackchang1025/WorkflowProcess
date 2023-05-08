@@ -2,59 +2,23 @@
 
 namespace App\Services\Tasks;
 
-use App\Models\Lottery;
 use App\Models\LotteryOption;
 use App\Models\Request;
 use App\Models\RequestLog;
-use App\Services\Events\ServiceTaskActivatedEvent;
 use App\Services\Lottery\LotteryOptionService;
+use App\Services\Traits\ServiceTrait;
 use Illuminate\Support\Facades\Log;
-use ProcessMaker\Nayra\Bpmn\ActivityTrait;
-use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
-use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
-use ProcessMaker\Nayra\Contracts\Bpmn\ServiceTaskInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\TokenInterface;
 
-class GetLotteryDataTask extends ServiceTask
+class GetLotteryDataTask
 {
-    use ActivityTrait;
+    use ServiceTrait;
 
     protected LotteryOptionService $lotteryOptionService;
 
-    const TAG_NAME = 'getLotteryDataTask';
-
-    public function __construct(...$args)
+    public function __construct()
     {
-        parent::__construct($args);
-
         $this->lotteryOptionService = app(LotteryOptionService::class);
-    }
-
-    protected function getBpmnEventClasses(): array
-    {
-        return [
-//            ServiceTaskInterface::EVENT_SERVICE_TASK_ACTIVATED => ServiceTaskActivatedEvent::class,
-        ];
-    }
-
-    /**
-     * 执行服务任务。首先尝试执行服务任务实现（通过 executeService() 方法），如果执行成功，调用 complete() 方法完成任务；否则，将令牌设置为失败状态
-     * @param TokenInterface $token
-     * @return GetLotteryDataTask|$this
-     */
-    public function run(TokenInterface $token): GetLotteryDataTask|static
-    {
-        Log::channel()->info('getLotteryDataTask run');
-
-        if ($this->executeService($token)) {
-
-            $this->complete($token);
-
-        } else {
-            // 如果请求失败，将令牌设置为失败状态
-            $token->setStatus(ActivityInterface::TOKEN_STATE_FAILING);
-        }
-        return $this;
     }
 
     /**
@@ -63,20 +27,12 @@ class GetLotteryDataTask extends ServiceTask
      * @return bool
      * @throws \Throwable
      */
-    private function executeService(TokenInterface $token): bool
+    public function __invoke(TokenInterface $token): bool
     {
         // 在这里实现您的远程请求接口逻辑，例如发送 HTTP 请求
         $dataStore = $token->getInstance()->getDataStore();
 
-        /**
-         * @var Request $request
-         */
-        $requestId = $dataStore->getData('request_id');
-
-        $request = Request::find($requestId);
-
-        throw_if(!$request , new \Exception('请求不存在'));
-        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
+        $request = $this->getRequest($dataStore->getData('request_id'));
 
         $lotteryManage = $dataStore->getData('lotteryManage');
 
@@ -152,6 +108,4 @@ class GetLotteryDataTask extends ServiceTask
 
         return $request->save();
     }
-
-
 }

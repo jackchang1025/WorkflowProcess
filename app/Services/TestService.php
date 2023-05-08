@@ -7,7 +7,7 @@ use App\Services\Engine\EventEngine;
 use App\Services\Engine\RepositoryEngine;
 use App\Services\Events\ServiceTaskActivatedEvent;
 use App\Services\Events\EndEventService;
-use App\Services\Tasks\BetTask;
+use App\Services\Tasks\DataTask;
 use App\Services\Tasks\CreateBetAmountTask;
 use App\Services\Tasks\CreateBetCodeTask;
 use App\Services\Tasks\FormActivityTask;
@@ -74,9 +74,9 @@ class TestService
         ],
         [
             'namespace' => self::NAMESPACE,
-            'tagName'   => BetTask::TAG_NAME,
+            'tagName'   => DataTask::TAG_NAME,
             'mapping'   => [
-                BetTask::class,
+                DataTask::class,
                 [
                     FlowNodeInterface::BPMN_PROPERTY_INCOMING             => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_INCOMING]],
                     FlowNodeInterface::BPMN_PROPERTY_OUTGOING             => ['n', [BpmnDocument::BPMN_MODEL, FlowNodeInterface::BPMN_PROPERTY_OUTGOING]],

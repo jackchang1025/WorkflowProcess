@@ -4,39 +4,37 @@ namespace App\Services\Events;
 
 
 use App\Models\Request;
+use App\Services\Traits\ServiceTrait;
 use Illuminate\Support\Facades\Log;
+use ProcessMaker\Nayra\Bpmn\Models\StartEvent;
 use ProcessMaker\Nayra\Bpmn\StartEventTrait;
 use ProcessMaker\Nayra\Contracts\Bpmn\MessageListenerInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\StartEventInterface;
 use ProcessMaker\Nayra\Contracts\Engine\ExecutionInstanceInterface;
 
 
-class StartEventService implements StartEventInterface, MessageListenerInterface
+class StartEventService extends StartEvent
 {
-    use StartEventTrait;
+    use ServiceTrait;
 
-    const TAG_NAME = 'startEvent';
-
-    public function start(ExecutionInstanceInterface $instance)
+    /**
+     * @param ExecutionInstanceInterface $instance
+     * @return StartEventService
+     * @throws \Throwable
+     */
+    public function start(ExecutionInstanceInterface $instance): static
     {
+        parent::start($instance);
+
         Log::channel()->info('StartEventService start');
 
         $requestId = $instance->getDataStore()->getData('request_id');
 
-        $request = Request::find($requestId);
-
-        throw_if(!$request , new \Exception('请求不存在'));
-        throw_if($request->status == Request::STATUS_STOP , new \Exception('请求已取消'));
-
-
-        $this->triggerPlace[0]->addNewToken($instance);
+        $request = $this->getRequest($requestId);
 
         $request->status = Request::STATUS_RUNNING;
-        return $request->save();
-    }
+        $request->save();
 
-    protected function getBpmnEventClasses()
-    {
-        return [];
+        return $this;
     }
 }

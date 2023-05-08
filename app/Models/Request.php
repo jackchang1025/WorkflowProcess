@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Providers\LotteryServiceProvider;
 use App\Services\Lottery\LotteryInterFace;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -24,12 +25,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int|null $bet_base_amount_rules 基础投注金额规则
  * @property int|null $bet_total_amount_rules 总投注金额规则
  * @property int|null $total_amount_rules 总金额规则
- * @property string|null $bet_amount_rules 投注金额规则
+ * @property int|null $bet_amount_rules 投注金额规则
+ * @property int|null $stop_betting_amount 停止投注金额
  * @property string|null $bet_code_rules 投注号码规则
  * @property int|null $bet_count_rules 投注次数规则
  * @property string|null $win_lose_rules 输赢规则
  * @property int|null $continuous_lose_count_rules 连续输次数规则
  * @property int|null $continuous_win_count_rules 连续赢次数规则
+ * @property int|null $continuous_bet_count 连续投注次数规则
  * @property string|null $current_bet_code_rule 当前投注号码规则
  * @property int|null $current_bet_amount_rule 当前投注金额规则
  * @property string|null $current_issue 当前期号
@@ -63,8 +66,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereTokenId($value)
  * @property-read \App\Models\Lottery|null $lottery
  * @property-read \App\Models\Token|null $token
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RequestLog> $requestLog
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\LotteryOption> $requestLotteryOption
+ * @property-read Collection<int, \App\Models\RequestLog> $requestLog
+ * @property-read Collection<int, \App\Models\LotteryOption> $requestLotteryOption
  * @mixin \Eloquent
  */
 class Request extends Model
@@ -167,8 +170,8 @@ class Request extends Model
         self::STATUS_PENDING   => '执行中',
         self::STATUS_COMPLETED => '已完成',
         self::STATUS_FAILED    => '执行失败',
-        self::STATUS_RUNNING    => '执行中',
-        self::STATUS_STOP    => '已停止',
+        self::STATUS_RUNNING   => '执行中',
+        self::STATUS_STOP      => '已停止',
     ];
 
 
@@ -279,6 +282,21 @@ class Request extends Model
 
         // 调用父类的 save() 方法
         return parent::save($options);
+    }
+
+    /**
+     * @param $id
+     * @return Model|array|Collection|Request|null
+     * @throws \Throwable
+     */
+    public static function findOrStatusFail($id): Model|array|Collection|Request|null
+    {
+        $request = Request::find($id);
+
+        throw_if(!$request, new \Exception('请求不存在'));
+        throw_if($request->status == Request::STATUS_STOP, new \Exception('请求已取消'));
+
+        return $request;
     }
 
 }

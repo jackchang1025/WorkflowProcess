@@ -26,7 +26,7 @@ export default defineConfig({
         clearScreen: false // 禁止清除控制台屏幕
     },
     watch: {
-        include: 'resources/**/*',
+        include: 'resources/*',
         exclude: ['vendor/**/*', 'node_modules/**/*'],
         usePolling: true, // 启用轮询
         interval: 500, // 轮询间隔，单位为毫秒，默认值是 100

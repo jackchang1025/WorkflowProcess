@@ -4,7 +4,7 @@ namespace App\Services\Expressions;
 
 interface ExpressionInterface
 {
-    public function evaluate(string $expression, $dataStore = null);
+    public function evaluate();
 
-    public function isExpression(string $expression): bool;
+    public function isExpression(): bool;
 }

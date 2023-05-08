@@ -1,0 +1,29 @@
+{
+    "name": "Rule",
+    "prefix": "rule",
+    "uri": "http://rule",
+    "xml": {
+    "tagAlias": "lowerCase"
+},
+    "associations": [],
+    "types": [
+    {
+        "name": "RuleSequenceFlow",
+        "extends": [
+            "bpmn:SequenceFlow"
+        ],
+        "properties": [
+            {
+                "name": "ruleName",
+                "isAttr": true,
+                "type": "String"
+            },
+            {
+                "name": "ruleExpression",
+                "isAttr": true,
+                "type": "String"
+            }
+        ]
+    }
+]
+}

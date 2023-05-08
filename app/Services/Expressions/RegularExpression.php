@@ -5,16 +5,28 @@ namespace App\Services\Expressions;
 class RegularExpression implements ExpressionInterface
 {
 
+    public $data;
+
+    public  string $expression;
+
     /**
+     * @param $data
      * @param string $expression
-     * @param $dataStore
+     */
+    public function __construct($data, string $expression)
+    {
+        $this->data = $data;
+        $this->expression = $expression;
+    }
+
+    /**
      * @return array|bool
      */
-    public function evaluate(string $expression, $dataStore = null): bool|array
+    public function evaluate(): bool|array
     {
         try {
 
-            return preg_match($expression, (string)$dataStore, $matches) ? $matches : false;
+            return preg_match($this->expression, (string) $this->data, $matches) ? $matches : false;
 
         } catch (\Exception) {
             return false;
@@ -22,13 +34,12 @@ class RegularExpression implements ExpressionInterface
     }
 
     /**
-     * @param string $expression
      * @return bool
      */
-    public function isExpression(string $expression): bool
+    public function isExpression(): bool
     {
         try {
-            return preg_match($expression, '') !== false;
+            return preg_match($this->expression, '') !== false;
 
         } catch (\Exception) {
 

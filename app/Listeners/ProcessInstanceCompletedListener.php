@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\ProcessInstanceCompletedEvent;
 use App\Models\Request;
+use Doctrine\DBAL\ArrayParameterType;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
