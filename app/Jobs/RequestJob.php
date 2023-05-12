@@ -28,14 +28,14 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
      *
      * @var int
      */
-    public  $tries = null;
+    public int $tries = 1;
 
     /**
      * 任务失败前允许的最大异常数
      *
      * @var int
      */
-    public  $maxExceptions = null;
+    public int $maxExceptions = 1;
 
     /**
      * 作业的唯一锁将被释放的秒数。
@@ -70,6 +70,16 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
      */
     public function handle(ProcessService $processService)
     {
+
+        Log::build([
+            'driver'  => 'single',
+            'path'    => storage_path('logs/request/' . $this->id . '.log'),
+            'level'   => 'debug',
+            'locking' => true,
+        ])->info("Log build");
+
+        Log::channel('ondemand')->info("RequestJob start");
+
         echo "{$this->id} RequestJob start" . PHP_EOL;
 
         $request = Request::findOrFail($this->id);
@@ -78,9 +88,12 @@ class RequestJob implements ShouldQueue, ShouldBeUnique
 
             $processService->handle($request);
 
+            Log::channel('ondemand')->info("end");
+
         } catch (\Exception $e) {
 
-            Log::error($e->getMessage());
+            Log::channel('ondemand')->error($e->getMessage());
+
             Request::where('id', $this->id)->update(['status' => Request::STATUS_FAILED]);
 
             echo "{$e->getMessage()}" . PHP_EOL;

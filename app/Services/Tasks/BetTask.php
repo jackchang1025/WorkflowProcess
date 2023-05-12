@@ -6,9 +6,6 @@ use App\Models\Request;
 use App\Services\Traits\ServiceTrait;
 use Exception;
 use Illuminate\Support\Facades\Log;
-use ProcessMaker\Nayra\Bpmn\ActivityTrait;
-use ProcessMaker\Nayra\Bpmn\Models\ServiceTask;
-use ProcessMaker\Nayra\Contracts\Bpmn\ActivityInterface;
 use ProcessMaker\Nayra\Contracts\Bpmn\TokenInterface;
 
 class BetTask
@@ -28,13 +25,15 @@ class BetTask
          */
         $dataStore = $token->getInstance()->getDataStore();
 
-        $request = $this->getRequest($dataStore->getData('request_id'));
+        $request = Request::findOrStatusFail($dataStore->getData('request_id'));
 
         $lotteryManage = $dataStore->getData('lotteryManage');
 
         $lotteryCurrentInfo = $lotteryManage->lotteryCurrentInfo();
 
         throw_if(empty($currentIssue = $lotteryCurrentInfo['issue']), new Exception('获取当前期号失败'));
+
+        throw_if($request->bet_total_amount_rules < $request->current_bet_amount_rule, new Exception("bet_total_amount_rules: {$request->bet_total_amount_rules} < current_bet_amount_rule: {$request->current_bet_amount_rule} 投注金额不足"));
 
         //开始投注 金额单位分
         $lotteryManage->lotteryBet($currentIssue, $request->current_bet_code_rule, $request->current_bet_amount_rule * 100);
@@ -63,8 +62,13 @@ class BetTask
             'bet_code_odds'    => $odds,
         ]);
 
+        //连续投注次数规则
+        $request->continuous_bet_count += 1;
 
-        Log::info('生成投注单投注日志', ['betOrderLogBettingLog' => $requestLog]);
+        Log::channel('ondemand')->info('BetTask 任务执行成功', [
+            'App\Models\Request'    => $request->toArray(),
+            'App\Models\RequestLog' => $requestLog->toArray()
+        ]);
 
         return $request->save();
     }

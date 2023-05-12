@@ -5,19 +5,8 @@ namespace App\Services\Expressions;
 use DateInterval;
 use Exception;
 
-class DurationExpression implements ExpressionInterface
+class DurationExpression extends BaseExpression
 {
-
-    public  string $expression;
-
-    /**
-     * @param string $expression
-     */
-    public function __construct(string $expression)
-    {
-        $this->expression = $expression;
-    }
-
     /**
      * @return DateInterval|bool
      */

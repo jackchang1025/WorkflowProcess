@@ -2,23 +2,10 @@
 
 namespace App\Services\Expressions;
 
-class RegularExpression implements ExpressionInterface
+use Illuminate\Support\Facades\Log;
+
+class RegularExpression extends BaseExpression
 {
-
-    public $data;
-
-    public  string $expression;
-
-    /**
-     * @param $data
-     * @param string $expression
-     */
-    public function __construct($data, string $expression)
-    {
-        $this->data = $data;
-        $this->expression = $expression;
-    }
-
     /**
      * @return array|bool
      */
@@ -28,7 +15,9 @@ class RegularExpression implements ExpressionInterface
 
             return preg_match($this->expression, (string) $this->data, $matches) ? $matches : false;
 
-        } catch (\Exception) {
+        } catch (\Exception $e) {
+
+            Log::channel('ondemand')->error($e->getMessage(), ['expression' => $this->expression, 'data' => $this->data->toArray()]);
             return false;
         }
     }

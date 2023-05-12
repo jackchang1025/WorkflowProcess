@@ -6,6 +6,7 @@ use App\Models\Request;
 use App\Models\RequestLog;
 use App\Models\Rule;
 use Dcat\Admin\Admin;
+use Dcat\Admin\Grid;
 use Dcat\Admin\Http\Controllers\AdminController;
 use Dcat\Admin\Layout\Content;
 use Dcat\Admin\Layout\Row;
@@ -68,6 +69,30 @@ class RequestStatisticsController extends AdminController
                         'requestLogs' => $requestLogs
                     ]
                 ]));
+            })->row(function (Row $row){
+
+                return Grid::make(new \App\Admin\Repositories\RequestLog(), function (Grid $grid) {
+
+                    $grid->model()->orderBy('id', 'desc');
+
+                    $grid->column('id')->sortable();
+                    $grid->column('request_id');
+                    $grid->column('issue');
+                    $grid->column('bet_code');
+                    $grid->column('bet_code_transform_value','value');
+                    $grid->column('bet_code_odds');
+                    $grid->column('lottery_code');
+                    $grid->column('bet_amount');
+                    $grid->column('bet_total_amount');
+                    $grid->column('win_lose');
+                    $grid->column('created_at');
+                    $grid->column('updated_at')->sortable();
+
+                    $grid->filter(function (Grid\Filter $filter) {
+                        $filter->equal('id');
+
+                    })->render();
+                });
             });
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Services\Tasks;
 
+use App\Models\Request;
 use App\Services\Expressions\FormalExpression;
 use App\Services\Traits\ServiceTrait;
 use Illuminate\Support\Facades\Log;
@@ -22,16 +23,17 @@ class CreateBetAmountTask
      * @return bool
      * @throws \Throwable
      */
-    private function __invoke(TokenInterface $token): bool
+    public function __invoke(TokenInterface $token): bool
     {
 
         $requestId = $token->getInstance()->getDataStore()->getData('request_id');
 
-        $request = $this->getRequest($requestId);
+        $request = Request::findOrStatusFail($requestId['request_id']);
+
+
+        $element = $token->getOwner()->getOwner()->getBpmnElement()->getElementsByTagNameNS('*', 'extensionElements');
 
         $extensionProperties = $this->formalExpression->getExtensionProperties($token->getBpmnElement());
-
-        $request->current_bet_amount_rule = $this->formalExpression->evaluates($request,$extensionProperties);
 
         //投注金额大于总金额
         throw_if($request->current_bet_amount_rule > $request->bet_total_amount_rules, new \Exception("投注金额大于总金额:{$request->current_bet_amount_rule} > {$request->bet_total_amount_rules}"));

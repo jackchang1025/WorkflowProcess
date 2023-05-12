@@ -3,9 +3,10 @@
 namespace App\Providers;
 
 use App\Models\Request;
+use App\Services\Lottery\ExtremelyFastThreeOnlineService;
 use App\Services\Lottery\ExtremelyFastThreeService;
 use App\Services\Lottery\ExtremelyFastThreeTestService;
-use App\Services\Lottery\LotteryInterFace;
+use Exception;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,24 +23,27 @@ class LotteryServiceProvider extends ServiceProvider
         $this->app->bind(LotteryServiceProvider::class, function (Application $app, array $params) {
             // 根据参数中的 code_type，实例化不同的服务类
 
-            if ($params['code_type'] == Request::CODE_TYPE_HISTORY) {
-
-                return new ExtremelyFastThreeTestService(
+            return match ($params['code_type']) {
+                Request::CODE_TYPE_LOCAL => new ExtremelyFastThreeOnlineService(
                     $params['url_address'],
                     $params['token'],
                     $params['lottery_id'],
                     $params['version']
-                );
-
-            }else{
-
-                return new ExtremelyFastThreeService(
+                ),
+                Request::CODE_TYPE_HISTORY => new ExtremelyFastThreeTestService(
                     $params['url_address'],
                     $params['token'],
                     $params['lottery_id'],
                     $params['version']
-                );
-            }
+                ),
+                Request::CODE_TYPE_PRODUCTION => new ExtremelyFastThreeService(
+                    $params['url_address'],
+                    $params['token'],
+                    $params['lottery_id'],
+                    $params['version']
+                ),
+                default => throw new Exception('code_type 参数错误'),
+            };
         });
     }
 

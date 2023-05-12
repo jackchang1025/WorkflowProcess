@@ -37,6 +37,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int|null $current_bet_amount_rule 当前投注金额规则
  * @property string|null $current_issue 当前期号
  * @property string|null $last_issue 上一期号
+ * @property string|null $last_code 上一期开奖号码
  * @property int|null $token_id token id
  * @property-read int|null $request_lottery_option_count
  * @property-read int|null $request_log_count
@@ -89,6 +90,7 @@ class Request extends Model
         'bet_base_amount_rules',
         'bet_total_amount_rules',
         'bet_amount_rules',
+        'stop_betting_amount',
         'bet_code_rules',
         'bet_count_rules',
         'win_lose_rules',
@@ -98,6 +100,10 @@ class Request extends Model
         'current_bet_amount_rule',
         'current_issue',
         'last_issue',
+    ];
+
+    protected $hidden = [
+        'bpmn_xml'
     ];
 
     protected $attributes = [
@@ -111,7 +117,7 @@ class Request extends Model
 
     // 定义需要排除的字段
     protected array $excludeFieldsOnSave = [
-
+        'last_code'
     ];
 
     protected $table = 'request';

@@ -29,10 +29,10 @@ class GetLotteryDataTask
      */
     public function __invoke(TokenInterface $token): bool
     {
-        // 在这里实现您的远程请求接口逻辑，例如发送 HTTP 请求
+
         $dataStore = $token->getInstance()->getDataStore();
 
-        $request = $this->getRequest($dataStore->getData('request_id'));
+        $request = Request::findOrStatusFail($dataStore->getData('request_id'));
 
         $lotteryManage = $dataStore->getData('lotteryManage');
 
@@ -42,15 +42,13 @@ class GetLotteryDataTask
 
         throw_if(!$lotteryLastInfo, new \Exception('获取上次开奖数据失败'));
 
-        //上一期开奖号码                             //上一期号
-        $code = $lotteryLastInfo['openNum'];
+        //上一期开奖号码
+        $request->last_code = $code = $lotteryLastInfo['openNum'];
+        //上一期号码
         $request->last_issue = $lotteryLastInfo['issue'];
 
-        Log::info("上一期开奖期号 ===> {$request->last_issue}");
-        Log::info("上一期开奖号码 ===> {$code}");
-
         //开奖总次数
-        $request->lottery_count_rules ++;
+        $request->lottery_count_rules++;
 
         //设置默认值
         $request->win_lose_rules = $request->win_lose_rules ?: '1';
@@ -65,11 +63,9 @@ class GetLotteryDataTask
             $request->appendLotteryRules($item->parentNode->title ?? $item->title, $item->value);
         });
 
-        Log::info("开奖规则 ===> {$request->lottery_rules}");
-
         $betOrderLogBettingLogUpdateOrCreate = RequestLog::updateOrCreate(
             ['request_id' => $request->id, 'issue' => $request->last_issue],
-            ['lottery_code' => $code, 'bet_code_transform_value' => $validateLotteryOption->value('value'),'bet_total_amount' => $request->bet_total_amount_rules]
+            ['lottery_code' => $code, 'bet_code_transform_value' => $validateLotteryOption->value('value'), 'bet_total_amount' => $request->bet_total_amount_rules]
         );
 
         if (!$betOrderLogBettingLogUpdateOrCreate->wasRecentlyCreated && $betOrderLogBettingLogUpdateOrCreate->bet_code) {
@@ -85,7 +81,7 @@ class GetLotteryDataTask
                 $betOrderLogBettingLogUpdateOrCreate->bet_total_amount = $request->bet_total_amount_rules;
 
                 $request->continuous_lose_count_rules = 0;
-                $request->continuous_win_count_rules ++;
+                $request->continuous_win_count_rules++;
 
             } else {
 
@@ -94,18 +90,15 @@ class GetLotteryDataTask
                 $betOrderLogBettingLogUpdateOrCreate->win_lose = Request::LOSE;
 
                 $request->continuous_win_count_rules = 0;
-                $request->continuous_lose_count_rules ++;
+                $request->continuous_lose_count_rules++;
             }
 
             //保持投注单日志表
             $betOrderLogBettingLogUpdateOrCreate->lottery_code = $code;
             $betOrderLogBettingLogUpdateOrCreate->save();
-
-            Log::info("输赢规则 ===> {$request->win_lose_rules}");
-            Log::info("连续输规则 ===> {$request->continuous_lose_count_rules}");
-            Log::info("连续赢规则 ===> {$request->continuous_win_count_rules}");
         }
 
+        Log::channel('ondemand')->info('GetLotteryDataTask 任务执行成功', ['App\Models\Request' => $request->toArray()]);
         return $request->save();
     }
 }

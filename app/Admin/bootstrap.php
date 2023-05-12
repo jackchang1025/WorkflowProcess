@@ -24,3 +24,20 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+
+Filter::resolving(function (Filter $filter) {
+
+
+    $filter->panel();
+    $filter->expand();
+});
+
+Grid::resolving(function (Grid $grid) {
+
+    //导出
+    $grid->export()->csv();
+
+    // 开启字段选择器功能
+    $grid->showColumnSelector();
+
+});

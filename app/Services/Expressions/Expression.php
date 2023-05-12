@@ -2,22 +2,10 @@
 
 namespace App\Services\Expressions;
 
-class Expression implements ExpressionInterface
+use Illuminate\Support\Facades\Log;
+
+class Expression extends BaseExpression
 {
-
-    public $data;
-
-    public  string $expression;
-
-    /**
-     * @param $data
-     * @param string $expression
-     */
-    public function __construct($data, string $expression)
-    {
-        $this->data = $data;
-        $this->expression = $expression;
-    }
 
     /**
      * @return mixed
@@ -36,6 +24,7 @@ class Expression implements ExpressionInterface
 
         } catch (\Exception | \Throwable $e) {
 
+            Log::channel('ondemand')->error($e->getMessage(), ['expression' => $this->expression, 'data' => $this->data->toArray()]);
             return false;
         }
 

@@ -7,6 +7,7 @@ use App\Services\Events\EndEventService;
 use App\Services\Events\StartEventService;
 use App\Services\Expressions\FormalExpression;
 use App\Services\Models\CallActivity;
+use App\Services\Tasks\ScriptTask;
 use App\Services\Tasks\ServiceTask;
 use Exception;
 use ProcessMaker\Nayra\Contracts\RepositoryInterface;
@@ -114,5 +115,15 @@ class RepositoryEngine implements RepositoryInterface
     public function createEndEvent()
     {
         return new EndEventService();
+    }
+
+    /**
+     * Create instance of ScriptTask.
+     *
+     * @return \ProcessMaker\Nayra\Contracts\Bpmn\ScriptTaskInterface
+     */
+    public function createScriptTask()
+    {
+        return new ScriptTask();
     }
 }

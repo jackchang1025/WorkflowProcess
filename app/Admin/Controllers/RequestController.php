@@ -105,9 +105,14 @@ class RequestController extends AdminController
     protected function form()
     {
         return Form::make(new Request(['requestLotteryOption']), function (Form $form) {
+
             $form->display('id');
 
-            $form->text('title')->required();
+            $form->select('title')->options(function () {
+
+                return Process::all()->pluck('title', 'title');
+
+            })->required();
 
             $form->select('lottery_id')->options(function () {
                 return Lottery::all()->pluck('title', 'id');
@@ -142,9 +147,24 @@ class RequestController extends AdminController
                     return array_column($v, 'id');
                 })->required();
 
-            $form->number('bet_base_amount_rules')->rules(['required', 'numeric', 'min:2', 'lt:total_amount_rules',])->required();
-            $form->number('total_amount_rules')->rules('required|min:10|numeric')->required();
-            $form->number('bet_total_amount_rules')->rules('required|same:total_amount_rules')->required();
+            $form->number('bet_base_amount_rules')
+                ->rules(['required', 'numeric', 'min:2', 'lt:total_amount_rules',])
+                ->required();
+
+            $form->number('total_amount_rules', '总金额')
+                ->rules('required|min:10|numeric')
+                ->help('总金额必须大于基础投注金额规则')
+                ->required();
+
+            $form->number('bet_total_amount_rules')
+                ->rules('required|same:total_amount_rules')
+                ->help('总投注金额规则必须和总金额一致')
+                ->required();
+
+            $form->number('stop_betting_amount', '截止金额')
+                ->rules('required|gte:total_amount_rules')
+                ->help('截止金额必须大于总投注金额规则')
+                ->required();
 
             $form->hidden('status', '状态')->saving(function () {
 
@@ -156,8 +176,8 @@ class RequestController extends AdminController
 
             $form->saved(function (Form $form) {
 
-//                RequestJob::dispatch($form->getKey());
-                RequestJob::dispatchSync($form->getKey());
+                RequestJob::dispatch($form->getKey());
+//                RequestJob::dispatchSync($form->getKey());
             });
         });
     }

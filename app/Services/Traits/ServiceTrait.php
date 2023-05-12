@@ -34,20 +34,4 @@ trait ServiceTrait
 
         return true;
     }
-
-    /**
-     * @param int $requestId
-     * @return Model|array|Collection|Request|null
-     * @throws \Throwable
-     */
-    public function getRequest(int $requestId): Model|array|Collection|Request|null
-    {
-        $request = Request::find($requestId);
-
-        throw_if(!$request, new \Exception('请求不存在'));
-
-        throw_if($request->status == Request::STATUS_STOP, new \Exception('请求已取消'));
-
-        return $request;
-    }
 }

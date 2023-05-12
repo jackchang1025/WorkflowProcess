@@ -4,9 +4,15 @@ namespace App\Admin\Controllers;
 
 use App\Admin\Actions\Grid\ProcessCopyRowAction;
 use App\Admin\Repositories\Process;
+use App\Jobs\RequestJob;
+use App\Models\Lottery;
+use App\Models\LotteryOption;
 use App\Models\Process as ProcessModel;
+use App\Models\Request as RequestModel;
+use App\Models\Token;
 use App\Services\Engine\BpmnDocumentService;
 use App\Services\ProcessService;
+use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Grid\Displayers\Actions;
 use Dcat\Admin\Layout\Content;
@@ -65,6 +71,19 @@ class ProcessController extends AdminController
         });
     }
 
+    public function form()
+    {
+        return Form::make(new Process(), function (Form $form) {
+            $form->display('id');
+            $form->text('title')->required();
+            $form->text('bpmn_xml')->required();
+            $form->switch('status')->default(1)->required();
+            $form->number('order')->default(0)->required();
+            $form->display('created_at');
+            $form->display('updated_at');
+        });
+    }
+
     /**
      * @param $id
      * @param Content $content
@@ -73,6 +92,9 @@ class ProcessController extends AdminController
     public function edit($id, Content $content)
     {
         $process = ProcessModel::find($id);
+//        dd($process->bpmn_xml);
+
+
 
         return Inertia::render('Bpmn/BpmnViewer', [
             'id'         => $process->id,
@@ -89,6 +111,7 @@ class ProcessController extends AdminController
     public function store()
     {
         throw_if(empty($bpmnXml = request()->post('xml')), ValidationException::withMessages(['xml' => 'xml 不能为空']));
+
 
         $this->bpmnDocumentService->loadXML($bpmnXml);
 

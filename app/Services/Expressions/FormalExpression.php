@@ -32,9 +32,9 @@ class FormalExpression implements FormalExpressionInterface
             new DateExpression($expression),
             new CycleExpression($expression),
             new DurationExpression($expression),
-            new RegularExpression($data, $expression),
-            new Expression($data, $expression),
-            new PhpScript($data, $expression),
+            new RegularExpression($expression, $data),
+            new Expression($expression, $data),
+            new PhpScript($expression, $data),
         ];
     }
 
@@ -110,12 +110,10 @@ class FormalExpression implements FormalExpressionInterface
         }));
 
         return array_reduce($matchingExpressions, function ($carry, ExpressionInterface $matchingExpression) {
-            if (!empty($matchingExpression->data)) {
-                Log::info("{$matchingExpression->expression} ===> {$matchingExpression->data}");
-            }
+
+            Log::channel('ondemand')->debug(get_class($matchingExpression), ['expression' => $matchingExpression->expression, 'data' => $matchingExpression->data]);
             return $carry ?: $matchingExpression->evaluate();
         }, false);
-
     }
 
     /**
@@ -153,12 +151,14 @@ class FormalExpression implements FormalExpressionInterface
     {
         try {
 
-            $request = Request::findOrStatusFail($args['request_id']);
-            return $this->evaluate($request);
+            return $this->evaluate(Request::findOrStatusFail($args['request_id']));
 
         } catch (\Exception $e) {
 
             // Log the error or handle it as needed
+
+            Log::channel('ondemand')->error($e->getMessage());
+
             return false;
         }
     }

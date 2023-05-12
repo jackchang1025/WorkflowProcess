@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Events\ProcessInstanceCompletedEvent;
+use App\Events\ScriptTaskActivatedEvent;
 use App\Events\ServiceTaskActivatedEvent;
 use App\Listeners\ProcessInstanceCompletedListener;
+use App\Listeners\ScriptTaskActivatedListener;
 use App\Listeners\ServiceTaskActivatedListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -19,15 +21,18 @@ class EventServiceProvider extends ServiceProvider
      * @var array<class-string, array<int, class-string>>
      */
     protected $listen = [
-        Registered::class => [
+        Registered::class                    => [
             SendEmailVerificationNotification::class,
         ],
-        ServiceTaskActivatedEvent::class => [
+        ServiceTaskActivatedEvent::class     => [
             ServiceTaskActivatedListener::class,
         ],
         ProcessInstanceCompletedEvent::class => [
             ProcessInstanceCompletedListener::class,
         ],
+        ScriptTaskActivatedEvent::class      => [
+            ScriptTaskActivatedListener::class,
+        ]
     ];
 
     /**

@@ -24,18 +24,32 @@ class RequestLogController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('request_id');
             $grid->column('issue');
+            $grid->column('lottery_code');
             $grid->column('bet_code');
             $grid->column('bet_code_transform_value','value');
             $grid->column('bet_code_odds');
-            $grid->column('lottery_code');
+
             $grid->column('bet_amount');
             $grid->column('bet_total_amount');
             $grid->column('win_lose');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
+
+//            dd(
+//                $grid->getVisibleColumnsFromQuery(),
+//                $grid->getVisibleColumns()->toArray(),
+//                $grid->getVisibleColumnNames()
+//            );
+
+//            $titles = ['issue' => '期号', 'lottery_code' => '开奖号码', 'bet_code_transform_value' => '开奖结果'];
+            $titles = ['issue' => '期号','bet_code_transform_value' => '开奖结果'];
+            $grid->export()->titles($titles);
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
+                $filter->equal('request_id');
+                $filter->equal('issue');
 
             });
         });

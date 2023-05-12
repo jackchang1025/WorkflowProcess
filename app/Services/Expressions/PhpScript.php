@@ -2,22 +2,10 @@
 
 namespace App\Services\Expressions;
 
-class PhpScript implements ExpressionInterface
+use Illuminate\Support\Facades\Log;
+
+class PhpScript extends BaseExpression
 {
-
-    public $data;
-
-    public string $expression;
-
-    /**
-     * @param $data
-     * @param string $expression
-     */
-    public function __construct($data, string $expression)
-    {
-        $this->data       = $data;
-        $this->expression = $this->buildScript($expression);
-    }
 
     /**
      * @param string $expression
@@ -45,22 +33,50 @@ class PhpScript implements ExpressionInterface
     }
 
     /**
-     * @return array|bool
+     * 执行表达式
+     * @return false|mixed
      */
-    public function evaluate(): bool|array
+    public function evaluate(): mixed
     {
         try {
             $request = $this->data;
 
-            $eval = function ($code) use ($request): mixed {
-                return eval($code);
-            };
+            // Check if the expression is a function definition
+            if (preg_match('/^function\s*\((.*?)\)\s*\{(.*?)\}$/s', $this->removeComments($this->expression), $matches)) {
+                $params = $matches[1];
+                $code   = $matches[2];
 
-            return $eval(trim($this->expression, ''));
+                // Create an anonymous function with the code
+                $function = eval("return function ({$params}) {{$code}};");
 
+                if ($function instanceof \Closure) {
+                    return $function($request);
+                }
+                return false;
+
+            } else {
+                // Evaluate the expression as a simple script
+                $func = function ($code) use ($request) {
+                    return eval($code);
+                };
+
+                // Call the function
+                return $func($this->expression);
+            }
         } catch (\Exception|\Throwable $e) {
+            Log::channel('ondemand')->error($e->getMessage(), ['expression' => $this->expression, 'data' => $this->data->toArray()]);
             return false;
         }
+    }
+
+    /**
+     * 移除代码注释
+     * @param string $code
+     * @return string
+     */
+    private function removeComments(string $code): string
+    {
+        return preg_replace(['!/\*.*?\*/!s', '!//.*?\n!', '!#.*?\n!'], '', $code);
     }
 
     /**
@@ -70,5 +86,4 @@ class PhpScript implements ExpressionInterface
     {
         return !empty($this->expression);
     }
-
 }

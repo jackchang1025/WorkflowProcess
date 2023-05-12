@@ -6,19 +6,8 @@ use DateInterval;
 use DateTime;
 use ProcessMaker\Nayra\Bpmn\Models\DatePeriod;
 
-class CycleExpression implements ExpressionInterface
+class CycleExpression extends BaseExpression
 {
-
-    public  string $expression;
-
-    /**
-     * @param string $expression
-     */
-    public function __construct(string $expression)
-    {
-        $this->expression = $expression;
-    }
-
     /**
      * @return false|DatePeriod
      */

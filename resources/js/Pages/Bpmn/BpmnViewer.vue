@@ -154,6 +154,16 @@ function init() {
     props.xml && modeler.importXML(props.xml);
 }
 
+
+function encodeXml(str) {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+}
+
 function extendReplaceMenuProvider() {
     const replaceMenuProvider = modeler.get("replaceMenuProvider");
     const originalGetEntries = replaceMenuProvider.getEntries;
@@ -303,7 +313,7 @@ html {
 }
 
 #js-properties-panel {
-    width: 400px;
+    width: 800px;
 }
 
 a:link {

@@ -4,18 +4,8 @@ namespace App\Services\Expressions;
 
 use DateTime;
 
-class DateExpression implements ExpressionInterface
+class DateExpression extends BaseExpression
 {
-
-    public  string $expression;
-
-    /**
-     * @param string $expression
-     */
-    public function __construct(string $expression)
-    {
-        $this->expression = $expression;
-    }
 
     /**
      * @return bool

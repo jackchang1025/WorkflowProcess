@@ -30,7 +30,7 @@ class StartEventService extends StartEvent
 
         $requestId = $instance->getDataStore()->getData('request_id');
 
-        $request = $this->getRequest($requestId);
+        $request = Request::findOrStatusFail($requestId);
 
         $request->status = Request::STATUS_RUNNING;
         $request->save();
