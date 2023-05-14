@@ -26,7 +26,7 @@ class StartEventService extends StartEvent
     {
         parent::start($instance);
 
-        Log::channel()->info('StartEventService start');
+        Log::channel('ondemand')->info('StartEventService start');
 
         $requestId = $instance->getDataStore()->getData('request_id');
 

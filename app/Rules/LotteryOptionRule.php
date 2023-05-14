@@ -160,4 +160,51 @@ class LotteryOptionRule implements Rule, DataAwareRule, ValidatorAwareRule
         $validator->setData($data);
         return true;
     }
+
+    /**
+     * 庄
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @return string
+     */
+    function determineResultVillage($attribute, $value, $parameters, $validator): string
+    {
+        list($card1,$card2,$card3) = explode(',', $value);
+
+        return ($card2 < $card1 && $card2 > $card3) || ($card2 > $card1 && $card2 < $card3);
+    }
+
+    /**
+     * 闲
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @return string
+     */
+    function determineResultIdle($attribute, $value, $parameters, $validator): string
+    {
+        list($card1,$card2,$card3) = explode(',', $value);
+
+        // 如果第二张牌不在第一张和第三张之间
+        return ($card2 > $card3 && $card2 > $card1) || ($card2 < $card3 && $card2 < $card1);
+    }
+
+    /**
+     * 和
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @param $validator
+     * @return string
+     */
+    function determineResultAnd($attribute, $value, $parameters, $validator): string
+    {
+        list($card1,$card2,$card3) = explode(',', $value);
+
+        // 如果第二张牌和第一张或者第三张相等
+        return $card2 == $card1 || $card2 == $card3;
+    }
 }

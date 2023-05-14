@@ -22,22 +22,54 @@ class RequestStatisticsController extends AdminController
 
         $requestLogs = $request->requestLog->unique('issue')->values();
 
+        $x = 1.5;
+        $y = 0.5;
+        $lastResult = null;
+
+        foreach ($requestLogs as $key => $log) {
+            if ($key == 0) {
+                // 对于第一个元素，我们直接设定它的 x 和 y 值为 1
+                $requestLogs[$key]['x'] = $x;
+                $requestLogs[$key]['y'] = $y;
+            } else {
+                // 对于后续的元素，我们需要检查它的 bet_code_transform_value 值是否与前一个元素一致
+                if ($log['bet_code_transform_value'] == $lastResult) {
+                    // 如果一致，那么它的 x 值与前一个元素相同，y 值增加
+                    $y++;
+                    $requestLogs[$key]['x'] = $x;
+                    $requestLogs[$key]['y'] = $y;
+                } else {
+                    // 如果不一致，那么我们创建一个新的列（即增加 x 值），并且 y 值重置为 1
+                    $x += 1;
+                    $y = 0.5;
+                    $requestLogs[$key]['x'] = $x;
+                    $requestLogs[$key]['y'] = $y;
+                }
+            }
+
+            // 根据 bet_code_transform_value 值设定颜色
+            $requestLogs[$key]['color'] = Request::$lotteryOptionValue[$log->bet_code_transform_value] ?? 'yellow';
+
+            // 更新 lastResult 变量，以便下一次循环使用
+            $lastResult = $log['bet_code_transform_value'];
+        }
+
         $request->total_lottery_count = $requestLogs->count();
         $request->win_count           = $requestLogs->where('bet_code', '!=', '')->where('win_lose', Request::WIN)->count();
         $request->lose_count          = $requestLogs->where('bet_code', '!=', '')->where('win_lose', Request::LOSE)->count();
         $request->bet_count           = $requestLogs->where('bet_code', '!=', '')->whereIn('win_lose', [Request::WIN, Request::LOSE])->count();
 
 
-        $ruleList = Rule::where('status',1)->get();
+        $ruleList = Rule::where('status', 1)->get();
 
-        $ruleList->each(function (Rule $rule) use ($request){ #/([\x{4e00}-\x{9fa5}])\1{2}/u
+        $ruleList->each(function (Rule $rule) use ($request) { #/([\x{4e00}-\x{9fa5}])\1{2}/u
 
             $count = preg_match_all($rule->rule, $request->lottery_rules, $matches);
 
             $rule->rule_count = $count;
-        })->makeHidden(['created_at', 'updated_at','status']);
+        })->makeHidden(['created_at', 'updated_at', 'status']);
 
-        Admin::js('https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js');
+        Admin::js('echarts/echarts-5.4.2.js');
 
         return $content
             ->title('Request Statistics')
@@ -69,30 +101,12 @@ class RequestStatisticsController extends AdminController
                         'requestLogs' => $requestLogs
                     ]
                 ]));
-            })->row(function (Row $row){
-
-                return Grid::make(new \App\Admin\Repositories\RequestLog(), function (Grid $grid) {
-
-                    $grid->model()->orderBy('id', 'desc');
-
-                    $grid->column('id')->sortable();
-                    $grid->column('request_id');
-                    $grid->column('issue');
-                    $grid->column('bet_code');
-                    $grid->column('bet_code_transform_value','value');
-                    $grid->column('bet_code_odds');
-                    $grid->column('lottery_code');
-                    $grid->column('bet_amount');
-                    $grid->column('bet_total_amount');
-                    $grid->column('win_lose');
-                    $grid->column('created_at');
-                    $grid->column('updated_at')->sortable();
-
-                    $grid->filter(function (Grid\Filter $filter) {
-                        $filter->equal('id');
-
-                    })->render();
-                });
+            })->row(function (Row $row) use ($requestLogs){
+                $row->column(12, view('requestStatistics/request_statistics_lutu', [
+                    'data' => [
+                        'requestLogs' => $requestLogs
+                    ]
+                ]));
             });
     }
 

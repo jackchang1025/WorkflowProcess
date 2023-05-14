@@ -48,5 +48,8 @@ class AppServiceProvider extends ServiceProvider
         Validator::extend('array_sum', 'App\Rules\LotteryOptionRule@array_sum');
         Validator::extend('pregMatch', 'App\Rules\LotteryOptionRule@pregMatch');
         Validator::extend('substr', 'App\Rules\LotteryOptionRule@substr');
+        Validator::extend('determineResultVillage', 'App\Rules\LotteryOptionRule@determineResultVillage');
+        Validator::extend('determineResultIdle', 'App\Rules\LotteryOptionRule@determineResultIdle');
+        Validator::extend('determineResultAnd', 'App\Rules\LotteryOptionRule@determineResultAnd');
     }
 }

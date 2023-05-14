@@ -35,6 +35,8 @@ class RequestCrontab extends Command
     {
         $id = $this->argument('id');
 
+        $id = array_unique($id);
+
         foreach ($id as $value) {
 
             try {
@@ -43,8 +45,20 @@ class RequestCrontab extends Command
 
                 $newRequest = $request->replicate();
 
-                $newRequest->title  = $newRequest->title . ' ' . Carbon::now();
                 $newRequest->status = Request::STATUS_PENDING;
+                $newRequest->lottery_rules = null;
+                $newRequest->lottery_count_rules = 0;
+                $newRequest->bet_amount_rules = 0;
+                $newRequest->bet_total_amount_rules = $newRequest->total_amount_rules;
+                $newRequest->bet_code_rules = null;
+                $newRequest->bet_count_rules = 0;
+                $newRequest->win_lose_rules = 1;
+                $newRequest->continuous_lose_count_rules = 0;
+                $newRequest->continuous_win_count_rules = 0;
+                $newRequest->continuous_bet_count = 0;
+                $newRequest->current_bet_code_rule = null;
+                $newRequest->current_bet_amount_rule = 0;
+                $newRequest->current_issue = '';
                 $newRequest->save();
 
                 RequestJob::dispatch($newRequest->id);
@@ -54,10 +68,10 @@ class RequestCrontab extends Command
 
             } catch (\Exception $e) {
 
-                $this->error('Request Crontab ' . $value . ' not found');
+                Log::info('Request Crontab ' . $e->getMessage());
+                $this->error('Request Crontab ' .$e->getMessage());
 
                 throw $e;
-
             }
         }
     }

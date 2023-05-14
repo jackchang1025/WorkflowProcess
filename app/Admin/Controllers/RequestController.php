@@ -43,6 +43,7 @@ class RequestController extends AdminController
             $grid->column('bet_base_amount_rules');
             $grid->column('bet_total_amount_rules');
             $grid->column('total_amount_rules', '总金额');
+            $grid->column('stop_betting_amount', '停止投注金额');
             $grid->column('bet_count_rules');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();

@@ -74,8 +74,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Request extends Model
 {
 
-    protected LotteryInterFace $lotteryService;
-
     use HasDateTimeFormatter;
 
     protected $fillable = [
@@ -180,6 +178,18 @@ class Request extends Model
         self::STATUS_STOP      => '已停止',
     ];
 
+    static array $lotteryOptionValue = [
+        '大'=>'red',
+        '双'=>'red',
+        '庄'=>'red',
+
+        '小'=>'blue',
+        '单'=>'blue',
+        '闲'=>'blue',
+
+        '和'=>'yellow',
+    ];
+
 
     /**
      * 彩票选项
@@ -207,7 +217,7 @@ class Request extends Model
 
     public function lotteryManage(): LotteryInterFace
     {
-        return $this->lotteryService = app(LotteryServiceProvider::class, [
+        return app(LotteryServiceProvider::class, [
             'url_address' => $this->lottery->url,
             'token'       => $this->token->token,
             'lottery_id'  => $this->lottery->lottery_id,

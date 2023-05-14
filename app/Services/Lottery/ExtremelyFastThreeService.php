@@ -118,7 +118,7 @@ class ExtremelyFastThreeService extends AbstractLotteryService implements Lotter
      * @return Response
      * @throws Exception|Throwable
      */
-    public function lotteryBet(int $issue, string $betCode, float $betAmount): Response
+    public function lotteryBet(int $issue, string $betCode, float $betAmount)
     {
         $this->config['betList']  = "[{\"playId\":{$this->payload($betCode)},\"buyCode\":\"$betCode\",\"buyCodeFront\":\"$betCode\",\"singleMoney\":$betAmount,\"buyDouble\":1,\"moneyUnit\":3,\"rebateRate\":0,\"imp\":0}]";
         $this->config['identity'] = time();

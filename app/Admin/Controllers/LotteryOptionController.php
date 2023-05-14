@@ -36,7 +36,9 @@ class LotteryOptionController extends AdminController
                 $branchSlug = htmlspecialchars($branch['rule']);
 
                 return "
-<div class='pull-left' style='min-width:310px'><b>{$branchName}</b>&nbsp;&nbsp;
+<div class='pull-left' style='min-width:310px'>
+<b>{$branch['id']}</b>&nbsp; &nbsp;
+<b>{$branchName}</b>&nbsp; &nbsp;
 [规则:<span class='text-primary'>{$branchSlug}</span>]&nbsp;&nbsp;
 [赔率:<span class='text-primary'>{$branch['odds']}</span>]&nbsp;&nbsp;
 [值:<span class='text-primary'>{$branch['value']}</span>]&nbsp;&nbsp;

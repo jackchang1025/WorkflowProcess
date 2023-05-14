@@ -2,10 +2,6 @@
 
 namespace App\Services\Lottery;
 
-use Exception;
-use Illuminate\Http\Client\Response;
-use Throwable;
-
 class ExtremelyFastThreeOnlineService extends ExtremelyFastThreeService
 {
 
@@ -14,11 +10,10 @@ class ExtremelyFastThreeOnlineService extends ExtremelyFastThreeService
      * @param int $issue
      * @param string $betCode
      * @param float $betAmount
-     * @return Response
-     * @throws Exception|Throwable
+     * @return bool
      */
-    public function lotteryBet(int $issue, string $betCode, float $betAmount): Response
+    public function lotteryBet(int $issue, string $betCode, float $betAmount): bool
     {
-        return app(Response::class);
+        return true;
     }
 }

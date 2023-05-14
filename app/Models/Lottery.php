@@ -58,6 +58,9 @@ class Lottery extends Model
 
     protected $table = 'lottery';
 
+    const STATUS_ON = 1;
+    const STATUS_OFF = 0;
+
     public function lotteryGroup(): BelongsTo
     {
         return $this->belongsTo(LotteryGroup::class);

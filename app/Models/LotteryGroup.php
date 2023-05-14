@@ -38,9 +38,11 @@ class LotteryGroup extends Model
     protected $table = 'lottery_group';
 
     const EXTREMELY_FAST_THREE = 'extremelyFastThree';
+    const WEB_SOCKET_CLIENT = 'web_socket_client';
 
     static array $driver = [
-        self::EXTREMELY_FAST_THREE=>'极速快三'
+        self::EXTREMELY_FAST_THREE=>'极速快三',
+        self::WEB_SOCKET_CLIENT=>'web socket client',
     ];
 
 }
