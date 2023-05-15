@@ -112,36 +112,38 @@ class WebSocketClientService implements LotteryInterFace
      */
     public function connect()
     {
-        echo '连接中...' . PHP_EOL;
+        return retry(5, function () {
+            echo '连接中...' . PHP_EOL;
 
-        //获取 ws 地址
-        $this->ws = $this->init();
+            //获取 ws 地址
+            $this->ws = $this->init();
 
-        $this->client = new Client($this->ws, [
-            'headers' => [
-                'Cache-Control' => 'no-cache',
-                'Host'          => 'destinedworld9999.net',
-                'Origin'        => 'https://destinedworld9999.net',
-                'Cookie'        => $this->cookies,
-                'User-Agent'    => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
-            ],
-            'timeout' => 60,
-        ]);
+            $this->client = new Client($this->ws, [
+                'headers' => [
+                    'Cache-Control' => 'no-cache',
+                    'Host'          => 'destinedworld9999.net',
+                    'Origin'        => 'https://destinedworld9999.net',
+                    'Cookie'        => $this->cookies,
+                    'User-Agent'    => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+                ],
+                'timeout' => 60,
+            ]);
 
-        //发送订阅消息
-        $this->send(json_encode([
-            'data'  => [
-                'channel' => 'CBLM'
-            ],
-            'event' => 'gusher.subscribe'
-        ]));
+            //发送订阅消息
+            $this->send(json_encode([
+                'data'  => [
+                    'channel' => 'CBLM'
+                ],
+                'event' => 'gusher.subscribe'
+            ]));
+        }, 5000);
     }
 
     /**
      * @return void
-     * @throws BadOpcodeException
+     * @throws BadOpcodeException|\Throwable
      */
-    public function reconnect()
+    public function reconnect(): void
     {
         $this->client->close();
         sleep(5);
@@ -162,13 +164,13 @@ class WebSocketClientService implements LotteryInterFace
 
         if ($response->failed()) {
             Log::error('Failed to fetch UUID and GSC data: ' . $response->body());
-            throw new Exception('Failed to fetch UUID and GSC data'.$response->body());
+            throw new Exception('Failed to fetch UUID and GSC data' . $response->body());
         }
 
         $data = $response->object();
         if (empty($data->ws->gsc) || empty($data->ws->uuid)) {
-            Log::error('Failed to fetch GSC and UUID data'.$response->body());
-            throw new Exception('Failed to fetch GSC and UUID data'.$response->body());
+            Log::error('Failed to fetch GSC and UUID data' . $response->body());
+            throw new Exception('Failed to fetch GSC and UUID data' . $response->body());
         }
 
         return "{$data->ws->gsc}?token={$data->ws->uuid}";
@@ -241,14 +243,14 @@ class WebSocketClientService implements LotteryInterFace
     /**
      * 循环获取服务器数据根据消息事件设置属性，
      * @return void
-     * @throws BadOpcodeException
+     * @throws BadOpcodeException|\Throwable
      */
     public function run()
     {
         while (true) {
             try {
                 $this->listen();
-            } catch (ConnectionException $e) {
+            } catch (\WebSocket\TimeoutException|ConnectionException $e) {
                 Log::error('ConnectionException in run: ' . $e->getMessage());
                 $this->reconnect();
             }
