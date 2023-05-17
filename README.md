@@ -2,6 +2,8 @@
 
 ### 安装
  - composer install 
+ - cp .env.example .env
+ - php artisan migrate
  - npm install 
  - npm run dev
 
@@ -21,7 +23,7 @@ vagrant ssh
 
 在 Homestead 虚拟机中，运行以下命令以打开 Cron 配置文件：
 
-```bash
+```bash                       
 sudo crontab -e
 ```
 

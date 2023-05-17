@@ -5008,8 +5008,8 @@ $request-&gt;save();</script>
                 'token_id' => NULL,
                 'code_type' => 0,
                 'status' => 'pending',
-                'lottery_rules' => '"庄闲闲闲和闲闲闲闲和闲闲庄庄和闲闲庄闲闲和闲庄闲闲庄闲庄庄闲和和闲庄庄闲闲"',
-                'lottery_count_rules' => 37,
+                'lottery_rules' => '"庄闲闲闲和闲闲闲闲和闲闲庄庄和闲闲庄闲闲和闲庄闲闲庄闲庄庄闲和和闲庄庄闲闲闲庄庄闲闲庄庄闲庄和闲庄闲闲闲闲和庄和庄闲闲庄庄闲闲闲庄庄闲闲闲庄闲闲闲和闲闲庄庄闲闲闲闲闲和庄闲闲闲闲庄庄和闲闲闲闲闲闲庄闲闲闲庄闲闲闲庄闲闲庄庄庄闲庄闲闲闲庄闲庄庄闲闲闲闲庄庄闲庄闲庄闲闲闲闲闲闲闲闲闲庄闲闲闲庄闲闲庄闲闲闲和庄庄闲闲闲闲闲闲庄闲庄闲闲闲和闲闲闲闲闲和闲闲庄庄和庄闲闲庄和闲闲闲闲和庄闲闲闲闲闲闲闲闲庄闲和闲庄闲庄闲庄闲闲庄闲庄和闲闲闲闲闲闲庄庄闲闲闲闲庄闲闲和闲闲庄闲和庄庄闲闲和和庄和闲庄庄闲庄闲闲闲闲闲庄和闲和闲闲闲庄和闲庄闲庄和闲和闲和闲庄闲和和庄庄闲闲闲闲闲闲闲闲庄和闲闲庄闲闲闲闲闲闲闲和闲庄庄庄庄闲庄和闲闲庄闲庄庄闲闲庄闲闲庄闲闲庄庄庄和闲和庄庄庄闲庄庄庄闲闲闲和闲闲闲闲闲闲庄闲闲闲和庄庄庄庄和闲闲闲和闲庄闲和闲闲庄和闲庄闲闲闲闲庄庄闲庄闲闲庄庄和庄闲和闲庄闲庄和庄闲闲庄庄和庄闲和闲闲闲闲闲闲闲闲闲闲庄闲闲和闲庄闲闲闲庄闲闲庄闲闲闲庄和闲庄闲闲闲和庄闲闲闲闲庄庄闲和庄庄闲闲闲闲闲闲庄和闲庄庄和庄闲庄闲闲和闲闲和和庄闲闲闲庄闲庄庄闲和庄闲闲庄闲和闲闲和闲庄庄闲闲闲闲庄闲闲闲闲庄闲庄庄闲闲闲闲闲庄闲闲闲庄闲庄和闲闲闲闲闲闲和庄闲闲闲闲闲闲闲闲庄闲闲庄闲和闲和庄庄闲闲庄庄闲闲庄闲闲庄闲闲庄庄闲闲闲闲庄闲闲闲闲闲庄闲闲和闲闲闲闲庄闲闲闲闲闲闲庄闲庄庄闲闲庄闲庄闲闲闲闲闲闲和闲闲和闲闲庄闲庄闲庄庄庄闲和闲庄闲闲闲闲闲和闲闲庄和闲庄庄闲庄闲庄闲闲闲闲闲庄闲闲闲闲闲闲闲闲庄闲闲闲庄闲闲闲闲闲庄闲闲"',
+                'lottery_count_rules' => 652,
                 'bet_base_amount_rules' => 0,
                 'bet_total_amount_rules' => 0,
                 'bet_amount_rules' => NULL,
@@ -5020,7 +5020,7 @@ $request-&gt;save();</script>
                 'continuous_lose_count_rules' => 0,
                 'continuous_win_count_rules' => 0,
                 'created_at' => '2023-05-15 16:03:12',
-                'updated_at' => '2023-05-15 16:39:30',
+                'updated_at' => '2023-05-16 02:54:30',
                 'total_amount_rules' => 0.0,
                 'title' => '射龙门',
                 'current_bet_code_rule' => NULL,
@@ -5116,8 +5116,8 @@ $request-&gt;save();</script>
                 'token_id' => 1,
                 'code_type' => 1,
                 'status' => 'running',
-                'lottery_rules' => '"大小大小大小大大小大小小小小小小小大大小大大小小大大小小"',
-                'lottery_count_rules' => 28,
+                'lottery_rules' => '"大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小大大小大小小大大小大大小大大大小小大小大大大小大小小大小小小小小大大小大小大大大小小大小小小大大大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小"',
+                'lottery_count_rules' => 871,
                 'bet_base_amount_rules' => 10,
                 'bet_total_amount_rules' => 1000,
                 'bet_amount_rules' => NULL,
@@ -5128,13 +5128,13 @@ $request-&gt;save();</script>
                 'continuous_lose_count_rules' => 0,
                 'continuous_win_count_rules' => 0,
                 'created_at' => '2023-05-15 16:05:03',
-                'updated_at' => '2023-05-15 16:39:21',
+                'updated_at' => '2023-05-16 10:13:11',
                 'total_amount_rules' => 1000.0,
                 'title' => '死循环获取开奖信息',
                 'current_bet_code_rule' => NULL,
                 'current_bet_amount_rule' => NULL,
                 'current_issue' => NULL,
-                'last_issue' => '32739963',
+                'last_issue' => '32740806',
                 'continuous_bet_count' => 0,
             ),
             21 => 
@@ -5428,6 +5428,2730 @@ $request-&gt;save();</script>
                 'current_issue' => NULL,
                 'last_issue' => '32739941',
                 'continuous_bet_count' => 101,
+            ),
+            22 => 
+            array (
+                'id' => 68,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="AAAAA倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0s4vlli</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_15h65le" />
+<sequenceFlow id="Flow_0s4vlli" name="Flow_0s4vlli" sourceRef="Gateway_15h65le" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1a44leq</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1a44leq" name="AAA" sourceRef="Gateway_15h65le" targetRef="Gateway_10t4rtn">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="lottery_rules-AAA" value="/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{2,}$/u" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">//AAA
+function ($request){
+return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules);
+}</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_15h65le" name="Gateway_15h65le" default="Flow_0s4vlli">
+<documentation>SSS</documentation>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_0s4vlli</outgoing>
+<outgoing>Flow_1a44leq</outgoing>
+</exclusiveGateway>
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules,$matches);
+
+throw_if(empty($response), new Exception(\'获取投注号码失败\'));
+
+$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_1likk12_di" bpmnElement="Gateway_15h65le" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="595" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="775" y="613" width="89" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="595" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0s4vlli_di" bpmnElement="Flow_0s4vlli">
+<di:waypoint x="715" y="620" />
+<di:waypoint x="400" y="620" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="385" y="477" width="61" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a44leq_di" bpmnElement="Flow_1a44leq">
+<di:waypoint x="740" y="645" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="744" y="677" width="23" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"小小小小小小小大小大小大小大小小小小大小小大小小大小大大小小大大大大大大小大大大小大大小大小大大大小小大大小大小小小小大小小小大大大大大小小大小小小大小小小大小大小小小大小小大大大大大大大小小大大大小小大大大大大小大小小小小大大大小小小小大小大大大小小小大小小大大小小小大小小小小小大小小小小大小小大大大大小小大小小小大大小大大大大大小小小大大小大大小大大小大大小大小小大大大小小大小小大大小小小大小小小小小大大小小小大小小大大小大大大小小大小大大大小小小大大小大小小小大小大小小大小大大大大大大大小大小大大小大大小大小小大小大小小小小小小大小大大大大小小小大大小大大大小大小小小大大大大小小大大大小小小大小大大小大大大大大大小大大大大小小大大小小小大小小大小小小小小小小大小大大小小大小小小大大小大小小大小大小大大小小大大大小大小大小大大大大小小小小大小小大大小小小小大大大大小大小小大大大大小小小大大小小小大小小大大小小大小大大大小大大小小大大小小小小小大小大小小小大小大大小小小大小大大大小大大小大大小小大小大大大小大小小小小大小大大大大大小大小大大小小小小大大大小小小小大小小大小大小大大大大大大大小小小大大大小大大大大小大大大小大小小大大小大大小小大大小小大小小大小大小小大小小大小小大小小大大大小大小小小大大小大小大小大大小小大小小大大大大小大小小大大小小小大小大大大小大大小大大小大小大小小大小小大大大小小小大小小大小小大大大小小大小大大小小大大大小大小小小小小大大大小小大小小小小小大小大小小大大大大大小小小小大小小大大小小小小小小小小小小小大小小大小大大小小大小大小小大小大大小大大小小小大小小小大大小小大大小大小大大小小大大大小小小小大大小小小大小大大小小大小小小小大小小大小大小小小大小大小大小大大大大小小小大大小小大小大大小小大小大小小大大大小大大大大大小小大小大大小大大小大小大大小大大小大小小小小小小大小大小小小小大大小大小大大大小小小小小大大大大小小大小大小大大大大小大小大小大大大小小大大大大大大小大小大大大小小大小小小大小大大小大大小小大大大大小小小大大大大小大大大小大大大小大小小小小小小小小大大小小小小小大大大大小大大小大小小小大大小大大大小大小大大大小小大大大小大小小大小小大小大小大大大小小小小大小小小小大小小大小大大大大大大小大大大小小小大大大大小小小大小小大小大大大大小大小小大大小大小大小大小小小大大大大大大大小小小大大大小小小小小大大小小大小小小大小小小小大大大小大大小大小小大小小大小小小小大大小大大小小大大大小小大小小小小大大小小大小小小小小小大小小小小小小小小大大小大小大大大小小小大大大小大小小大小小小小大小小大小小小小小小大小小大大小大大大大小小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大小大大小大小小小小小小大大小小小小小小小大大小小小大小小小大大大大小小小大小小小大小大小小小大大大小大小大小小大大小大大小大小小大小大小大大小大大小大小小小大大小小大大大小小大小小大小大小大大小大小小大大小小小大大大小小小小小小小大小大小大大大小小小大大大大小小大小大大大大小小大大大大大大大小小大小大小大小大大大小大大大大小大大小大大大小小小小小大小小大大大小小大小小小小大大小小大大大小大小大小大大小小小小大小小大大小小大大大小小大小小大大小大大小小大大大小大大大大小小大大大大大大大大小大大大大小大小大大大小大大大小小大大小小小小小大小大小小小小小大小大小大大小大小小小大大小小大大小小小小小大小大大小小小小大大小大小大小大大大大大大小小大小大小大小小小大小小小大大大小大小小大大小大大小大小大小大小小大大小小大大大小大大大小小大大大大大小小小大大大小大小大大小小大大小小小大大大小小小小小大大小大小小大大小小大小小小大小大大大小大小大大大小大小小小小大大大大小小大大小小大小大大小小大大小小小大大大大大小小小小大大大大大小大大大大小小小大大小小小大大小大小小大小小小小小小大小大小小大大小大大小小大小小大大小大小小小小大小小小小大大大大小小大大小大大大小大小大小小小大大小大大大小小小小大大大小大小小大小大小大大小大小大小小大小大大小小小大小大大大小小小小小小大大大大小大大小大小大大小小大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小"',
+                'lottery_count_rules' => 2256,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1635,
+                'bet_amount_rules' => '0,10,10,10,20,10,20,40,10,10,20,40,80,160,320,10,10,20,10,20,10,20,10,10,20,40,80,10,10,20,40,80,160,10,10,10,10,10,10,20,40,10,20,40,10,20,10,10,10,20,40,10,20,10,10,20,40,10,20,10,10,10,20,10,20,40,10,10,10,10,10,20,40,80,10,20,10,10,20,10,10,20,10,10,20,40,10,10,10,20,40,80,160,10,20,40,80,160,320,10,20,10,20,10,10,20,40,80,10,20,40,80,160,10',
+                'stop_betting_amount' => 1700,
+                'bet_code_rules' => '小小小大大大大大大大小大小大大大小小大大小小小小大大大大小小大小小小小小小小大小小小大大小小小小小大大大大大小小小小小小小小小小大大大大大大小小小小小小小小小小大大大小大大大大小小小大大大小大大小小小小小小小大小小小大大大小小',
+                'bet_count_rules' => 113,
+                'win_lose_rules' => '111010011000001101010110001100001111110010010111001011001011101001111100010110110110011100001000001010110001000010',
+                'continuous_lose_count_rules' => 1,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-15 23:00:03',
+                'updated_at' => '2023-05-15 23:02:01',
+                'total_amount_rules' => 1200.0,
+                'title' => 'AAAAA倍投',
+                'current_bet_code_rule' => '小',
+                'current_bet_amount_rule' => 10.0,
+                'current_issue' => '',
+                'last_issue' => '32740267',
+                'continuous_bet_count' => 113,
+            ),
+            23 => 
+            array (
+                'id' => 71,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="AAAAA倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0s4vlli</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_15h65le" />
+<sequenceFlow id="Flow_0s4vlli" name="Flow_0s4vlli" sourceRef="Gateway_15h65le" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1a44leq</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1a44leq" name="AAAAA" sourceRef="Gateway_15h65le" targetRef="Gateway_10t4rtn">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="lottery_rules-AAA" value="/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{2,}$/u" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">//AAAAA
+function ($request){
+return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules);
+}</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_15h65le" name="Gateway_15h65le" default="Flow_0s4vlli">
+<documentation>SSS</documentation>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_0s4vlli</outgoing>
+<outgoing>Flow_1a44leq</outgoing>
+</exclusiveGateway>
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules,$matches);
+
+throw_if(empty($response), new Exception(\'获取投注号码失败\'));
+
+$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_1likk12_di" bpmnElement="Gateway_15h65le" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="595" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="775" y="613" width="89" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="595" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0s4vlli_di" bpmnElement="Flow_0s4vlli">
+<di:waypoint x="715" y="620" />
+<di:waypoint x="400" y="620" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="385" y="477" width="61" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a44leq_di" bpmnElement="Flow_1a44leq">
+<di:waypoint x="740" y="645" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="738" y="677" width="36" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大小大大小大小小小小小小大大小小小小小小小大大小小小大小小小大大大大小小小大小小小大小大小小小大大大小大小大小小大大小大大小大小小大小大小大大小大大小大小小小大大小小大大大小小大小小大小大小大大小大小小大大小小小大大大小小小小小小小大小大小大大大小小小大大大大小小大小大大大大小小大大大大大大大小小大小大小大小大大大小大大大大小大大小大大大小小小小小大小小大大大小小大小小小小大大小小大大大小大小大小大大小小小小大小小大大小小大大大小小大小小大大小大大小小大大大小大大大大小小大大大大大大大大小大大大大小大小大大大小大大大小小大大小小小小小大小大小小小小小大小大小大大小大小小小大大小小大大小小小小小大小大大小小小小大大小大小大小大大大大大大小小大小大小大小小小大小小小大大大小大小小大大小大大小大小大小大小小大大小小大大大小大大大小小大大大大大小小小大大大小大小大大小小大大小小小大大大小小小小小大大小大小小大大小小大小小小大小大大大小大小大大大小大小小小小大大大大小小大大小小大小大大小小大大小小小大大大大大小小小小大大大大大小大大大大小小小大大小小小大大小大小小大小小小小小小大小大小小大大小大大小小大小小大大小大小小小小大小小小小大大大大小小大大小大大大小大小大小小小大大小大大大小小小小大大大小大小小大小大小大大小大小大小小大小大大小小小大小大大大小小小小小小大大大大小大大小大小大大小小大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小大大小大小小大大小大大小大大大小小大小大大大小大小小大小小小小小大大小大小大大大小小大小小小大大大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小"',
+                'lottery_count_rules' => 1887,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1390,
+                'bet_amount_rules' => ',10,20,10,10,10,10,10,20,40,80,10,20,10,10,20,10,10,20,10,10,20,40,10,10,10,20,40,80,160,10,20,40,80,160,320,10,20,10,20,10,10,20,40,80,10,20,40,80,160,10,20,40,80,160,320,10,10,10,20,10,20,40,10,20,40,80,160,320,10,20,10,20,40,80,160,320,10',
+                'stop_betting_amount' => 1700,
+                'bet_code_rules' => '小大大大大大大小小小小小小小小小小大大大小大大大大小小小大大大小大大小小小小小小小大小小小大大大小小小小小大小小小小小小小小小大小小大大大大大大小大小大大',
+                'bet_count_rules' => 77,
+                'win_lose_rules' => '101111100010110110110011100001000001010110001000010000011101001000001010000010',
+                'continuous_lose_count_rules' => 1,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-16 15:18:11',
+                'updated_at' => '2023-05-16 15:19:33',
+                'total_amount_rules' => 1200.0,
+                'title' => 'AAAAA倍投',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 10.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741050',
+                'continuous_bet_count' => 77,
+            ),
+            24 => 
+            array (
+                'id' => 72,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="死循环获取开奖信息" isExecutable="true">
+<documentation>获取数据</documentation>
+<extensionElements>
+<camunda:executionListener class="" event="start" />
+<camunda:properties>
+<camunda:property />
+</camunda:properties>
+</extensionElements>
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_0ygumq5" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="620" />
+<di:waypoint x="440" y="620" />
+<di:waypoint x="440" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 1,
+                'status' => 'failed',
+                'lottery_rules' => '"小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小小小小大小小大大大小小大小大小大大小小小大小小小小小小小小小大小小小大大小小小大小大小小大大小小大小大小小大大大大大大小小大大小大大大大小大大大大小大大小大大大大大小大大小小大小大大大小小大大大大大大大小小小小大大小小大大小小小大小大小大大大小小小大大小大大小大小大小小大大小小大大小小大小大小大小小大小"',
+                'lottery_count_rules' => 242,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1000,
+                'bet_amount_rules' => NULL,
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => NULL,
+                'bet_count_rules' => 0,
+                'win_lose_rules' => '1',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-16 15:27:49',
+                'updated_at' => '2023-05-16 20:32:12',
+                'total_amount_rules' => 1000.0,
+                'title' => '死循环获取开奖信息',
+                'current_bet_code_rule' => NULL,
+                'current_bet_amount_rule' => NULL,
+                'current_issue' => NULL,
+                'last_issue' => '32741300',
+                'continuous_bet_count' => 0,
+            ),
+            25 => 
+            array (
+                'id' => 73,
+                'bpmn_xml' => '',
+                'lottery_id' => 2,
+                'token_id' => NULL,
+                'code_type' => 0,
+                'status' => 'pending',
+                'lottery_rules' => '"闲闲闲庄庄闲庄庄闲闲和庄闲庄闲庄闲闲闲和闲闲庄和闲和闲闲和和庄闲闲和和和闲和闲闲闲庄闲庄庄和闲庄闲闲庄闲和庄和闲闲庄庄闲闲闲闲闲闲闲庄闲庄闲闲闲和闲闲庄闲闲和和和闲闲闲闲和庄庄和闲庄闲和和闲和闲闲闲闲闲和闲闲闲庄闲和庄闲闲闲闲闲闲闲闲庄庄闲庄庄庄庄闲闲和庄闲闲和闲庄和庄庄庄庄庄闲庄闲闲和庄和闲闲和庄闲庄和和闲闲庄闲庄闲闲庄和闲庄闲庄庄闲庄庄闲闲庄庄庄闲庄闲闲闲庄和闲和闲闲闲闲闲闲庄闲闲闲和和庄庄庄庄庄闲闲闲闲闲闲闲和庄闲庄庄闲闲闲闲庄庄闲闲闲闲闲闲闲庄庄闲闲庄闲闲庄和闲闲闲庄闲和和庄闲闲庄闲庄闲闲闲闲闲庄庄闲闲庄庄闲闲庄闲闲闲庄闲庄庄庄闲庄庄闲闲闲庄闲闲闲和和闲庄闲闲闲闲闲闲闲闲闲庄闲闲闲闲闲庄闲闲闲闲闲闲闲和闲闲闲和庄庄和闲闲闲闲闲和闲闲闲和闲闲闲闲闲闲闲庄闲闲庄闲闲庄庄庄庄闲闲闲闲闲闲庄闲闲闲闲闲闲庄和庄庄庄和庄庄和闲闲闲闲和闲闲庄闲和闲庄庄闲闲闲闲闲闲庄闲庄闲闲和和闲庄闲闲闲庄庄庄庄闲闲庄闲闲闲闲闲闲闲闲庄庄闲闲庄闲闲闲闲闲庄庄庄庄闲闲闲闲闲闲闲闲和和庄庄庄闲和庄庄和闲庄闲庄闲庄闲庄闲闲庄和闲闲闲庄闲闲闲庄闲闲闲闲闲庄庄闲闲闲和闲庄庄闲闲庄闲闲闲闲庄闲庄庄闲庄庄闲闲闲和闲庄闲庄闲闲闲闲闲闲闲和和闲庄闲闲闲闲庄闲闲和庄和闲闲闲庄庄闲闲和闲和闲闲闲闲闲闲庄庄闲庄庄闲闲闲闲闲闲闲庄闲闲闲闲闲闲闲庄庄闲闲庄庄闲庄和闲闲闲庄闲庄闲闲闲闲和闲庄和闲闲庄庄闲庄闲闲庄庄闲庄庄和和闲和庄庄闲闲庄和闲庄闲闲闲闲和庄庄闲闲闲和庄闲庄闲闲闲闲闲闲庄闲闲闲闲闲和庄庄闲闲闲庄和闲闲闲闲闲"',
+                'lottery_count_rules' => 643,
+                'bet_base_amount_rules' => 0,
+                'bet_total_amount_rules' => 0,
+                'bet_amount_rules' => NULL,
+                'stop_betting_amount' => 0,
+                'bet_code_rules' => NULL,
+                'bet_count_rules' => 0,
+                'win_lose_rules' => '1',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-16 15:32:10',
+                'updated_at' => '2023-05-17 02:14:30',
+                'total_amount_rules' => 0.0,
+                'title' => '射龙门',
+                'current_bet_code_rule' => NULL,
+                'current_bet_amount_rule' => NULL,
+                'current_issue' => NULL,
+                'last_issue' => NULL,
+                'continuous_bet_count' => 0,
+            ),
+            26 => 
+            array (
+                'id' => 74,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="AAAAA倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0s4vlli</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_15h65le" />
+<sequenceFlow id="Flow_0s4vlli" name="Flow_0s4vlli" sourceRef="Gateway_15h65le" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1a44leq</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1a44leq" name="AAAAA" sourceRef="Gateway_15h65le" targetRef="Gateway_10t4rtn">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="lottery_rules-AAA" value="/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{2,}$/u" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">//AAAAA
+function ($request){
+return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules);
+}</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_15h65le" name="Gateway_15h65le" default="Flow_0s4vlli">
+<documentation>SSS</documentation>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_0s4vlli</outgoing>
+<outgoing>Flow_1a44leq</outgoing>
+</exclusiveGateway>
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules,$matches);
+
+throw_if(empty($response), new Exception(\'获取投注号码失败\'));
+
+$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_1likk12_di" bpmnElement="Gateway_15h65le" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="595" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="775" y="613" width="89" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="595" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0s4vlli_di" bpmnElement="Flow_0s4vlli">
+<di:waypoint x="715" y="620" />
+<di:waypoint x="400" y="620" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="385" y="477" width="61" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a44leq_di" bpmnElement="Flow_1a44leq">
+<di:waypoint x="740" y="645" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="738" y="677" width="36" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 2,
+                'status' => 'failed',
+                'lottery_rules' => '"小大大大大大小大小大大小大大小大小大小大小大大小大小小小大大小大小大大大大大大大大大小小大大大小小大小大大大小小小小大大小大小大大大小大大小小小小小小小小小大小大大小小大大大小大小小大大小小大小小大大大大大小大小小小大小大小小小大小小小大大大小大小小小小小大小小大大小小小小大大小大小大大小小小小大小小小大大小小小大小大大大小小小大大大大大大小小大小大大小大小小大大小大小小小小小小大大大大小大大大小小大大大大大小大小大大小大小大大大小小大小大大小小小小大大小小小小小小大小大大小大小大小大小小小小大大小大大小小小小大小大大大大大大大大大大小小小小小小小小大大小小小小小大小小大大小小小小小大小小小小小小小小大小小大小小大大大大小小大大小小小小小小小小小小小小大大大小大小大小小小小大大大大小大小小大大小小大大小大大小大小大小小大小大小小小小小小大小小大大大小大小大大大小小小大小小大小小小大小大小小小大小小小小小小小大大大大大大大小大大小大小小小小小大小小大小小大大小大小大大小小小小小大小大大大大大大小大大大小小大大小小大小大小大小大大小小小小大小小小小大大大小大大大小小小大小大小大大小大大小小大小大小小小大大大小小大大小大小大小小大小小小大小大大小大大小小小小大小大小小大大小小大小小小大小大小小小小小大小小大大小小大小大小小小大大小小小小大小大小小大小小小小大小大大大小小小小大大大大大小大小小大大小小小小大小大小小小小小大大大小小小大小大小小小大大大大大小大小小小小小大小"',
+                'lottery_count_rules' => 642,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 947,
+                'bet_amount_rules' => ',10,20,10,10,10,10,20,10,10,10,10,20,40,80,10,20,10,20,40,10,20,10,10,10,10,10,20,10,10,10,20,40,80,10,10,10,20,10,10,10,10,10,10,10,20,10,20,10,10,20,10,10,20,40,80,10,20,40,80,160,320',
+                'stop_betting_amount' => 1600,
+                'bet_code_rules' => '大大大大大大小小小小小大小大大小小大小小大大大大大大小小小小小小小小小小小小小小小小小小小小小小小大大大小小大大小大小大小',
+                'bet_count_rules' => 61,
+                'win_lose_rules' => '10111101111000101001011111011100011101111111010110110001000000',
+                'continuous_lose_count_rules' => 6,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-16 20:31:48',
+                'updated_at' => '2023-05-17 09:54:20',
+                'total_amount_rules' => 1250.0,
+                'title' => 'AAAAA倍投',
+                'current_bet_code_rule' => '小',
+                'current_bet_amount_rule' => 320.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741943',
+                'continuous_bet_count' => 61,
+            ),
+            27 => 
+            array (
+                'id' => 75,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="AAAAA倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0s4vlli</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_15h65le" />
+<sequenceFlow id="Flow_0s4vlli" name="Flow_0s4vlli" sourceRef="Gateway_15h65le" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1a44leq</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1a44leq" name="AAA" sourceRef="Gateway_15h65le" targetRef="Gateway_10t4rtn">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="lottery_rules-AAA" value="/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{2,}$/u" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">//AAA
+function ($request){
+return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules);
+}</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_15h65le" name="Gateway_15h65le" default="Flow_0s4vlli">
+<documentation>SSS</documentation>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_0s4vlli</outgoing>
+<outgoing>Flow_1a44leq</outgoing>
+</exclusiveGateway>
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules,$matches);
+
+throw_if(empty($response), new Exception(\'获取投注号码失败\'));
+
+$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_1likk12_di" bpmnElement="Gateway_15h65le" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="595" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="775" y="613" width="89" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="595" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0s4vlli_di" bpmnElement="Flow_0s4vlli">
+<di:waypoint x="715" y="620" />
+<di:waypoint x="400" y="620" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="385" y="477" width="61" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a44leq_di" bpmnElement="Flow_1a44leq">
+<di:waypoint x="740" y="645" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="744" y="677" width="23" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大小大大小大小小小小小小大大小小小小小小小大大小小小大小小小大大大大小小小大小小小大小大小小小大大大小大小大小小大大小大大小大小小大小大小大大小大大小大小小小大大小小大大大小小大小小大小大小大大小大小小大大小小小大大大小小小小小小小大小大小大大大小小小大大大大小小大小大大大大小小大大大大大大大小小大小大小大小大大大小大大大大小大大小大大大小小小小小大小小大大大小小大小小小小大大小小大大大小大小大小大大小小小小大小小大大小小大大大小小大小小大大小大大小小大大大小大大大大小小大大大大大大大大小大大大大小大小大大大小大大大小小大大小小小小小大小大小小小小小大小大小大大小大小小小大大小小大大小小小小小大小大大小小小小大大小大小大小大大大大大大小小大小大小大小小小大小小小大大大小大小小大大小大大小大小大小大小小大大小小大大大小大大大小小大大大大大小小小大大大小大小大大小小大大小小小大大大小小小小小大大小大小小大大小小大小小小大小大大大小大小大大大小大小小小小大大大大小小大大小小大小大大小小大大小小小大大大大大小小小小大大大大大小大大大大小小小大大小小小大大小大小小大小小小小小小大小大小小大大小大大小小大小小大大小大小小小小大小小小小大大大大小小大大小大大大小大小大小小小大大小大大大小小小小大大大小大小小大小大小大大小大小大小小大小大大小小小大小大大大小小小小小小大大大大小大大小大小大大小小大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小大大小大小小大大小大大小大大大小小大小大大大小大小小大小小小小小大大小大小大大大小小大小小小大大大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小大大大小大大小小小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小小小小大小小大大大小小大小大小大大小小小大小小小小小小小小小大小小小大大小小小大小大小小大大小小大小大小小大大大大大大小小大大小大大大大小大大大大小大大小大大大大大小大大小小大小大大大小小大大大大大大大小小小小大大小小大大小小小大小大小大大大小小小大大小大大小大小大小小大大小小大大小小大小大小大小小大小大小大大大大大小大小大大小大大小大小大小大小大大小大小小小大大小大小大大大大大大大大大小小大大大小小大小大大大小小小小大大小大小大大大小大大小小小小小小小小小大小大大小小大大大小大小小大大小小大小小大大大大大小大小小小大小大小小小大小小小"',
+                'lottery_count_rules' => 2256,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1529,
+                'bet_amount_rules' => '0,10,20,10,10,10,10,10,20,40,80,10,20,10,10,20,10,10,20,10,10,20,40,10,10,10,20,40,80,160,10,20,40,80,160,320,10,20,10,20,10,10,20,40,80,10,20,40,80,160,10,20,40,80,160,320,10,10,10,20,10,20,40,10,20,40,80,160,320,10,20,10,20,40,80,160,320,10,20,40,80,10,10,20,10,10,10,10,20,10,20,40,10,10,20,40,10,10,10,10,20,10,10,10,10,20',
+                'stop_betting_amount' => 1700,
+                'bet_code_rules' => '小大大大大大大小小小小小小小小小小大大大小大大大大小小小大大大小大大小小小小小小小大小小小大大大小小小小小大小小小小小小小小小大小小大大大大大大小大小大大小大小小小小小小小小大大大大大大大大大大大大小小小小小大',
+                'bet_count_rules' => 105,
+                'win_lose_rules' => '1011111000101101101100111000010000010101100010000100000111010010000010100000100011011110100110011110111100',
+                'continuous_lose_count_rules' => 2,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-16 23:00:03',
+                'updated_at' => '2023-05-16 23:01:46',
+                'total_amount_rules' => 1200.0,
+                'title' => 'AAAAA倍投',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 20.0,
+                'current_issue' => '',
+                'last_issue' => '32741419',
+                'continuous_bet_count' => 105,
+            ),
+            28 => 
+            array (
+                'id' => 76,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注" isExecutable="false">
+<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1sl5j1j</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_0qy900k</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_0vgmnk1</incoming>
+<outgoing>Flow_0qy900k</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
+<incoming>Flow_1sl5j1j</incoming>
+<outgoing>Flow_0vgmnk1</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
+<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
+<sequenceFlow id="Flow_1sl5j1j" sourceRef="Activity_19dyqqr" targetRef="Activity_05ghkdt" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
+<omgdc:Bounds x="690" y="580" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="690" y="760" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
+<di:waypoint x="740" y="660" />
+<di:waypoint x="740" y="760" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
+<di:waypoint x="740" y="840" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1sl5j1j_di" bpmnElement="Flow_1sl5j1j">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="580" />
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'completed',
+                'lottery_rules' => '"小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大"',
+                'lottery_count_rules' => 174,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1300,
+                'bet_amount_rules' => ',10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10',
+                'stop_betting_amount' => 1300,
+                'bet_code_rules' => '小大小大大大大小小大大小大小大大小小大小小大小小大小小大小大小大小小大大大大小大大大小小小小小小大小小大小小大大小小小小小小大小小小小大大小大小大大小小小小大大大小小小小大大大大小小大小小小大大大小小小大大小小大小小小大小大小小小小小大大大大大小大大大小大大小大大小小大大大小小小大小大大小大小小大大大小小小大大小大大大小小小大小小小大小大大大大大',
+                'bet_count_rules' => 174,
+                'win_lose_rules' => '110011011100010011101111111111001101010100101101011000011000000011111101111101011001111000011000011010100111111111110110011100011000001010010111101111111100001111101100011111',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 5,
+                'created_at' => '2023-05-16 23:56:12',
+                'updated_at' => '2023-05-16 23:56:28',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 10.0,
+                'current_issue' => NULL,
+                'last_issue' => '32739337',
+                'continuous_bet_count' => 174,
+            ),
+            29 => 
+            array (
+                'id' => 77,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注" isExecutable="false">
+<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1sl5j1j</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_0qy900k</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_0vgmnk1</incoming>
+<outgoing>Flow_0qy900k</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
+<incoming>Flow_1sl5j1j</incoming>
+<outgoing>Flow_0vgmnk1</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
+<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
+<sequenceFlow id="Flow_1sl5j1j" sourceRef="Activity_19dyqqr" targetRef="Activity_05ghkdt" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
+<omgdc:Bounds x="690" y="580" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="690" y="760" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
+<di:waypoint x="740" y="660" />
+<di:waypoint x="740" y="760" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
+<di:waypoint x="740" y="840" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1sl5j1j_di" bpmnElement="Flow_1sl5j1j">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="580" />
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大小大大小大小小小小小小大大小小小小小小小大大小小小大小小小大大大大小小小大小小小大小大小小小大大大小大小大小小大大小大大小大小小大小大小大大小大大小大小小小大大小小大大大小小大小小大小大小大大小大小小大大小小小大大大小小小小小小小大小大小大大大小小小大大大大小小大小大大大大小小大大大大大大大小小大小大小大小大大大小大大大大小大大小大大大小小小小小大小小大大大小小大小小小小大大小小大大大小大小大小大大小小小小大小小大大小小大大大小小大小小大大小大大小小大大大小大大大大小小大大大大大大大大小大大大大小大小大大大小大大大小小大大小小小小小大小大小小小小小大小大小大大小大小小小大大小小大大小小小小小大小大大小小小小大大小大小大小大大大大大大小小大小大小大小小小大小小小大大大小大小小大大小大大小大小大小大小小大大小小大大大小大大大小小大大大大大小小小大大大小大小大大小小大大小小小大大大小小小小小大大小大小小大大小小大小小小大小大大大小大小大大大小大小小小小大大大大小小大大小小大小大大小小大大小小小大大大大大小小小小大大大大大小大大大大小小小大大小小小大大小大小小大小小小小小小大小大小小大大小大大小小大小小大大小大小小小小大小小小小大大大大小小大大小大大大小大小大小小小大大小大大大小小小小大大大小大小小大小大小大大小大小大小小大小大大小小小大小大大大小小小小小小大大大大小大大小大小大大小小大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小大大小大小小大大小大大小大大大小小大小大大大小大小小大小小小小小大大小大小大大大小小大小小小大大大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小大大大小大大小小小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小小小小大小小大大大小小大小大小大大小小小大小小小小小小小小小大小小小大大小小小大小大小小大大小小大小大小小大大大大大大小小大大小大大大大小大大大大小大大小大大大大大小大大小小大小大大大小小大大大大大大大小小小小大大小小大大小小小大小大小大大大小小小大大小大大小大小大小小大大小小大大小小大小大小大小小大小大小大大大大大小大小大大小大大小大小大小大小大大小大小小小大大小大小大大大大大大大大大小小大大大小小大小大大大小小小小大大小大小大大大小大大小小小小小小小小小大小大大小小大大大小大小小大大小小大小小大大大大大小大小小小大小大小小小大小小小大大大小大小小小小小大小小大大小小小小大大小大小大大小小小小大小小小大大小小小大小大大大小小"',
+                'lottery_count_rules' => 2302,
+                'bet_base_amount_rules' => 20,
+                'bet_total_amount_rules' => 454,
+                'bet_amount_rules' => ',20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20',
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => '大大大小大大大大小大小小大小大小大小小小小大小大小小小小小大小小大小大小小小大小小大小大小小小小大大大大小大小小小小大小小大大大大小大大大小小小小小大大小小大大大大小大小大小大小大大大大大小大小大小大大大小大小小大大大小大小小大小大小小大小大小小小小大大小小大小小小大小小大小小大小大大小大小小小小小小小大小小小小大小大大小小小大小大小小小小小大大大小小小小大大小大大小小小小大小大小小小大大大小大大小小大大大小大小小大大小大大小大大小小大大小大小小大大小大大小大大小大大小小大小大小小大大小大小大小小小小大大大小大小小小大小小小小小小小大大大大大小大大大大大小小小小大小大大大小大小小大小小大小大小小小大小大大大小大小小小大大大小小大大小小大大小大大小小小大小大小大大小小大小大大小大大大大小小小大大小大小大小小大小小大小小大小大大小小大大大大大大大大小大大大大大小小大小小小小小大小大大大小大大大小小小大小大小大小小小小小大大小小大大小小小大小大小小大大小大小大小小小小小大小小小大大小小小小大大小小小大小大大小小大小大大大小小小小大大小小大大大小小小小小小小小小大小小小小小小大小小小小小小大大大小小大小小小大大大大小大小小大小小小大大小小小大大小大小大小小大大小大大大小小大小大小大小小小小大小大小小小大大小小小小小小大小大小大大大大小小大大小大小大小大大大小大大大小小大大大小小大小小大大小大小小小小小小大大小大小小小小小大大小小大大大大小大大大大大小大小大小小小大小大大大大大大小大大大小大大大小大大小大大大大小小小大大大小大小小小小小小小小大大小小小小小大大大大大大小小大大大小大大小大小小大大大小小小小大大小大小小大大小大大小大大大大大小大大小大大大大小大小大小大大大大大大大大小大小大大大小小大小小大大大小小大大大大小小小小大大小小小小小大大大小大小大大大小大大小大大小大大小小小小小小大大大小小小大大小小大大大小小大大大大小大大大大大大小小大大大小大小小大小小小大大小小大大大小小小小小大大小小小大大小小大大小小小大小小小大小大大小小大小小小大小大大大小大大小大大大小大小小小小大小小小小大小大小大小大小小小小大大小小小小小小大小大大大小大小小大大大小大大小大小小大大大大小小小大小大小小大小大大大小小小大大大小大小大小小小小小大小大大小小小大小小大大大小小大小小大大小大大小大大大大小大小大小大小小小小小小小大小小大小大小小小大大小大大大小大大小小大大大大小小小大大小小小小小小小大大大小大小大小大小小小大大大小大小小小小大大小大小小小小大大小大小大小大小小大大小小小小大大大大小大小小大大大大大大小小小小大大大大大大大小小小小大小小大小大小小小小大大小大小小小小大小小小大小大大大小大大小大大小小小小小大大小小大小小大小小小大大大小大小小大小大大小大大大大小大大大大小小大大大大小大小小大小小小小小大大大小小小大大大大大小小小小小大大小大大大小小大小小小小大大小小小大大小大小大小小小小大小大大大小大小小小大小小小小小大小大小大小大小大大小小小大小大大大小大大小小小小小大大小大小小大小小小小小大大小小小大大小小小大大大小小小大大大小小大大小大大大大小小小大小大小小大小小大大小小大小大大大大大大大小大小小大小大大大小小小小小大小小小小小大大小大大小小大小小小大小大小大小小大大大大大小小大大大小大小大大大小小大小大小大小小大大大小大小大小小大大小小小大大大大大小小大大大小大小大大小大小小小小小大小大大小大大大小大大小大小小小大小小大大小大大小大大大小大小小大小大小小大大小大大小小大小大大大小大小大大大小大小小小大小小大大小小大大小小小小大小小大小大大小小小小大大小小大大大小小大大小小小小大大大小大小小大大小小大小大大小大小大小小大小大小小大小大大小大小大小小小大小小大小大大大小大小大大大小小大小小小小大小小小大小小小大小大大大大大大大大小小大大小小大小大小大小小小大小小大大大大小大小小小小小大大小大小小大大小小大大大大大大大小大小大大大小小大大小小大大小大小大小大小小大小小大小大大小大小小大大小大大小大大大小小大大大小大小小小大大小大大大大小小小大大小小小大大大小大小小小大大小小大小大大大大小小小大大大小小大大小小小小大小大小大大小小小小小小大小大大大小大小小小大小小小大小小大小小大小小小大大小小小大小小大小小小小小大小小小小大小小小大大小小小大小小大小小大大小小小小小小大小小大小小小大小小大大大大小大小小大小大大大小小小小大小小大小大大小大大大大小小大小大大小小大小大小小大小小大大小大大大大大大小小大小大小大小小小小小小小大大小小小大大小大大小小大大大小小大小大大大大小大小小大大大小小小小大大小小小大大小小小大大大大大大小大大小大大大大小小大小小大小大小大小小大大大小小小小小大小小大小大小大大小小大小小大小小小大大大大小小小大小小小小小大小小大大小小大小大大小大小大大大小小大大大小小小小大大大小大大小大小小小小大小小小小大大大小小小小小小小大大大小大大大大大小大小小大大小小大小大大小大小大大大小大小大大大大小小小大大大小大大小大小大小大大大小大小小小大小小大小大大大小小小大小大大大小大小小大小小大大小小大大小小小小小小小大大小大小大大大小大小大大大大小大大大大大小大小小大小小大小大小小大大大小小大小大大大大小小小大小小小小小大小小大小大小大大小小小大大大小大大大小小大大大大小小大大小小大大小大大大小小小小大小大大大大小大小大大小大大小小大小',
+                'bet_count_rules' => 2301,
+                'win_lose_rules' => '1001010101010100001111110011010000011010111001010101001000010010001011001000110110110111011011100010011111000000010111001101110001111001000110010101100010011010101000011100010101010010000110101101001101111100111010111011110001101111111101000000010000110000101110010101000100100001101110100111101010110000110101011111001111100011001110111011110000010101011001011101001110010110001100111110011001110010000000101110001100100001111011110111001011110011100010001001011101001001110101111001000100001011010010111111111000101100011011011001011111111101011110100010101001111011000000011001101010100010110101101010000101001010000000001011100100100000111000010011100000000011001011010011010101011001000101111010000101101101000010100011010110001100000110110001110100110101111010100011100101010110100011111110101110001111111101111011001010001001011111001010001111001111011000010111001011100011000000111110100001010011011101110010101111101001110100001111101011101111111110100110101101001000010100101100111001110100100011001000110101011111101001110001011010000011000101001111001100101011001101111101001011100011111010110101001010001110011000001000111111111000010101111110010110111011000001111100011101000101101101110000111101101011010010100010010000111111101000100000001101110001010011101100011110001000111011100000010111011011110110111111000011100100010010101111000000110010100001010101011100000101100111010011101100111000110010010100011110110010101000001100111111101010110111110100100001100001111100110000110101111100010000100101011011000000101011000000100101000111110101101010110011110100000101110000010000110100100000111011101010000101100101101010000110001110010001100110000001111101100011011100111110101010000101001011000110011111101010010110110000111001101001110111100101011111000010011101101010010001101001010001111101010000100011111011000001111000100110001011101001000111111101001101111110001110100100001001100111110111010111010101100100001101110011011100100010101111100001010000111000100111001011011111110001101000011111001011000100010001010111010000100001001111011110001111001010011100000100110010110011010001110100001011110110001001101001110111101000011110100011111001100101110010011010100110101110101111111100100001011001100101100100100111010001001111110001101100101100101010110100100011011000011000010001',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 1,
+                'created_at' => '2023-05-16 23:57:05',
+                'updated_at' => '2023-05-17 00:00:09',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 20.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741465',
+                'continuous_bet_count' => 2301,
+            ),
+            30 => 
+            array (
+                'id' => 78,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注" isExecutable="false">
+<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1sl5j1j</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_0qy900k</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_0vgmnk1</incoming>
+<outgoing>Flow_0qy900k</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
+<incoming>Flow_1sl5j1j</incoming>
+<outgoing>Flow_0vgmnk1</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
+<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
+<sequenceFlow id="Flow_1sl5j1j" sourceRef="Activity_19dyqqr" targetRef="Activity_05ghkdt" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
+<omgdc:Bounds x="690" y="580" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="690" y="760" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
+<di:waypoint x="740" y="660" />
+<di:waypoint x="740" y="760" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
+<di:waypoint x="740" y="840" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1sl5j1j_di" bpmnElement="Flow_1sl5j1j">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="580" />
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"小小小大大大小大小小小小大大大小大小小小小小大小小大小小大小小大大小大大小大小小小小大大小小大小大大小大小大大大大大大大大大大小小小小小大大大大小大大小大小大大大小大小小小大小小小大小大大大大小大大大小大大小大小大小小小大小大小小小大小大小小大大小小小小小大小大小小大小小大小大小大大小大大大大小小大大大小小大小小大大大大小小大大小大大小小大大大大小大大小大小小小小小小大大小小小小小小小大大小小小大小小小大大大大小小小大小小小大小大小小小大大大小大小大小小大大小大大小大小小大小大小大大小大大小大小小小大大小小大大大小小大小小大小大小大大小大小小大大小小小大大大小小小小小小小大小大小大大大小小小大大大大小小大小大大大大小小大大大大大大大小小大小大小大小大大大小大大大大小大大小大大大小小小小小大小小大大大小小大小小小小大大小小大大大小大小大小大大小小小小大小小大大小小大大大小小大小小大大小大大小小大大大小大大大大小小大大大大大大大大小大大大大小大小大大大小大大大小小大大小小小小小大小大小小小小小大小大小大大小大小小小大大小小大大小小小小小大小大大小小小小大大小大小大小大大大大大大小小大小大小大小小小大小小小大大大小大小小大大小大大小大小大小大小小大大小小大大大小大大大小小大大大大大小小小大大大小大小大大小小大大小小小大大大小小小小小大大小大小小大大小小大小小小大小大大大小大小大大大小大小小小小大大大大小小大大小小大小大大小小大大小小小大大大大大小小小小大大大大大小大大大大小小小大大小小小大大小大小小大小小小小小小大小大小小大大小大大小小大小小大大小大小小小小大小小小小大大大大小小大大小大大大小大小大小小小大大小大大大小小小小大大大小大小小大小大小大大小大小大小小大小大大小小小大小大大大小小小小小小大大大大小大大小大小大大小小大小大小大小大大小大小小小小小小小大大小大大小小大大小小小大大小大大小小小大大小大大大大小大大大小小小小大小小小大大大大小大小大小小小大小大大小大大大大大小大大小小大大大小小小小大大大小小小小小大小大大小大小大大大小大大小大小小大小大大小小大小大小大小大小小大小小大大小大大大小大大大小大大小小小小小小大大大小大大小小小大小小小小大大小大大小小大大大大小小大小大小小大小小大小大小小小大小小大大大大大小大大小大大小小大大大大小大小小小小大大大大大小小大大小大小小大大小小大大大大大小小大小小小大大小大小小小小大大小大大小小小大小小大大小小大大小小大小小大大大小小大小大大小大小小大小小小小大大大大小小大小大小小小小小小大小小小大大大大小小小小大小小小大大小大大大小大大小大小小大大小大大小大大大小小大小大大大小大小小大小小小小小大大小大小大大大小小大小小小大大大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小大大大小大大小小小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小小小小大小小大大大小小大小大小大大小小小大小小小小小小小小小大小小小大大小小小大小大小小大大小小大小大小小大大大大大大小小大大小大大大大小大大大大小大大小大大大大大小大大小小大小大大大小小大大大大大大大小小小小大大小小大大小小小大小大小大大大小小小大大小大大小大小大小小大大小小大大小小大小大小大小小大小大小大大大大大小大小大大小大大小大小大小大小大大小大小小小大大小大小大大大大大大大大大小小大大大小小大小大大大小小小小大大小大小大大大小大大小小小小小小小小小大小大大小小大大大小大小小大大小小大小小大大大大大小大小小小大小大小小小大小小小大大大小大小小小小小大小小大大小小小小大大小大小大大小小小小大小小小大大小小小大小大大大小小小大"',
+                'lottery_count_rules' => 2304,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1230,
+                'bet_amount_rules' => ',10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10',
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => '小小小小小小大大小大大大大小大小大小大小小大小大大小大小小大小大小大大大小大小大小小大大小大大大大小小大大大小小小大小大小大小小大小大小小小小大大小小大大小小大大小大大大小小大大大小小大大大小大小小小小小小大小大小大小小小大大小小小小小大大小小小大大大小小大小小小小大小大大大小小小小小小小小大大大大小大大大小大小大大大小大小大大大大小小大大小大小大小小小大小小大小小小小大小大小小大小小小小大小大大大大大大大小大小小小小大大大大大大大小小大小小大大小小小小小大大大小大小小小大大小小大小小小大小大小小大小小大小小小小大小小大大大大小小大小大小小大大小大小大大大小大小大大大大大小小小大大大大大大大大小大大大大小大大大大大小小大小小小小小大小大小大小小大小大小大小小大小大小小大小大大小小小大大大小大大大大小大小小小小小小大小小小大大小大小小小大大大小小大大小小大大大小小小大大大小大大大小小大大大大大大大大大大小小大大大小小小大大小小小大小大小大小大大小大大大小小小小小大大大大大小大小大大大小小小小小小大小大大小小大小大大小大小大大大小大大小小小大小小小大小大大大大小小小小大小小大大小大大大小大小大小大小大小小大小小小小小小小小小小大大大大大大大小小大小大大大大大小小大大大大小小大小小大小大小小大小小小大大大大大大大小小大小小小大大大大小大大小小小小大小小大小小小大大大小小小小大大大大小小小大小小小小小大小小大大小小大小小小小大小小大大小大大大大大大大小小小大小大小大大大大大小小大小大小大大大大大大大小小小小小大小大小大大小大小大大小小小大大小大大大小大大大小大小大大大大大小大小大大小小大大大大大大大大小小大大小大小小小小小小小小大小大小大小大大小小大大小大小大大小大大小小小大小大大小小大大小大大小小小大大大小大小小小大小小小大小小大小小大小大小大小小大小小大大大大大小大小小大大小大小小大大小大小大大大小大小大小小小小大大小大大小小小小小大大大小大大大大大小小小小大大大小小小小小小大大大小大小小小小小小大小大大小小小小小大小大大大大大小大大大小小小大大大大大小小大小大大大大大大小大大小大大大小大小大大小小小小小大小小小小大小小大大大小大小大小小大小小大小大大大大大小小小小大小大小小小大大大大小大小大小大大小大大小小小大大小小小大大小大大小小大小大小大小小大大大小大小大大大大大大小小大大小小小小大大小小大大小大大小大大大大小大大大大大小大大小小大小小大小大大大大大大大大小大大小小小大大大小小小大小大大大小小大大小大小大大大小小大小大大小小大大小大大小小大小小小小小大小小小小小大大大小大小大小小大小大小小小大大小小小小大大大小小大大大小大大小大大小小大小大小大小小大小大小小大大大大大小大大大小小小大大小小小大大大大小大大大小大大小大大大小大小小大小大小小小小大小小大小大大大大大小小大小小小小大大大小大小小小小小大大大小小大小小小大小大大大大小大小小小小大大小小大大大大小小小小小小小大小小小大大小小大大小大大大小大小大大大大小大大大大大大大大小大大大小大小大小小小大大小小小小大大小大小小大大小小小小大小小小小小小大小大小大大大小小小大大大大小大大大小大大大大大大小小小小小小大小小大小小小大小大小小小大小小大大大大小大小大小小大大大小大小小大大小大大大小大大大小大大小小大小大大大大小大大小大大大小大小大小大大小大小大小大小大小小大大大小小小小小小大小大小大大小小大大大小小小大小大小小小小小大大小大小大大大小小大小大小大大小小大小大大大小小小小小大小小小小大小大大小小小小大小大大大大小大小小大大大大大大小小大小大小大大大小小小大大小大大小小小大小小小大大大小小大大小小小小小大大小小大大小小小小小小小大大大大小小小大大大小小小大大小大小小大小小小小大小大大小小大大小小大大小大大小大大小小大大大小大小大大小小小小大小大大大大小小小小大大大大大大大大大大大小小小小小大大大小小大大大大小小大大大大大大大大大大大大小大大大小小大小大大大大小大大小大大大大小小大大大小大大小小小大小小大小小小小大小小小大大小小小大大大大大小大小小大大小大大小大大大小大大大小小大大大小大小小大大大大大大小大大小大小大小小大大大小小大大小大大小小大小大大大小大小大小小小小大大小小小大小大大小小小小小大小大大大小小小小小小大大小小大小小小小大小小小小小大小小小小小小小大小小小大小大小大小大大小小大大大小小大大小大大小大小小大小小大大大小大大大大小小小小大大小小大大大大大小小大小小小大小大小小大大小大小大大大大小大大大大小小大小小小大小大大小小小小大大小大大大大大小大小大小小大小大大大小小小大小小小小小小大大大小小大小小小大大大大小大大大小小小大大大小小大小大大大大小小大小小小大小小小大小大小大小小小大大小大大大小小小大大小小小小小大小大小小大大大小大小大大小大大大小小大大大大大小大小小大大小小小小小小小小小大大大小大小小大大小大小小大小大小大大大小大大小大小小小小小大小大小小小大小小小小小小大大小大小大小小大小小大小大大大大大小小大大小大小大大大大大大大小大小小大小大大大大大小大小小大大大小小小大大小小大大小小小小小大小大小小小大小大小大大小小大小大大小大小大大大小大小小小小小大小大大小小小小大大大大小大大大大小小小大小大大小小小小小大小小大小小小小小小小小小大小大小小小小小小大小小小大大小大小大小小小大小大大小大小大大小大大大小小大小小大小大小大小大大大大小小大大小小大小大',
+                'bet_count_rules' => 2303,
+                'win_lose_rules' => '111000110100110000101111011001001111000101010110111001100010101110100000010110001000000100110111110010011111010110110100000100010001100110110010000001100011001111001011111101110100110110001011010010110001110011010010100101011001100011111100110110000011101000010010101101111111101111101000011011110001101001111110101000000111110001000010000001111100110111100111101110111110111011011111010010000010111001110110000100011001101000010101001101000011110011101000100101111001001000101111001010010010010110111101110101010110010001010101011011100010010010101100001010011001010110001001110001001100110101111001101000001010100001110100011110001001011111101110010110100011110111101100101110111000001110001101101011110101011111100111100111100011010000000010110001000010010011001101101111000110000110110110100101010000100101111010100101000111011111010010101010000101000101111010001110110010110011101010111111101010110111001001001000111100010100100101110011000000011101010000001011010001000111101001111011111011011010101010001111101010010010110100010010110110010001111001110100000101100110111010001000110101101100010010100001011101011110111110001100101011110111110101101001001010111101100001011110110000111101100001001011110111100001110011000010110000001111110010100100111000110100000000110100001011001111011100000000011000101111001011000001101011100000110100001001100100100100000110100010101100100001100010110101001110111001110000110000001001001101110001011010100011011010011011010111010111001101110100101110001111101010100010000111011010011111100011110110011100011011101010100001010001101001010001011000010010100110100010001110011111111111100111010011010101100001111101001100110101000101101110110111000111000001010001110101001110111101110000101100011011111100010011100010110011011110011100000110111111100101111101111111000110100001111001001000100010100101010100110100111010111000011111011110110000011011011110000110110111001010001110000110001000000011111110001010001101000101101011000000100110111111011001000101110001000111001001111111110111000001111010111010110101011100100100011001111001010010111000100011011010111000110100011000100100111110000001010101000001101000110110001110101010101000100111010001011000011010011111111000011011110100111001001000000101100001110101001000101100111101010010000110001001000011101011',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 2,
+                'created_at' => '2023-05-16 23:59:21',
+                'updated_at' => '2023-05-17 00:02:41',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 10.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741467',
+                'continuous_bet_count' => 2303,
+            ),
+            31 => 
+            array (
+                'id' => 79,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注倍投" isExecutable="false">
+<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1sl5j1j</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_0qy900k</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_0vgmnk1</incoming>
+<outgoing>Flow_0qy900k</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
+<incoming>Flow_1sl5j1j</incoming>
+<outgoing>Flow_0vgmnk1</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
+<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
+<sequenceFlow id="Flow_1sl5j1j" sourceRef="Activity_19dyqqr" targetRef="Activity_05ghkdt" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
+<omgdc:Bounds x="690" y="580" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="690" y="760" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
+<di:waypoint x="740" y="660" />
+<di:waypoint x="740" y="760" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
+<di:waypoint x="740" y="840" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1sl5j1j_di" bpmnElement="Flow_1sl5j1j">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="580" />
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'completed',
+                'lottery_rules' => '"大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小大大大小大大小小小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小"',
+                'lottery_count_rules' => 833,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1500,
+                'bet_amount_rules' => ',20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20',
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => '大小大大小小大小大小大大大大小大大小小大大小小小大小小大小小大小小大大小大小小大大大小小小小大大小小小小小小小小小小大小大小小小大小小大大大大大小大小大大大小小小小大小小小大大大大大小小大大小小小大小大小小小小小大大大小大大大大小小小小大大小小大小小小大小大大大大大小小小小小小小小小大大小大大小小大大大大大大大小大小大大大大大小小大小小小小大大大大大大大大小小小大大大小小小大小小小大大大大小大大大小大大大小小大小大大大小小大大小大小小小小大大小大大小小大小小大小小大小大大大大小大小小小小小小小大小大小小小大小大大大小小小小小小大小小小大大小大小小大大小大大大小小大大大大小大小大大小小小大小小大小大小小小小小小大小小大小小大大大大大大小大小大小小小大小小小小大小小小小大大小大大大小小小小大大大小大小小小大大大大大大大小小大小小大大小小大小大大大小大大小小小大小小大小小大小大大大大小大大大小小大大小小大大小大大大小大大小大小小大小大大大大大大大小大大大大小小大大大小小小小小大大大大大大大大大小大小大大小小大大小小小大小小小小大大小大小大大小小大大小大大小小小小小大大小小小小小大小大大小小小小大小大大大小大小大大小大小小大小大小大大大大大大小小小小小小大小小大小小小大小小大大小小大小小大大小小小小大小大大大小大大小大小大大小小大大小小小小大小小小大小大大小大小大小小大大大大小大小小大大大小大小小小大大小大小小大大小大大大小小大小小大大大大大小大大小大大小小小小小大大大大小小小大大小小大小小大大小大小大小小小大大小大大小大小小小小大大小小大大大大小小小小大大大大小大大小大小大小大小小大小小大大大大小大大小小小小大小小大小大小小大大小小大大小小大大大小大大小小小大大小大大大大小小小大大小小小大大大小大大小大小小小大大小小小小大大小大小大大小大大小小大大小小小大大小大小小大大大小小大小大小大小大大大大小小小大大大小大小小大大大小大小大小大大大大大小大',
+                'bet_count_rules' => 833,
+                'win_lose_rules' => '10001010111010010101101001011100101011111010010101011101011100010011101110000111111001100011001001000111110101101000111111111100001100010011011110000010101000100011101000011100100011100100101110101101110101000010010011110100111000100110111011001111111010011010011001111100011000010111011010010000000011011101111001101100100011011010110010011111010001001001000011000110010001111101111101110100110011101000000010101000010011010101110100010001010011111101001001101111101010101101111110010011001001101010001100101011111001000100111001101000110111111001101110001011110000100111111010100001100110111111101001010110101011101011001100100110100100001111110000011011101110110010001101010101111011101010010011000011100011111001111010100111001100010011110011001001100111100111010010001001010101001000011000111111101001101001011110100010111101111',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 4,
+                'created_at' => '2023-05-17 00:01:17',
+                'updated_at' => '2023-05-17 00:02:39',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注倍投',
+                'current_bet_code_rule' => '大',
+                'current_bet_amount_rule' => 20.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741148',
+                'continuous_bet_count' => 833,
+            ),
+            32 => 
+            array (
+                'id' => 80,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注倍投" isExecutable="false">
+<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1sl5j1j</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_0qy900k</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_0vgmnk1</incoming>
+<outgoing>Flow_0qy900k</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
+<incoming>Flow_1sl5j1j</incoming>
+<outgoing>Flow_0vgmnk1</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
+<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
+<sequenceFlow id="Flow_1sl5j1j" sourceRef="Activity_19dyqqr" targetRef="Activity_05ghkdt" />
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
+<omgdc:Bounds x="690" y="580" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="690" y="760" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
+<di:waypoint x="740" y="660" />
+<di:waypoint x="740" y="760" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
+<di:waypoint x="740" y="840" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1sl5j1j_di" bpmnElement="Flow_1sl5j1j">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="580" />
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大小大大小小大小小大大大小小大大大小大小大小小大大大小小大大大大小小大大大小大大小小大小小小小小小小小大大大小小小小小小大小大小小大大小小大小小大小大小大小大小小小小大小小大小小小小大大大大小小大小小小小小大大小大小小大小小小小小小大大大大大小大大大小小小小大大小小大小小大小小小大大大小小小小大大小大大大小大大小小小小大大大小大大大小小小小小大小小大小大小小小小大大小小大大小大大小大小大大小大小大大大小大小大小大大大大小大大小大小大大大大小小小小小大大小大大大小大小大大大小小大大大小小大小小小大大小大小大大大小大大小大大大大大小小小大大小小大大小大大大小大小大小小大大大小大小大小小大大小大大大小大小大大小大小小小大大大大大大小小小大大小大小大小小小小大小大小大大小小小小大小小小大大小大小大小大大小大小大小大大小大大大小小大大大大小小小大大大大大大小大小大小小小大小大小小大大小大大小小大大大大小小小大大小小大大小大小小小小大小小大大小小小大大小大小大小大大小大小大大小小小大大大小大小大小大小小大大小大大大大大小大小大大小小小小小大小大小小小小大大大小小大小小小小大小大小小大小大大大大大小大小大大大小大大大小小小小小大大小小小小大小大大大小小大大大大小大大小大小小大大小小大大小大大小小大小大大小大大大小大大大小小大大大小大小大大小小大大大小小小大小小小大小小小大大小大小大大大大大大小大小大大大小大大小小小大大大大小小小小小大小大大小大小大大小小大大小大小大大小大大小小小大大大小小大小大大大大小大小小大大大大大小小大小小小小大大大小大大大小小大大小大大小小小小小小小大小大小大大大小小小小大小小大大大小小大小大小大大小小小大小小小小小小小小小大小小小大大小小小大小大小小大大小小大小大小小大大大大大大小小大大小大大大大小大大大大小大大小大大大大大小大大小小大小大大大小小大大大大大大大小小小小大大小小大大小小小大小大小大大大小小小大大小大大小大小大小小大大小小大大小小大小大小大小小大小大小大大大大大小大小大大小大大小大小大小大小大大小大小小小大大小大小大大大大大大大大大小"',
+                'lottery_count_rules' => 1029,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 18,
+                'bet_amount_rules' => ',20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20',
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => '小大小小小小大小小小小大小大大小大小小大大小小小大小大小大大大大小小大大小大小小小大小大大小小小大大大大大大大小大小小小小小小大小小大大小大大小小小大大大大大小大大小小大小小大大大小小大小小大大小大小大大小小小小小大大大小大小小大大小小大小大大大大小大小大大小小大小大小大大小大小大大小小大大大大小大小大大大小小小小小大大小小大小大大大小小小大小大大小小大大大大小小大大小小小大大小小小小大大小大小小小大小大小大大大大小小小小小大大大大小大大小小小大大大大大大小大大大大大大小小大小小大小小大小大小大小大小大小大大小大小小大小大小大大小小小小大大大大小小大大大大大大小大小大大大小小小小大大大小小小小小大大大小小小小小小大大大小小大大小小大大小大大大大大大小小大大小小大大大大大大大大大小小小大小小大小大大小小大大大大大大大大小小大小小大小大大小大小大大小大小大大大小小小小小小大小大大大小小大大小大小小小大大大小小小小大小大大小大小小小小小大小大小小小大小小大小小大大小小小小大大小大大大大小小大大大小大大小小小小小大大小大小大大小小小大小大小小小大小小小大小大小大小小大小大大小小小小小小大大小小小大大小大大大大小小小大小小小小小小大大小大大小大小小小小小小大大小大大大小大大小大大小小大小大小大小小大小大小小大小大小小大小大大小小大小小大大大大大大小小大小小大大小大大大大小大大大小小小大小大大小大小大小小小大小大小小小小小大大大小大小小小小大大小小大大小小小大小大大大小大大大大大小大小大小小大小大大小小小小小大大大大大小大小小小小大小大小大大大大大大大小小小小大小小小大大小大小大大小大大小大大小小小小小大大小小大小大小大大大大大大小大大小小小小大大大大小小小大大小小小小大大小小小小小大大小小小小大小小大大大小大大小大大大小大大小小小小大大小大小大大小大大小小大小大大小大小大大小大小小小小大小小小小小大小小小小大大大大大小大大大大小大大小小小大小小大小大小小大大小小小小大大小小大小小小大大大小大大小大大大小小大大小大小大大小大小大小大小小大大大小大小大小小小小大小小大大小小大大小大大大小小大大小小大大大大大小小大小大小大小大小大小小大小小大小大小大大大大大小大小小小小大小小大大小小小大大小大小大大小大大小大大小大大小大大小大大小小小大大小小大大大大小小小大大大大小小大小小大小小大小小小大大大大大大小小大小小小大小小小大大大小大小小小大',
+                'bet_count_rules' => 1028,
+                'win_lose_rules' => '111100101011110011011010010000100000000101101000101000100010010111101111001101101001001100100101100001011100010111110111000101111000011111100000010010111011100000001000100110000100001101001001110011000100011010010110010110111111100000000101111111010110101111001100110111010011010001100100111111111100010001011011001111111111101010110001010101110101100011010000110100001101011010111001010100111100011001101000010100111110000000111011000110011010111001001111010100111100010100110001111110111100010000000010101110000010111100000110011011000001011110010111110011100011111100000001111000110111010111101100010111010100001110010010101101100111111111100101101010110001011111101010011011011010101100100100001111000110111100010100010011000111001011100100000010011011011010000101111100100010000010011101101100101101000110011110111000010110110001010000001011000010011001000111010010100000101000000100010000000101100011101011100001100001010001010100000111000111001011101111111100000101111100110001001011111000000000100101100101000010111010000',
+                'continuous_lose_count_rules' => 4,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-17 09:22:59',
+                'updated_at' => '2023-05-17 09:24:20',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注倍投',
+                'current_bet_code_rule' => '小',
+                'current_bet_amount_rule' => 20.0,
+                'current_issue' => NULL,
+                'last_issue' => '32741344',
+                'continuous_bet_count' => 1028,
+            ),
+            33 => 
+            array (
+                'id' => 81,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="随机投注倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_10t4rtn" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="575" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => '"大小大小大大小小小大小小大小小小小大大小大小小大大大大小大小大小小大大小小大小小大小大大大小大大小小大小小小大小大小小大大小大小大小小小大小大大大大小大小大大小小小小小大小小小小小大大大大大小大小大小大大小小小小大大小大小小大小小大小小小大大小小大小小大小大小大大小小大"',
+                'lottery_count_rules' => 135,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 238,
+                'bet_amount_rules' => ',10,10,20,10,20,40,10,20,40,10,20,40,10,20,10,10,10,10,20,10,20,10,10,20,40,10,20,40,10,10,20,40,10,20,10,20,10,10,10,20,40,80,10,10,10,10,10,20,40,80,10,20,10,10,10,20,40,80,160,320,10,10,20,10,20,40,80,10,10,10,20,40,80,10,10,20,10,20,40,10,10,20,40,80,160,10,10,20,10,10,10,20,40,10,20,40,80,160,320,640,10,10,10,20,10,10,10,10,20,40,80,10,10,10,20,40,80,10,20,40,10,20,40,10,10,20,10,10,20,40,80,160,320,640',
+                'stop_betting_amount' => 1500,
+                'bet_code_rules' => '小小小小小小大大大大大大大小小小大小小小小小小小大小大大小小大小小大大小大小大小大大大大小大小大大大大小小大大小大大小大小小小小大大小大小小小小大小小小小小小小大大大小小小大小小大小小大小大小大小大大大小大小小大大大小大小大小大小大小大小大大大大小大大小小大小小大大小',
+                'bet_count_rules' => 134,
+                'win_lose_rules' => '110100100100101111010110010011001010111000111110001011100000110100011100011010011000011011100100000011101111000111000100100110110000000',
+                'continuous_lose_count_rules' => 7,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-17 09:50:46',
+                'updated_at' => '2023-05-17 09:51:02',
+                'total_amount_rules' => 1000.0,
+                'title' => '随机投注倍投',
+                'current_bet_code_rule' => '小',
+                'current_bet_amount_rule' => 1280.0,
+                'current_issue' => NULL,
+                'last_issue' => '32740450',
+                'continuous_bet_count' => 134,
+            ),
+            34 => 
+            array (
+                'id' => 82,
+                'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+<process id="Process_1" name="AAAAA倍投" isExecutable="false">
+<extensionElements />
+<startEvent id="StartEvent_1y45yut" name="start">
+<documentation>Element documentation .......</documentation>
+<extensionElements>
+<zeebe:ioMapping>
+<zeebe:output source="=Variable assignment value" target="OutputVariable_32ckfr2" />
+</zeebe:ioMapping>
+<zeebe:properties>
+<zeebe:property name="lottery_id" value="1" />
+<zeebe:property name="lottery_option" value="单双" />
+<zeebe:property name="base_bet_amount" value="20" />
+<zeebe:property name="total_bet_amount" value="1000" />
+</zeebe:properties>
+</extensionElements>
+<outgoing>Flow_1wrzu2u</outgoing>
+</startEvent>
+<sequenceFlow id="Flow_1wrzu2u" name="Flow_1wrzu2u" sourceRef="StartEvent_1y45yut" targetRef="Gateway_0ygumq5" />
+<endEvent id="Event_00p8isq" name="end">
+<incoming>Flow_0a721c8</incoming>
+</endEvent>
+<sequenceFlow id="Flow_0a721c8" name="Flow_0a721c8" sourceRef="Gateway_0ygumq5" targetRef="Event_00p8isq">
+<conditionExpression xsi:type="tFormalExpression" language="">//投注金额小于等于0 || 投注金额大于等于截止金额
+return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rules) || \\App\\Help\\Common::greaterOrEqualTo($request-&gt;bet_total_amount_rules,$request-&gt;stop_betting_amount);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19ch7nt" name="Flow_19ch7nt" sourceRef="Gateway_0ygumq5" targetRef="Activity_19dyqqr" />
+<serviceTask id="Activity_19dyqqr" name="GetLotteryDataTask" camunda:delegateExpression="App\\Services\\Tasks\\GetLotteryDataTask">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_19ch7nt</incoming>
+<outgoing>Flow_1ar6z4o</outgoing>
+</serviceTask>
+<exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
+<incoming>Flow_1wrzu2u</incoming>
+<incoming>Flow_0s4vlli</incoming>
+<incoming>Flow_0mthd3n</incoming>
+<outgoing>Flow_0a721c8</outgoing>
+<outgoing>Flow_19ch7nt</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_15h65le" />
+<sequenceFlow id="Flow_0s4vlli" name="Flow_0s4vlli" sourceRef="Gateway_15h65le" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1a44leq</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
+</exclusiveGateway>
+<sequenceFlow id="Flow_1a44leq" name="AAA" sourceRef="Gateway_15h65le" targetRef="Gateway_10t4rtn">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="lottery_rules-AAA" value="/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{2,}$/u" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">//AAA
+function ($request){
+return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules);
+}</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
+<serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
+<incoming>Flow_15forua</incoming>
+<outgoing>Flow_0mthd3n</outgoing>
+</serviceTask>
+<sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
+<exclusiveGateway id="Gateway_15h65le" name="Gateway_15h65le" default="Flow_0s4vlli">
+<documentation>SSS</documentation>
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_0s4vlli</outgoing>
+<outgoing>Flow_1a44leq</outgoing>
+</exclusiveGateway>
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
+<extensionElements>
+<camunda:inputOutput />
+</extensionElements>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
+<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1{4,}$/u\', $request-&gt;lottery_rules,$matches);
+
+throw_if(empty($response), new Exception(\'获取投注号码失败\'));
+
+$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;save();</script>
+</scriptTask>
+</process>
+<bpmndi:BPMNDiagram id="BpmnDiagram_1">
+<bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
+<bpmndi:BPMNShape id="StartEvent_1y45yut_di" bpmnElement="StartEvent_1y45yut">
+<omgdc:Bounds x="722" y="202" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="729" y="172" width="22" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Event_00p8isq_di" bpmnElement="Event_00p8isq">
+<omgdc:Bounds x="922" y="322" width="36" height="36" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="931" y="365" width="19" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1t8wh6x_di" bpmnElement="Activity_19dyqqr">
+<omgdc:Bounds x="690" y="440" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_0nysfq9_di" bpmnElement="Gateway_0ygumq5" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="315" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="748" y="306" width="83" height="27" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
+<bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Gateway_1likk12_di" bpmnElement="Gateway_15h65le" isMarkerVisible="true">
+<omgdc:Bounds x="715" y="595" width="50" height="50" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="775" y="613" width="89" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
+<di:waypoint x="740" y="238" />
+<di:waypoint x="740" y="315" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="274" width="71" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0a721c8_di" bpmnElement="Flow_0a721c8">
+<di:waypoint x="765" y="340" />
+<di:waypoint x="922" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="808" y="322" width="72" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19ch7nt_di" bpmnElement="Flow_19ch7nt">
+<di:waypoint x="740" y="365" />
+<di:waypoint x="740" y="440" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="721" y="400" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="595" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="555" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0s4vlli_di" bpmnElement="Flow_0s4vlli">
+<di:waypoint x="715" y="620" />
+<di:waypoint x="400" y="620" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="385" y="477" width="61" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a44leq_di" bpmnElement="Flow_1a44leq">
+<di:waypoint x="740" y="645" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="744" y="677" width="23" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
+<di:waypoint x="690" y="1100" />
+<di:waypoint x="400" y="1100" />
+<di:waypoint x="400" y="340" />
+<di:waypoint x="715" y="340" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="353" y="1033" width="73" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+</bpmndi:BPMNPlane>
+</bpmndi:BPMNDiagram>
+</definitions>',
+                'lottery_id' => 1,
+                'token_id' => 1,
+                'code_type' => 3,
+                'status' => 'failed',
+                'lottery_rules' => NULL,
+                'lottery_count_rules' => 0,
+                'bet_base_amount_rules' => 10,
+                'bet_total_amount_rules' => 1200,
+                'bet_amount_rules' => '0',
+                'stop_betting_amount' => 1700,
+                'bet_code_rules' => NULL,
+                'bet_count_rules' => 0,
+                'win_lose_rules' => '1',
+                'continuous_lose_count_rules' => 0,
+                'continuous_win_count_rules' => 0,
+                'created_at' => '2023-05-17 12:00:03',
+                'updated_at' => '2023-05-17 12:00:06',
+                'total_amount_rules' => 1200.0,
+                'title' => 'AAAAA倍投',
+                'current_bet_code_rule' => NULL,
+                'current_bet_amount_rule' => 0.0,
+                'current_issue' => '',
+                'last_issue' => '32736213',
+                'continuous_bet_count' => 0,
             ),
         ));
         

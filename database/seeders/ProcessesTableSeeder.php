@@ -1089,12 +1089,11 @@ $request-&gt;save();</script>
             ),
             5 => 
             array (
-                'id' => 16,
-                'title' => 'ABAB或者跟投1684051617 copy',
+                'id' => 17,
+                'title' => '随机投注倍投',
                 'bpmn_xml' => '<?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
-<process id="Process_1" name="ABAB或者跟投" isExecutable="false">
-<documentation>如果 ABAB 就执行ABAB规则否则执行跟投</documentation>
+<process id="Process_1" name="随机投注倍投" isExecutable="false">
 <extensionElements />
 <startEvent id="StartEvent_1y45yut" name="start">
 <documentation>Element documentation .......</documentation>
@@ -1125,7 +1124,7 @@ return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rule
 <camunda:inputOutput />
 </extensionElements>
 <incoming>Flow_19ch7nt</incoming>
-<outgoing>Flow_0jhivou</outgoing>
+<outgoing>Flow_1ar6z4o</outgoing>
 </serviceTask>
 <exclusiveGateway id="Gateway_0ygumq5" name="Gateway_0ygumq5" default="Flow_19ch7nt">
 <incoming>Flow_1wrzu2u</incoming>
@@ -1133,64 +1132,66 @@ return \\App\\Help\\Common::lessThanOrEqualTo($request-&gt;bet_total_amount_rule
 <outgoing>Flow_0a721c8</outgoing>
 <outgoing>Flow_19ch7nt</outgoing>
 </exclusiveGateway>
-<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn" default="Flow_0k10k4t">
-<incoming>Flow_0jhivou</incoming>
-<outgoing>Flow_0k10k4t</outgoing>
-<outgoing>Flow_0fhqjnu</outgoing>
+<sequenceFlow id="Flow_1ar6z4o" name="Flow_1ar6z4o" sourceRef="Activity_19dyqqr" targetRef="Gateway_10t4rtn" />
+<exclusiveGateway id="Gateway_10t4rtn" name="Gateway_10t4rtn">
+<incoming>Flow_1ar6z4o</incoming>
+<outgoing>Flow_19pl5zp</outgoing>
+<outgoing>Flow_1meev5f</outgoing>
 </exclusiveGateway>
+<sequenceFlow id="Flow_19pl5zp" name="赢" sourceRef="Gateway_10t4rtn" targetRef="Activity_0f97m8m">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-输" value="/0$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/1$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1meev5f" name="输" sourceRef="Gateway_10t4rtn" targetRef="Activity_1k2wjfy">
+<extensionElements>
+<zeebe:properties>
+<zeebe:property name="win_lose_rules-赢" value="/1$/" />
+</zeebe:properties>
+</extensionElements>
+<conditionExpression xsi:type="tFormalExpression" language="PHP">return preg_match(\'/0$/\', $request-&gt;win_lose_rules);</conditionExpression>
+</sequenceFlow>
+<sequenceFlow id="Flow_1a5lhmw" name="Flow_1a5lhmw" sourceRef="Activity_0f97m8m" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_0usdnwm" name="Flow_0usdnwm" sourceRef="Activity_1k2wjfy" targetRef="Activity_1029zj8" />
+<sequenceFlow id="Flow_15forua" sourceRef="Activity_1029zj8" targetRef="Activity_0bbkk1o" />
 <serviceTask id="Activity_0bbkk1o" name="BetTask" camunda:delegateExpression="App\\Services\\Tasks\\BetTask">
-<incoming>Flow_0qy900k</incoming>
+<incoming>Flow_15forua</incoming>
 <outgoing>Flow_0mthd3n</outgoing>
 </serviceTask>
 <sequenceFlow id="Flow_0mthd3n" name="Flow_0mthd3n" sourceRef="Activity_0bbkk1o" targetRef="Gateway_0ygumq5" />
-<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
-<incoming>Flow_14lqzxx</incoming>
-<incoming>Flow_0vgmnk1</incoming>
-<outgoing>Flow_0qy900k</outgoing>
-<script>//设置投注金额-输
+<scriptTask id="Activity_0f97m8m" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_19pl5zp</incoming>
+<outgoing>Flow_1a5lhmw</outgoing>
+<script>//设置投注金额-赢
 $request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
 
 $request-&gt;current_bet_amount_rule = $request-&gt;bet_base_amount_rules;
+$request-&gt;save();</script>
+</scriptTask>
+<scriptTask id="Activity_1k2wjfy" name="createBetAmountTask" scriptFormat="PHP">
+<incoming>Flow_1meev5f</incoming>
+<outgoing>Flow_0usdnwm</outgoing>
+<script>//设置投注金额-输
+$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
+
+$request-&gt;current_bet_amount_rule = $request-&gt;last_bet_amount_rules * 2;
 $request-&gt;save();</script>
 </scriptTask>
 <scriptTask id="Activity_1029zj8" name="createBetCodeTask" scriptFormat="PHP">
 <extensionElements>
 <camunda:inputOutput />
 </extensionElements>
-<incoming>Flow_0k10k4t</incoming>
-<outgoing>Flow_14lqzxx</outgoing>
+<incoming>Flow_1a5lhmw</incoming>
+<incoming>Flow_0usdnwm</incoming>
+<outgoing>Flow_15forua</outgoing>
 <script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
 
-$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])$/u\', $request-&gt;lottery_rules,$matches);
-
-throw_if(empty($response), new Exception(\'获取投注号码失败\'));
-
-$request-&gt;current_bet_code_rule = $matches[1];
+$request-&gt;current_bet_code_rule = $request-&gt;requestLotteryOption-&gt;pluck(\'value\')-&gt;random();
 $request-&gt;save();</script>
 </scriptTask>
-<sequenceFlow id="Flow_0jhivou" sourceRef="Activity_19dyqqr" targetRef="Gateway_10t4rtn" />
-<sequenceFlow id="Flow_0k10k4t" sourceRef="Gateway_10t4rtn" targetRef="Activity_1029zj8" />
-<sequenceFlow id="Flow_0fhqjnu" sourceRef="Gateway_10t4rtn" targetRef="Activity_05ghkdt">
-<conditionExpression xsi:type="tFormalExpression" language="PHP">//ABAB
-function ($request){
-return preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])(?!\\1)([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1\\2$/u\', $request-&gt;lottery_rules);
-}</conditionExpression>
-</sequenceFlow>
-<scriptTask id="Activity_05ghkdt" name="createBetCodeTask">
-<incoming>Flow_0fhqjnu</incoming>
-<outgoing>Flow_0vgmnk1</outgoing>
-<script>$request = App\\Models\\Request::findOrStatusFail($data[\'request_id\']);
-
-$response = preg_match(\'/([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])(?!\\1)([\\x{4e00}-\\x{9fa5}_a-zA-Z0-9])\\1\\2$/u\', $request-&gt;lottery_rules,$matches);
-
-throw_if(empty($response), new Exception(\'获取投注号码失败\'));
-
-$request-&gt;current_bet_code_rule = $matches[1];
-$request-&gt;save();</script>
-</scriptTask>
-<sequenceFlow id="Flow_14lqzxx" sourceRef="Activity_1029zj8" targetRef="Activity_1k2wjfy" />
-<sequenceFlow id="Flow_0vgmnk1" sourceRef="Activity_05ghkdt" targetRef="Activity_1k2wjfy" />
-<sequenceFlow id="Flow_0qy900k" sourceRef="Activity_1k2wjfy" targetRef="Activity_0bbkk1o" />
 </process>
 <bpmndi:BPMNDiagram id="BpmnDiagram_1">
 <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
@@ -1217,24 +1218,23 @@ $request-&gt;save();</script>
 </bpmndi:BPMNLabel>
 </bpmndi:BPMNShape>
 <bpmndi:BPMNShape id="Gateway_10t4rtn_di" bpmnElement="Gateway_10t4rtn" isMarkerVisible="true">
-<omgdc:Bounds x="715" y="585" width="50" height="50" />
+<omgdc:Bounds x="715" y="715" width="50" height="50" />
 <bpmndi:BPMNLabel>
-<omgdc:Bounds x="698" y="645" width="84" height="14" />
+<omgdc:Bounds x="698" y="772" width="84" height="14" />
 </bpmndi:BPMNLabel>
 </bpmndi:BPMNShape>
-<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
-<omgdc:Bounds x="900" y="570" width="100" height="80" />
-</bpmndi:BPMNShape>
-<bpmndi:BPMNShape id="Activity_1lnbzn9_di" bpmnElement="Activity_05ghkdt">
-<omgdc:Bounds x="510" y="570" width="100" height="80" />
+<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
+<omgdc:Bounds x="690" y="1060" width="100" height="80" />
 <bpmndi:BPMNLabel />
+</bpmndi:BPMNShape>
+<bpmndi:BPMNShape id="Activity_0xougq0_di" bpmnElement="Activity_0f97m8m">
+<omgdc:Bounds x="860" y="700" width="100" height="80" />
 </bpmndi:BPMNShape>
 <bpmndi:BPMNShape id="Activity_05ftgvw_di" bpmnElement="Activity_1k2wjfy">
-<omgdc:Bounds x="700" y="760" width="100" height="80" />
+<omgdc:Bounds x="540" y="700" width="100" height="80" />
 </bpmndi:BPMNShape>
-<bpmndi:BPMNShape id="Activity_1n8x1r0_di" bpmnElement="Activity_0bbkk1o">
-<omgdc:Bounds x="700" y="1060" width="100" height="80" />
-<bpmndi:BPMNLabel />
+<bpmndi:BPMNShape id="Activity_04pnazf_di" bpmnElement="Activity_1029zj8">
+<omgdc:Bounds x="690" y="900" width="100" height="80" />
 </bpmndi:BPMNShape>
 <bpmndi:BPMNEdge id="Flow_1wrzu2u_di" bpmnElement="Flow_1wrzu2u">
 <di:waypoint x="740" y="238" />
@@ -1257,8 +1257,49 @@ $request-&gt;save();</script>
 <omgdc:Bounds x="721" y="400" width="70" height="14" />
 </bpmndi:BPMNLabel>
 </bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1ar6z4o_di" bpmnElement="Flow_1ar6z4o">
+<di:waypoint x="740" y="520" />
+<di:waypoint x="740" y="715" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="720" y="575" width="70" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_19pl5zp_di" bpmnElement="Flow_19pl5zp">
+<di:waypoint x="765" y="740" />
+<di:waypoint x="860" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="807" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1meev5f_di" bpmnElement="Flow_1meev5f">
+<di:waypoint x="715" y="740" />
+<di:waypoint x="640" y="740" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="672" y="722" width="12" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_1a5lhmw_di" bpmnElement="Flow_1a5lhmw">
+<di:waypoint x="920" y="780" />
+<di:waypoint x="920" y="940" />
+<di:waypoint x="790" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="898" y="857" width="75" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_0usdnwm_di" bpmnElement="Flow_0usdnwm">
+<di:waypoint x="590" y="780" />
+<di:waypoint x="590" y="940" />
+<di:waypoint x="690" y="940" />
+<bpmndi:BPMNLabel>
+<omgdc:Bounds x="567" y="857" width="77" height="14" />
+</bpmndi:BPMNLabel>
+</bpmndi:BPMNEdge>
+<bpmndi:BPMNEdge id="Flow_15forua_di" bpmnElement="Flow_15forua">
+<di:waypoint x="740" y="980" />
+<di:waypoint x="740" y="1060" />
+</bpmndi:BPMNEdge>
 <bpmndi:BPMNEdge id="Flow_0mthd3n_di" bpmnElement="Flow_0mthd3n">
-<di:waypoint x="700" y="1100" />
+<di:waypoint x="690" y="1100" />
 <di:waypoint x="400" y="1100" />
 <di:waypoint x="400" y="340" />
 <di:waypoint x="715" y="340" />
@@ -1266,40 +1307,14 @@ $request-&gt;save();</script>
 <omgdc:Bounds x="353" y="1033" width="73" height="14" />
 </bpmndi:BPMNLabel>
 </bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_0jhivou_di" bpmnElement="Flow_0jhivou">
-<di:waypoint x="740" y="520" />
-<di:waypoint x="740" y="585" />
-</bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_0k10k4t_di" bpmnElement="Flow_0k10k4t">
-<di:waypoint x="765" y="610" />
-<di:waypoint x="900" y="610" />
-</bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_0fhqjnu_di" bpmnElement="Flow_0fhqjnu">
-<di:waypoint x="715" y="610" />
-<di:waypoint x="610" y="610" />
-</bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_14lqzxx_di" bpmnElement="Flow_14lqzxx">
-<di:waypoint x="950" y="650" />
-<di:waypoint x="950" y="800" />
-<di:waypoint x="800" y="800" />
-</bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_0vgmnk1_di" bpmnElement="Flow_0vgmnk1">
-<di:waypoint x="560" y="650" />
-<di:waypoint x="560" y="800" />
-<di:waypoint x="700" y="800" />
-</bpmndi:BPMNEdge>
-<bpmndi:BPMNEdge id="Flow_0qy900k_di" bpmnElement="Flow_0qy900k">
-<di:waypoint x="750" y="840" />
-<di:waypoint x="750" y="1060" />
-</bpmndi:BPMNEdge>
 </bpmndi:BPMNPlane>
 </bpmndi:BPMNDiagram>
 </definitions>',
                 'status' => 1,
                 'order' => 0,
                 'describe' => NULL,
-                'created_at' => '2023-05-14 16:06:57',
-                'updated_at' => '2023-05-14 16:06:57',
+                'created_at' => '2023-05-17 09:48:10',
+                'updated_at' => '2023-05-17 09:50:12',
             ),
         ));
         
